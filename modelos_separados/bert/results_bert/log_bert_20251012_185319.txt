@@ -1,0 +1,363 @@
+================================================================================
+TREINAMENTO COM BERT EMBEDDINGS
+Início: 2025-10-12 18:53:19
+================================================================================
+
+Dispositivo: cuda
+GPU: NVIDIA GeForce RTX 3060
+Memória GPU disponível: 12.88 GB
+
+Carregando modelo BERT: neuralmind/bert-base-portuguese-cased
+Modelo carregado com sucesso!
+
+================================================================================
+PROCESSANDO DATASET: dataset_sem_stopwords_lemmatizado
+================================================================================
+
+Carregando ../../bases_preprocessados/dataset_sem_stopwords_lemmatizado.xlsx...
+Dataset carregado: 11902 linhas
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo - Campos: ['Titulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings BERT (usando cuda)...
+    Modelo: neuralmind/bert-base-portuguese-cased
+    Batch size: 16
+  Embeddings salvos em: embeddings_bert\embeddings_dataset_sem_stopwords_lemmatizado_titulo.npy
+  Dimensão dos embeddings: (11902, 768)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.8702
+      Precision: 0.8703
+      Recall: 0.8702
+      F1-Score: 0.8702
+    Treinando RandomForest...
+      Accuracy: 0.8207
+      Precision: 0.8207
+      Recall: 0.8207
+      F1-Score: 0.8207
+    Treinando LogisticRegression...
+      Accuracy: 0.8706
+      Precision: 0.8707
+      Recall: 0.8706
+      F1-Score: 0.8706
+  [CHECKPOINT] Progresso salvo para titulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: texto - Campos: ['Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings BERT (usando cuda)...
+    Modelo: neuralmind/bert-base-portuguese-cased
+    Batch size: 16
+  Embeddings salvos em: embeddings_bert\embeddings_dataset_sem_stopwords_lemmatizado_texto.npy
+  Dimensão dos embeddings: (11902, 768)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9307
+      Precision: 0.9307
+      Recall: 0.9307
+      F1-Score: 0.9307
+    Treinando RandomForest...
+      Accuracy: 0.8887
+      Precision: 0.8890
+      Recall: 0.8887
+      F1-Score: 0.8887
+    Treinando LogisticRegression...
+      Accuracy: 0.9278
+      Precision: 0.9278
+      Recall: 0.9278
+      F1-Score: 0.9278
+  [CHECKPOINT] Progresso salvo para texto
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: subtitulo - Campos: ['Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings BERT (usando cuda)...
+    Modelo: neuralmind/bert-base-portuguese-cased
+    Batch size: 16
+  Embeddings salvos em: embeddings_bert\embeddings_dataset_sem_stopwords_lemmatizado_subtitulo.npy
+  Dimensão dos embeddings: (11902, 768)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.8345
+      Precision: 0.8547
+      Recall: 0.8345
+      F1-Score: 0.8321
+    Treinando RandomForest...
+      Accuracy: 0.8328
+      Precision: 0.8440
+      Recall: 0.8328
+      F1-Score: 0.8315
+    Treinando LogisticRegression...
+      Accuracy: 0.8404
+      Precision: 0.8600
+      Recall: 0.8404
+      F1-Score: 0.8382
+  [CHECKPOINT] Progresso salvo para subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo_subtitulo - Campos: ['Titulo', 'Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings BERT (usando cuda)...
+    Modelo: neuralmind/bert-base-portuguese-cased
+    Batch size: 16
+  Embeddings salvos em: embeddings_bert\embeddings_dataset_sem_stopwords_lemmatizado_titulo_subtitulo.npy
+  Dimensão dos embeddings: (11902, 768)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.8971
+      Precision: 0.8973
+      Recall: 0.8971
+      F1-Score: 0.8971
+    Treinando RandomForest...
+      Accuracy: 0.8736
+      Precision: 0.8742
+      Recall: 0.8736
+      F1-Score: 0.8735
+    Treinando LogisticRegression...
+      Accuracy: 0.9072
+      Precision: 0.9075
+      Recall: 0.9072
+      F1-Score: 0.9072
+  [CHECKPOINT] Progresso salvo para titulo_subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: completo - Campos: ['Titulo', 'Subtitulo', 'Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings BERT (usando cuda)...
+    Modelo: neuralmind/bert-base-portuguese-cased
+    Batch size: 16
+  Embeddings salvos em: embeddings_bert\embeddings_dataset_sem_stopwords_lemmatizado_completo.npy
+  Dimensão dos embeddings: (11902, 768)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9467
+      Precision: 0.9467
+      Recall: 0.9467
+      F1-Score: 0.9467
+    Treinando RandomForest...
+      Accuracy: 0.8912
+      Precision: 0.8916
+      Recall: 0.8912
+      F1-Score: 0.8912
+    Treinando LogisticRegression...
+      Accuracy: 0.9467
+      Precision: 0.9467
+      Recall: 0.9467
+      F1-Score: 0.9467
+  [CHECKPOINT] Progresso salvo para completo
+
+================================================================================
+PROCESSANDO DATASET: dataset_sem_caracteres_especiais_lemmatizado
+================================================================================
+
+Carregando ../../bases_preprocessados/dataset_sem_caracteres_especiais_lemmatizado.xlsx...
+Dataset carregado: 11902 linhas
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo - Campos: ['Titulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings BERT (usando cuda)...
+    Modelo: neuralmind/bert-base-portuguese-cased
+    Batch size: 16
+  Embeddings salvos em: embeddings_bert\embeddings_dataset_sem_caracteres_especiais_lemmatizado_titulo.npy
+  Dimensão dos embeddings: (11902, 768)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9282
+      Precision: 0.9282
+      Recall: 0.9282
+      F1-Score: 0.9282
+    Treinando RandomForest...
+      Accuracy: 0.8887
+      Precision: 0.8893
+      Recall: 0.8887
+      F1-Score: 0.8887
+    Treinando LogisticRegression...
+      Accuracy: 0.9332
+      Precision: 0.9332
+      Recall: 0.9332
+      F1-Score: 0.9332
+  [CHECKPOINT] Progresso salvo para titulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: texto - Campos: ['Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings BERT (usando cuda)...
+    Modelo: neuralmind/bert-base-portuguese-cased
+    Batch size: 16
+  Embeddings salvos em: embeddings_bert\embeddings_dataset_sem_caracteres_especiais_lemmatizado_texto.npy
+  Dimensão dos embeddings: (11902, 768)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9290
+      Precision: 0.9291
+      Recall: 0.9290
+      F1-Score: 0.9290
+    Treinando RandomForest...
+      Accuracy: 0.8778
+      Precision: 0.8783
+      Recall: 0.8778
+      F1-Score: 0.8777
+    Treinando LogisticRegression...
+      Accuracy: 0.9336
+      Precision: 0.9337
+      Recall: 0.9336
+      F1-Score: 0.9336
+  [CHECKPOINT] Progresso salvo para texto
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: subtitulo - Campos: ['Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings BERT (usando cuda)...
+    Modelo: neuralmind/bert-base-portuguese-cased
+    Batch size: 16
+  Embeddings salvos em: embeddings_bert\embeddings_dataset_sem_caracteres_especiais_lemmatizado_subtitulo.npy
+  Dimensão dos embeddings: (11902, 768)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.8459
+      Precision: 0.8642
+      Recall: 0.8459
+      F1-Score: 0.8439
+    Treinando RandomForest...
+      Accuracy: 0.8391
+      Precision: 0.8510
+      Recall: 0.8391
+      F1-Score: 0.8378
+    Treinando LogisticRegression...
+      Accuracy: 0.8492
+      Precision: 0.8677
+      Recall: 0.8492
+      F1-Score: 0.8473
+  [CHECKPOINT] Progresso salvo para subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo_subtitulo - Campos: ['Titulo', 'Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings BERT (usando cuda)...
+    Modelo: neuralmind/bert-base-portuguese-cased
+    Batch size: 16
+  Embeddings salvos em: embeddings_bert\embeddings_dataset_sem_caracteres_especiais_lemmatizado_titulo_subtitulo.npy
+  Dimensão dos embeddings: (11902, 768)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9383
+      Precision: 0.9383
+      Recall: 0.9383
+      F1-Score: 0.9383
+    Treinando RandomForest...
+      Accuracy: 0.9114
+      Precision: 0.9119
+      Recall: 0.9114
+      F1-Score: 0.9114
+    Treinando LogisticRegression...
+      Accuracy: 0.9429
+      Precision: 0.9429
+      Recall: 0.9429
+      F1-Score: 0.9429
+  [CHECKPOINT] Progresso salvo para titulo_subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: completo - Campos: ['Titulo', 'Subtitulo', 'Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings BERT (usando cuda)...
+    Modelo: neuralmind/bert-base-portuguese-cased
+    Batch size: 16
+  Embeddings salvos em: embeddings_bert\embeddings_dataset_sem_caracteres_especiais_lemmatizado_completo.npy
+  Dimensão dos embeddings: (11902, 768)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9622
+      Precision: 0.9622
+      Recall: 0.9622
+      F1-Score: 0.9622
+    Treinando RandomForest...
+      Accuracy: 0.9042
+      Precision: 0.9048
+      Recall: 0.9042
+      F1-Score: 0.9042
+    Treinando LogisticRegression...
+      Accuracy: 0.9672
+      Precision: 0.9673
+      Recall: 0.9672
+      F1-Score: 0.9672
+  [CHECKPOINT] Progresso salvo para completo
+
+
+================================================================================
+RESUMO GERAL DOS RESULTADOS
+================================================================================
+
+Resultados salvos em: results_bert\resultados_bert.csv
+
+                                     Dataset      Combination         Classifier  Accuracy  Precision   Recall  F1-Score  Embedding_Dim
+           dataset_sem_stopwords_lemmatizado           titulo                SVM  0.870223   0.870267 0.870223  0.870219            768
+           dataset_sem_stopwords_lemmatizado           titulo       RandomForest  0.820664   0.820675 0.820664  0.820662            768
+           dataset_sem_stopwords_lemmatizado           titulo LogisticRegression  0.870643   0.870652 0.870643  0.870642            768
+           dataset_sem_stopwords_lemmatizado            texto                SVM  0.930701   0.930702 0.930701  0.930701            768
+           dataset_sem_stopwords_lemmatizado            texto       RandomForest  0.888702   0.889000 0.888702  0.888680            768
+           dataset_sem_stopwords_lemmatizado            texto LogisticRegression  0.927761   0.927766 0.927761  0.927761            768
+           dataset_sem_stopwords_lemmatizado        subtitulo                SVM  0.834523   0.854723 0.834523  0.832144            768
+           dataset_sem_stopwords_lemmatizado        subtitulo       RandomForest  0.832843   0.843969 0.832843  0.831489            768
+           dataset_sem_stopwords_lemmatizado        subtitulo LogisticRegression  0.840403   0.860048 0.840403  0.838206            768
+           dataset_sem_stopwords_lemmatizado titulo_subtitulo                SVM  0.897102   0.897278 0.897102  0.897091            768
+           dataset_sem_stopwords_lemmatizado titulo_subtitulo       RandomForest  0.873583   0.874219 0.873583  0.873530            768
+           dataset_sem_stopwords_lemmatizado titulo_subtitulo LogisticRegression  0.907182   0.907459 0.907182  0.907167            768
+           dataset_sem_stopwords_lemmatizado         completo                SVM  0.946661   0.946661 0.946661  0.946661            768
+           dataset_sem_stopwords_lemmatizado         completo       RandomForest  0.891222   0.891599 0.891222  0.891195            768
+           dataset_sem_stopwords_lemmatizado         completo LogisticRegression  0.946661   0.946676 0.946661  0.946661            768
+dataset_sem_caracteres_especiais_lemmatizado           titulo                SVM  0.928181   0.928189 0.928181  0.928181            768
+dataset_sem_caracteres_especiais_lemmatizado           titulo       RandomForest  0.888702   0.889311 0.888702  0.888660            768
+dataset_sem_caracteres_especiais_lemmatizado           titulo LogisticRegression  0.933221   0.933229 0.933221  0.933221            768
+dataset_sem_caracteres_especiais_lemmatizado            texto                SVM  0.929021   0.929072 0.929021  0.929019            768
+dataset_sem_caracteres_especiais_lemmatizado            texto       RandomForest  0.877782   0.878321 0.877782  0.877738            768
+dataset_sem_caracteres_especiais_lemmatizado            texto LogisticRegression  0.933641   0.933685 0.933641  0.933640            768
+dataset_sem_caracteres_especiais_lemmatizado        subtitulo                SVM  0.845863   0.864193 0.845863  0.843908            768
+dataset_sem_caracteres_especiais_lemmatizado        subtitulo       RandomForest  0.839143   0.851033 0.839143  0.837777            768
+dataset_sem_caracteres_especiais_lemmatizado        subtitulo LogisticRegression  0.849223   0.867730 0.849223  0.847310            768
+dataset_sem_caracteres_especiais_lemmatizado titulo_subtitulo                SVM  0.938261   0.938298 0.938261  0.938260            768
+dataset_sem_caracteres_especiais_lemmatizado titulo_subtitulo       RandomForest  0.911382   0.911920 0.911382  0.911354            768
+dataset_sem_caracteres_especiais_lemmatizado titulo_subtitulo LogisticRegression  0.942881   0.942882 0.942881  0.942881            768
+dataset_sem_caracteres_especiais_lemmatizado         completo                SVM  0.962201   0.962212 0.962201  0.962200            768
+dataset_sem_caracteres_especiais_lemmatizado         completo       RandomForest  0.904242   0.904845 0.904242  0.904205            768
+dataset_sem_caracteres_especiais_lemmatizado         completo LogisticRegression  0.967241   0.967305 0.967241  0.967239            768
+
+
+================================================================================
+MELHORES RESULTADOS POR COMBINAÇÃO
+================================================================================
+
+
+Dataset: dataset_sem_stopwords_lemmatizado
+--------------------------------------------------------------------------------
+  titulo               | Melhor: LogisticRegression   | F1: 0.8706 | Acc: 0.8706
+  texto                | Melhor: SVM                  | F1: 0.9307 | Acc: 0.9307
+  subtitulo            | Melhor: LogisticRegression   | F1: 0.8382 | Acc: 0.8404
+  titulo_subtitulo     | Melhor: LogisticRegression   | F1: 0.9072 | Acc: 0.9072
+  completo             | Melhor: SVM                  | F1: 0.9467 | Acc: 0.9467
+
+Dataset: dataset_sem_caracteres_especiais_lemmatizado
+--------------------------------------------------------------------------------
+  titulo               | Melhor: LogisticRegression   | F1: 0.9332 | Acc: 0.9332
+  texto                | Melhor: LogisticRegression   | F1: 0.9336 | Acc: 0.9336
+  subtitulo            | Melhor: LogisticRegression   | F1: 0.8473 | Acc: 0.8492
+  titulo_subtitulo     | Melhor: LogisticRegression   | F1: 0.9429 | Acc: 0.9429
+  completo             | Melhor: LogisticRegression   | F1: 0.9672 | Acc: 0.9672
+
+Resultados completos salvos em: results_bert\resultados_completos_bert.pkl
+
+================================================================================
+PROCESSAMENTO CONCLUÍDO!
+Fim: 2025-10-12 19:05:15
+================================================================================

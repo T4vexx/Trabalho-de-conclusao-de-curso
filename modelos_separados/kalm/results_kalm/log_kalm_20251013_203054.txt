@@ -1,0 +1,448 @@
+================================================================================
+TREINAMENTO COM KALM-EMBEDDING-V2.5
+Modelo: 0.5B params | Dim: 896 | Multilíngue
+Início: 2025-10-13 20:30:54
+================================================================================
+
+✅ Dispositivo: cuda
+✅ GPU: NVIDIA GeForce RTX 3060
+✅ Memória GPU: 12.88 GB
+✅ Otimizações CUDA ativadas
+
+📥 Carregando KaLM-v2.5: KaLM-Embedding/KaLM-embedding-multilingual-mini-instruct-v2.5
+⚠️  Modelo leve (0.5B params), carregamento rápido!
+
+✓ Modelo carregado!
+✓ Device: cuda:0
+✓ Dimensão: 896
+✓ Max seq length: 512
+✓ Batch size: 64
+
+📊 VRAM alocada: 1.98 GB
+
+🧪 Teste de velocidade...
+   200 textos em 0.35s = 568.1 txt/s
+   ✅ Velocidade OK - usando GPU!
+   Tempo estimado: ~0.3 minutos
+
+================================================================================
+PROCESSANDO DATASET: dataset_sem_stopwords_lemmatizado
+================================================================================
+
+Carregando ../../bases_preprocessados/dataset_sem_stopwords_lemmatizado.xlsx...
+Dataset carregado: 11902 linhas
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo - Campos: ['Titulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings KaLM (USANDO GPU!)...
+    Modelo: KaLM-Embedding/KaLM-embedding-multilingual-mini-instruct-v2.5
+    Total de textos: 11902
+    Batch size: 64
+    Device: cuda
+    ✓ Instruções KaLM adicionadas
+    VRAM antes: 1.99 GB
+    VRAM depois: 1.99 GB
+    ✓ Embeddings gerados: (11902, 896)
+  Embeddings salvos em: embeddings_kalm\embeddings_dataset_sem_stopwords_lemmatizado_titulo.npy
+  ✓ Cache GPU limpo (usando 1.99 GB)
+  Dimensão dos embeddings: (11902, 896)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.8849
+      Precision: 0.8859
+      Recall: 0.8849
+      F1-Score: 0.8849
+    Treinando RandomForest...
+      Accuracy: 0.8123
+      Precision: 0.8123
+      Recall: 0.8123
+      F1-Score: 0.8123
+    Treinando LogisticRegression...
+      Accuracy: 0.8706
+      Precision: 0.8708
+      Recall: 0.8706
+      F1-Score: 0.8706
+  [CHECKPOINT] Progresso salvo para titulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: texto - Campos: ['Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings KaLM (USANDO GPU!)...
+    Modelo: KaLM-Embedding/KaLM-embedding-multilingual-mini-instruct-v2.5
+    Total de textos: 11902
+    Batch size: 64
+    Device: cuda
+    ✓ Instruções KaLM adicionadas
+    VRAM antes: 1.99 GB
+    VRAM depois: 1.99 GB
+    ✓ Embeddings gerados: (11902, 896)
+  Embeddings salvos em: embeddings_kalm\embeddings_dataset_sem_stopwords_lemmatizado_texto.npy
+  ✓ Cache GPU limpo (usando 1.99 GB)
+  Dimensão dos embeddings: (11902, 896)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9206
+      Precision: 0.9207
+      Recall: 0.9206
+      F1-Score: 0.9206
+    Treinando RandomForest...
+      Accuracy: 0.8849
+      Precision: 0.8857
+      Recall: 0.8849
+      F1-Score: 0.8849
+    Treinando LogisticRegression...
+      Accuracy: 0.9110
+      Precision: 0.9110
+      Recall: 0.9110
+      F1-Score: 0.9110
+  [CHECKPOINT] Progresso salvo para texto
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: subtitulo - Campos: ['Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings KaLM (USANDO GPU!)...
+    Modelo: KaLM-Embedding/KaLM-embedding-multilingual-mini-instruct-v2.5
+    Total de textos: 11902
+    Batch size: 64
+    Device: cuda
+    ✓ Instruções KaLM adicionadas
+    VRAM antes: 1.99 GB
+    VRAM depois: 1.99 GB
+    ✓ Embeddings gerados: (11902, 896)
+  Embeddings salvos em: embeddings_kalm\embeddings_dataset_sem_stopwords_lemmatizado_subtitulo.npy
+  ✓ Cache GPU limpo (usando 1.99 GB)
+  Dimensão dos embeddings: (11902, 896)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.8509
+      Precision: 0.8716
+      Recall: 0.8509
+      F1-Score: 0.8488
+    Treinando RandomForest...
+      Accuracy: 0.8278
+      Precision: 0.8357
+      Recall: 0.8278
+      F1-Score: 0.8268
+    Treinando LogisticRegression...
+      Accuracy: 0.8450
+      Precision: 0.8627
+      Recall: 0.8450
+      F1-Score: 0.8431
+  [CHECKPOINT] Progresso salvo para subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo_subtitulo - Campos: ['Titulo', 'Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings KaLM (USANDO GPU!)...
+    Modelo: KaLM-Embedding/KaLM-embedding-multilingual-mini-instruct-v2.5
+    Total de textos: 11902
+    Batch size: 64
+    Device: cuda
+    ✓ Instruções KaLM adicionadas
+    VRAM antes: 1.99 GB
+    VRAM depois: 1.99 GB
+    ✓ Embeddings gerados: (11902, 896)
+  Embeddings salvos em: embeddings_kalm\embeddings_dataset_sem_stopwords_lemmatizado_titulo_subtitulo.npy
+  ✓ Cache GPU limpo (usando 1.99 GB)
+  Dimensão dos embeddings: (11902, 896)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9185
+      Precision: 0.9193
+      Recall: 0.9185
+      F1-Score: 0.9185
+    Treinando RandomForest...
+      Accuracy: 0.8673
+      Precision: 0.8673
+      Recall: 0.8673
+      F1-Score: 0.8673
+    Treinando LogisticRegression...
+      Accuracy: 0.9055
+      Precision: 0.9057
+      Recall: 0.9055
+      F1-Score: 0.9055
+  [CHECKPOINT] Progresso salvo para titulo_subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: completo - Campos: ['Titulo', 'Subtitulo', 'Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings KaLM (USANDO GPU!)...
+    Modelo: KaLM-Embedding/KaLM-embedding-multilingual-mini-instruct-v2.5
+    Total de textos: 11902
+    Batch size: 64
+    Device: cuda
+    ✓ Instruções KaLM adicionadas
+    VRAM antes: 1.99 GB
+    VRAM depois: 1.99 GB
+    ✓ Embeddings gerados: (11902, 896)
+  Embeddings salvos em: embeddings_kalm\embeddings_dataset_sem_stopwords_lemmatizado_completo.npy
+  ✓ Cache GPU limpo (usando 1.99 GB)
+  Dimensão dos embeddings: (11902, 896)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9450
+      Precision: 0.9451
+      Recall: 0.9450
+      F1-Score: 0.9450
+    Treinando RandomForest...
+      Accuracy: 0.8916
+      Precision: 0.8920
+      Recall: 0.8916
+      F1-Score: 0.8916
+    Treinando LogisticRegression...
+      Accuracy: 0.9353
+      Precision: 0.9354
+      Recall: 0.9353
+      F1-Score: 0.9353
+  [CHECKPOINT] Progresso salvo para completo
+
+================================================================================
+PROCESSANDO DATASET: dataset_sem_caracteres_especiais_lemmatizado
+================================================================================
+
+Carregando ../../bases_preprocessados/dataset_sem_caracteres_especiais_lemmatizado.xlsx...
+Dataset carregado: 11902 linhas
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo - Campos: ['Titulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings KaLM (USANDO GPU!)...
+    Modelo: KaLM-Embedding/KaLM-embedding-multilingual-mini-instruct-v2.5
+    Total de textos: 11902
+    Batch size: 64
+    Device: cuda
+    ✓ Instruções KaLM adicionadas
+    VRAM antes: 1.99 GB
+    VRAM depois: 1.99 GB
+    ✓ Embeddings gerados: (11902, 896)
+  Embeddings salvos em: embeddings_kalm\embeddings_dataset_sem_caracteres_especiais_lemmatizado_titulo.npy
+  ✓ Cache GPU limpo (usando 1.99 GB)
+  Dimensão dos embeddings: (11902, 896)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9131
+      Precision: 0.9132
+      Recall: 0.9131
+      F1-Score: 0.9131
+    Treinando RandomForest...
+      Accuracy: 0.8501
+      Precision: 0.8501
+      Recall: 0.8501
+      F1-Score: 0.8501
+    Treinando LogisticRegression...
+      Accuracy: 0.8984
+      Precision: 0.8985
+      Recall: 0.8984
+      F1-Score: 0.8984
+  [CHECKPOINT] Progresso salvo para titulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: texto - Campos: ['Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings KaLM (USANDO GPU!)...
+    Modelo: KaLM-Embedding/KaLM-embedding-multilingual-mini-instruct-v2.5
+    Total de textos: 11902
+    Batch size: 64
+    Device: cuda
+    ✓ Instruções KaLM adicionadas
+    VRAM antes: 1.99 GB
+    VRAM depois: 1.99 GB
+    ✓ Embeddings gerados: (11902, 896)
+  Embeddings salvos em: embeddings_kalm\embeddings_dataset_sem_caracteres_especiais_lemmatizado_texto.npy
+  ✓ Cache GPU limpo (usando 1.99 GB)
+  Dimensão dos embeddings: (11902, 896)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9240
+      Precision: 0.9241
+      Recall: 0.9240
+      F1-Score: 0.9240
+    Treinando RandomForest...
+      Accuracy: 0.8778
+      Precision: 0.8787
+      Recall: 0.8778
+      F1-Score: 0.8777
+    Treinando LogisticRegression...
+      Accuracy: 0.9110
+      Precision: 0.9110
+      Recall: 0.9110
+      F1-Score: 0.9110
+  [CHECKPOINT] Progresso salvo para texto
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: subtitulo - Campos: ['Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings KaLM (USANDO GPU!)...
+    Modelo: KaLM-Embedding/KaLM-embedding-multilingual-mini-instruct-v2.5
+    Total de textos: 11902
+    Batch size: 64
+    Device: cuda
+    ✓ Instruções KaLM adicionadas
+    VRAM antes: 1.99 GB
+    VRAM depois: 1.99 GB
+    ✓ Embeddings gerados: (11902, 896)
+  Embeddings salvos em: embeddings_kalm\embeddings_dataset_sem_caracteres_especiais_lemmatizado_subtitulo.npy
+  ✓ Cache GPU limpo (usando 1.99 GB)
+  Dimensão dos embeddings: (11902, 896)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.8559
+      Precision: 0.8789
+      Recall: 0.8559
+      F1-Score: 0.8537
+    Treinando RandomForest...
+      Accuracy: 0.8282
+      Precision: 0.8364
+      Recall: 0.8282
+      F1-Score: 0.8272
+    Treinando LogisticRegression...
+      Accuracy: 0.8492
+      Precision: 0.8669
+      Recall: 0.8492
+      F1-Score: 0.8474
+  [CHECKPOINT] Progresso salvo para subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo_subtitulo - Campos: ['Titulo', 'Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings KaLM (USANDO GPU!)...
+    Modelo: KaLM-Embedding/KaLM-embedding-multilingual-mini-instruct-v2.5
+    Total de textos: 11902
+    Batch size: 64
+    Device: cuda
+    ✓ Instruções KaLM adicionadas
+    VRAM antes: 1.99 GB
+    VRAM depois: 1.99 GB
+    ✓ Embeddings gerados: (11902, 896)
+  Embeddings salvos em: embeddings_kalm\embeddings_dataset_sem_caracteres_especiais_lemmatizado_titulo_subtitulo.npy
+  ✓ Cache GPU limpo (usando 1.99 GB)
+  Dimensão dos embeddings: (11902, 896)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9336
+      Precision: 0.9340
+      Recall: 0.9336
+      F1-Score: 0.9336
+    Treinando RandomForest...
+      Accuracy: 0.8879
+      Precision: 0.8879
+      Recall: 0.8879
+      F1-Score: 0.8879
+    Treinando LogisticRegression...
+      Accuracy: 0.9164
+      Precision: 0.9167
+      Recall: 0.9164
+      F1-Score: 0.9164
+  [CHECKPOINT] Progresso salvo para titulo_subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: completo - Campos: ['Titulo', 'Subtitulo', 'Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings KaLM (USANDO GPU!)...
+    Modelo: KaLM-Embedding/KaLM-embedding-multilingual-mini-instruct-v2.5
+    Total de textos: 11902
+    Batch size: 64
+    Device: cuda
+    ✓ Instruções KaLM adicionadas
+    VRAM antes: 1.99 GB
+    VRAM depois: 1.99 GB
+    ✓ Embeddings gerados: (11902, 896)
+  Embeddings salvos em: embeddings_kalm\embeddings_dataset_sem_caracteres_especiais_lemmatizado_completo.npy
+  ✓ Cache GPU limpo (usando 1.99 GB)
+  Dimensão dos embeddings: (11902, 896)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9622
+      Precision: 0.9623
+      Recall: 0.9622
+      F1-Score: 0.9622
+    Treinando RandomForest...
+      Accuracy: 0.9068
+      Precision: 0.9074
+      Recall: 0.9068
+      F1-Score: 0.9067
+    Treinando LogisticRegression...
+      Accuracy: 0.9509
+      Precision: 0.9510
+      Recall: 0.9509
+      F1-Score: 0.9509
+  [CHECKPOINT] Progresso salvo para completo
+
+
+================================================================================
+RESUMO GERAL DOS RESULTADOS
+================================================================================
+
+Resultados salvos em: results_kalm\resultados_kalm.csv
+
+                                     Dataset      Combination         Classifier  Accuracy  Precision   Recall  F1-Score  Embedding_Dim
+           dataset_sem_stopwords_lemmatizado           titulo                SVM  0.884922   0.885905 0.884922  0.884850            896
+           dataset_sem_stopwords_lemmatizado           titulo       RandomForest  0.812264   0.812266 0.812264  0.812264            896
+           dataset_sem_stopwords_lemmatizado           titulo LogisticRegression  0.870643   0.870794 0.870643  0.870630            896
+           dataset_sem_stopwords_lemmatizado            texto                SVM  0.920622   0.920671 0.920622  0.920619            896
+           dataset_sem_stopwords_lemmatizado            texto       RandomForest  0.884922   0.885656 0.884922  0.884866            896
+           dataset_sem_stopwords_lemmatizado            texto LogisticRegression  0.910962   0.911003 0.910962  0.910959            896
+           dataset_sem_stopwords_lemmatizado        subtitulo                SVM  0.850903   0.871617 0.850903  0.848805            896
+           dataset_sem_stopwords_lemmatizado        subtitulo       RandomForest  0.827803   0.835658 0.827803  0.826797            896
+           dataset_sem_stopwords_lemmatizado        subtitulo LogisticRegression  0.845023   0.862737 0.845023  0.843116            896
+           dataset_sem_stopwords_lemmatizado titulo_subtitulo                SVM  0.918522   0.919263 0.918522  0.918486            896
+           dataset_sem_stopwords_lemmatizado titulo_subtitulo       RandomForest  0.867283   0.867319 0.867283  0.867279            896
+           dataset_sem_stopwords_lemmatizado titulo_subtitulo LogisticRegression  0.905502   0.905711 0.905502  0.905490            896
+           dataset_sem_stopwords_lemmatizado         completo                SVM  0.944981   0.945072 0.944981  0.944978            896
+           dataset_sem_stopwords_lemmatizado         completo       RandomForest  0.891642   0.892040 0.891642  0.891614            896
+           dataset_sem_stopwords_lemmatizado         completo LogisticRegression  0.935321   0.935444 0.935321  0.935317            896
+dataset_sem_caracteres_especiais_lemmatizado           titulo                SVM  0.913062   0.913217 0.913062  0.913054            896
+dataset_sem_caracteres_especiais_lemmatizado           titulo       RandomForest  0.850063   0.850075 0.850063  0.850062            896
+dataset_sem_caracteres_especiais_lemmatizado           titulo LogisticRegression  0.898362   0.898475 0.898362  0.898355            896
+dataset_sem_caracteres_especiais_lemmatizado            texto                SVM  0.923982   0.924113 0.923982  0.923975            896
+dataset_sem_caracteres_especiais_lemmatizado            texto       RandomForest  0.877782   0.878710 0.877782  0.877706            896
+dataset_sem_caracteres_especiais_lemmatizado            texto LogisticRegression  0.910962   0.910980 0.910962  0.910961            896
+dataset_sem_caracteres_especiais_lemmatizado        subtitulo                SVM  0.855943   0.878904 0.855943  0.853736            896
+dataset_sem_caracteres_especiais_lemmatizado        subtitulo       RandomForest  0.828223   0.836356 0.828223  0.827186            896
+dataset_sem_caracteres_especiais_lemmatizado        subtitulo LogisticRegression  0.849223   0.866867 0.849223  0.847396            896
+dataset_sem_caracteres_especiais_lemmatizado titulo_subtitulo                SVM  0.933641   0.933996 0.933641  0.933628            896
+dataset_sem_caracteres_especiais_lemmatizado titulo_subtitulo       RandomForest  0.887862   0.887924 0.887862  0.887858            896
+dataset_sem_caracteres_especiais_lemmatizado titulo_subtitulo LogisticRegression  0.916422   0.916670 0.916422  0.916410            896
+dataset_sem_caracteres_especiais_lemmatizado         completo                SVM  0.962201   0.962264 0.962201  0.962199            896
+dataset_sem_caracteres_especiais_lemmatizado         completo       RandomForest  0.906762   0.907369 0.906762  0.906726            896
+dataset_sem_caracteres_especiais_lemmatizado         completo LogisticRegression  0.950861   0.950976 0.950861  0.950858            896
+
+
+================================================================================
+MELHORES RESULTADOS POR COMBINAÇÃO
+================================================================================
+
+
+Dataset: dataset_sem_stopwords_lemmatizado
+--------------------------------------------------------------------------------
+  titulo               | Melhor: SVM                  | F1: 0.8849 | Acc: 0.8849
+  texto                | Melhor: SVM                  | F1: 0.9206 | Acc: 0.9206
+  subtitulo            | Melhor: SVM                  | F1: 0.8488 | Acc: 0.8509
+  titulo_subtitulo     | Melhor: SVM                  | F1: 0.9185 | Acc: 0.9185
+  completo             | Melhor: SVM                  | F1: 0.9450 | Acc: 0.9450
+
+Dataset: dataset_sem_caracteres_especiais_lemmatizado
+--------------------------------------------------------------------------------
+  titulo               | Melhor: SVM                  | F1: 0.9131 | Acc: 0.9131
+  texto                | Melhor: SVM                  | F1: 0.9240 | Acc: 0.9240
+  subtitulo            | Melhor: SVM                  | F1: 0.8537 | Acc: 0.8559
+  titulo_subtitulo     | Melhor: SVM                  | F1: 0.9336 | Acc: 0.9336
+  completo             | Melhor: SVM                  | F1: 0.9622 | Acc: 0.9622
+
+Resultados salvos em: results_kalm\resultados_completos_kalm.pkl
+
+================================================================================
+PROCESSAMENTO CONCLUÍDO!
+Fim: 2025-10-13 21:07:09
+================================================================================

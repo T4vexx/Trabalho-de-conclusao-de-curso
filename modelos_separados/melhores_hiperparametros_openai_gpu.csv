@@ -1,0 +1,11 @@
+Dataset,Method,Classifier,Test_F1,Test_Accuracy,Used_GPU,Best_Params
+dataset_sem_caracteres_especiais_lemmatizado,RandomSearch,LogisticRegression,0.9832003359932802,0.9832003359932802,True,"{'C': np.float64(37.55401188473625), 'penalty': np.str_('l2'), 'max_iter': np.int64(2000)}"
+dataset_sem_caracteres_especiais_lemmatizado,GridSearch,LogisticRegression,0.9811003113170526,0.9811003779924401,True,"{'C': 100.0, 'penalty': 'l2', 'max_iter': 2000}"
+dataset_sem_caracteres_especiais_lemmatizado,GridSearch,SVM,0.9798403818558384,0.9798404031919362,True,"{'C': 10.0, 'kernel': 'linear', 'class_weight': None}"
+dataset_sem_caracteres_especiais_lemmatizado,RandomSearch,SVM,0.9790003755413967,0.9790004199916001,True,"{'C': np.float64(18.44347898661638), 'kernel': np.str_('linear'), 'class_weight': 'balanced'}"
+dataset_sem_stopwords_lemmatizado,RandomSearch,SVM,0.9693398993004682,0.9693406131877362,True,"{'C': np.float64(18.44347898661638), 'kernel': np.str_('linear'), 'class_weight': 'balanced'}"
+dataset_sem_stopwords_lemmatizado,RandomSearch,LogisticRegression,0.9685004632983432,0.9685006299874003,True,"{'C': np.float64(95.17143064099162), 'penalty': np.str_('l2'), 'max_iter': np.int64(2000)}"
+dataset_sem_stopwords_lemmatizado,GridSearch,LogisticRegression,0.9672404124870727,0.9672406551868963,True,"{'C': 10.0, 'penalty': 'l2', 'max_iter': 2000}"
+dataset_sem_stopwords_lemmatizado,GridSearch,SVM,0.9655597410811385,0.9655606887862243,True,"{'C': 10.0, 'kernel': 'linear', 'class_weight': None}"
+dataset_sem_caracteres_especiais_lemmatizado,RandomSearch,RandomForest,0.9420390121501836,0.9420411591768164,True,"{'n_estimators': 363, 'max_depth': np.int64(50), 'min_samples_split': 4, 'max_features': np.str_('log2')}"
+dataset_sem_stopwords_lemmatizado,RandomSearch,RandomForest,0.9197617044568446,0.9197816043679127,True,"{'n_estimators': 202, 'max_depth': np.int64(20), 'min_samples_split': 9, 'max_features': np.str_('sqrt')}"

@@ -1,0 +1,393 @@
+================================================================================
+TF-IDF: HYPERPARAMETER TUNING (VERSÃO OTIMIZADA/RÁPIDA)
+Otimizações:
+  • 3-fold CV (ao invés de 5-fold)
+  • SVM: apenas kernel linear + grid reduzido para RBF
+  • RandomForest: Random Search ao invés de Grid
+  • LogisticRegression: apenas L2 com lbfgs
+  • Grids reduzidos (~200 testes totais)
+Início: 2025-10-21 08:30:07
+================================================================================
+
+
+################################################################################
+DATASET: dataset_sem_stopwords_lemmatizado
+################################################################################
+
+Combinação: completo - ['Titulo', 'Subtitulo', 'Noticia']
+
+Gerando embeddings TF-IDF otimizados...
+Dimensão TF-IDF: (11902, 10000)
+
+
+********************************************************************************
+CLASSIFICADOR: SVM (LINEAR)
+********************************************************************************
+
+================================================================================
+GRID SEARCH (OTIMIZADO): SVM
+================================================================================
+Combinações a testar: 8 (com 5-fold CV = 40 fits)
+Iniciando Grid Search (3-fold CV)...
+
+✅ Grid Search concluído!
+
+🏆 MELHORES HIPERPARÂMETROS:
+  • C: 1.0
+  • class_weight: None
+  • kernel: linear
+
+📊 Score de validação cruzada (CV): 0.9804
+
+📈 PERFORMANCE NO TESTE:
+  • Accuracy:  0.9773
+  • Precision: 0.9773
+  • Recall:    0.9773
+  • F1-Score:  0.9773
+
+================================================================================
+RANDOM SEARCH (OTIMIZADO): SVM
+================================================================================
+Testando 20 combinações aleatórias (3-fold CV)...
+
+✅ Random Search concluído!
+
+🏆 MELHORES HIPERPARÂMETROS:
+  • C: 37.55401188473625
+  • class_weight: None
+  • kernel: linear
+
+📊 Score de validação cruzada (CV): 0.9775
+
+📈 PERFORMANCE NO TESTE:
+  • Accuracy:  0.9752
+  • Precision: 0.9752
+  • Recall:    0.9752
+  • F1-Score:  0.9752
+
+
+********************************************************************************
+CLASSIFICADOR: SVM (RBF - OPCIONAL)
+********************************************************************************
+
+================================================================================
+GRID SEARCH (OTIMIZADO): SVM_RBF
+================================================================================
+Combinações a testar: 4 (com 5-fold CV = 20 fits)
+Iniciando Grid Search (3-fold CV)...
+
+✅ Grid Search concluído!
+
+🏆 MELHORES HIPERPARÂMETROS:
+  • C: 10.0
+  • class_weight: balanced
+  • gamma: scale
+  • kernel: rbf
+
+📊 Score de validação cruzada (CV): 0.9794
+
+📈 PERFORMANCE NO TESTE:
+  • Accuracy:  0.9769
+  • Precision: 0.9769
+  • Recall:    0.9769
+  • F1-Score:  0.9769
+
+
+********************************************************************************
+CLASSIFICADOR: RandomForest
+********************************************************************************
+
+================================================================================
+RANDOM SEARCH (OTIMIZADO): RandomForest
+================================================================================
+Testando 50 combinações aleatórias (3-fold CV)...
+
+✅ Random Search concluído!
+
+🏆 MELHORES HIPERPARÂMETROS:
+  • class_weight: None
+  • criterion: gini
+  • max_depth: None
+  • max_features: sqrt
+  • min_samples_leaf: 3
+  • min_samples_split: 9
+  • n_estimators: 288
+
+📊 Score de validação cruzada (CV): 0.9681
+
+📈 PERFORMANCE NO TESTE:
+  • Accuracy:  0.9681
+  • Precision: 0.9681
+  • Recall:    0.9681
+  • F1-Score:  0.9681
+
+
+********************************************************************************
+CLASSIFICADOR: LogisticRegression
+********************************************************************************
+
+================================================================================
+GRID SEARCH (OTIMIZADO): LogisticRegression
+================================================================================
+Combinações a testar: 8 (com 5-fold CV = 40 fits)
+Iniciando Grid Search (3-fold CV)...
+
+✅ Grid Search concluído!
+
+🏆 MELHORES HIPERPARÂMETROS:
+  • C: 100.0
+  • class_weight: balanced
+  • max_iter: 1000
+  • penalty: l2
+  • solver: lbfgs
+
+📊 Score de validação cruzada (CV): 0.9796
+
+📈 PERFORMANCE NO TESTE:
+  • Accuracy:  0.9765
+  • Precision: 0.9765
+  • Recall:    0.9765
+  • F1-Score:  0.9765
+
+================================================================================
+RANDOM SEARCH (OTIMIZADO): LogisticRegression
+================================================================================
+Testando 20 combinações aleatórias (3-fold CV)...
+
+✅ Random Search concluído!
+
+🏆 MELHORES HIPERPARÂMETROS:
+  • C: 51.523443841361164
+  • class_weight: balanced
+  • max_iter: 1000
+  • penalty: l2
+  • solver: lbfgs
+
+📊 Score de validação cruzada (CV): 0.9799
+
+📈 PERFORMANCE NO TESTE:
+  • Accuracy:  0.9765
+  • Precision: 0.9765
+  • Recall:    0.9765
+  • F1-Score:  0.9765
+
+
+################################################################################
+DATASET: dataset_sem_caracteres_especiais_lemmatizado
+################################################################################
+
+Combinação: completo - ['Titulo', 'Subtitulo', 'Noticia']
+
+Gerando embeddings TF-IDF otimizados...
+Dimensão TF-IDF: (11902, 10000)
+
+
+********************************************************************************
+CLASSIFICADOR: SVM (LINEAR)
+********************************************************************************
+
+================================================================================
+GRID SEARCH (OTIMIZADO): SVM
+================================================================================
+Combinações a testar: 8 (com 5-fold CV = 40 fits)
+Iniciando Grid Search (3-fold CV)...
+
+✅ Grid Search concluído!
+
+🏆 MELHORES HIPERPARÂMETROS:
+  • C: 1.0
+  • class_weight: None
+  • kernel: linear
+
+📊 Score de validação cruzada (CV): 0.9811
+
+📈 PERFORMANCE NO TESTE:
+  • Accuracy:  0.9798
+  • Precision: 0.9799
+  • Recall:    0.9798
+  • F1-Score:  0.9798
+
+================================================================================
+RANDOM SEARCH (OTIMIZADO): SVM
+================================================================================
+Testando 20 combinações aleatórias (3-fold CV)...
+
+✅ Random Search concluído!
+
+🏆 MELHORES HIPERPARÂMETROS:
+  • C: 37.55401188473625
+  • class_weight: None
+  • kernel: linear
+
+📊 Score de validação cruzada (CV): 0.9791
+
+📈 PERFORMANCE NO TESTE:
+  • Accuracy:  0.9782
+  • Precision: 0.9782
+  • Recall:    0.9782
+  • F1-Score:  0.9782
+
+
+********************************************************************************
+CLASSIFICADOR: SVM (RBF - OPCIONAL)
+********************************************************************************
+
+================================================================================
+GRID SEARCH (OTIMIZADO): SVM_RBF
+================================================================================
+Combinações a testar: 4 (com 5-fold CV = 20 fits)
+Iniciando Grid Search (3-fold CV)...
+
+✅ Grid Search concluído!
+
+🏆 MELHORES HIPERPARÂMETROS:
+  • C: 10.0
+  • class_weight: balanced
+  • gamma: scale
+  • kernel: rbf
+
+📊 Score de validação cruzada (CV): 0.9805
+
+📈 PERFORMANCE NO TESTE:
+  • Accuracy:  0.9777
+  • Precision: 0.9778
+  • Recall:    0.9777
+  • F1-Score:  0.9777
+
+
+********************************************************************************
+CLASSIFICADOR: RandomForest
+********************************************************************************
+
+================================================================================
+RANDOM SEARCH (OTIMIZADO): RandomForest
+================================================================================
+Testando 50 combinações aleatórias (3-fold CV)...
+
+✅ Random Search concluído!
+
+🏆 MELHORES HIPERPARÂMETROS:
+  • class_weight: None
+  • criterion: gini
+  • max_depth: None
+  • max_features: sqrt
+  • min_samples_leaf: 3
+  • min_samples_split: 9
+  • n_estimators: 288
+
+📊 Score de validação cruzada (CV): 0.9693
+
+📈 PERFORMANCE NO TESTE:
+  • Accuracy:  0.9702
+  • Precision: 0.9702
+  • Recall:    0.9702
+  • F1-Score:  0.9702
+
+
+********************************************************************************
+CLASSIFICADOR: LogisticRegression
+********************************************************************************
+
+================================================================================
+GRID SEARCH (OTIMIZADO): LogisticRegression
+================================================================================
+Combinações a testar: 8 (com 5-fold CV = 40 fits)
+Iniciando Grid Search (3-fold CV)...
+
+✅ Grid Search concluído!
+
+🏆 MELHORES HIPERPARÂMETROS:
+  • C: 100.0
+  • class_weight: balanced
+  • max_iter: 1000
+  • penalty: l2
+  • solver: lbfgs
+
+📊 Score de validação cruzada (CV): 0.9805
+
+📈 PERFORMANCE NO TESTE:
+  • Accuracy:  0.9782
+  • Precision: 0.9782
+  • Recall:    0.9782
+  • F1-Score:  0.9782
+
+================================================================================
+RANDOM SEARCH (OTIMIZADO): LogisticRegression
+================================================================================
+Testando 20 combinações aleatórias (3-fold CV)...
+
+✅ Random Search concluído!
+
+🏆 MELHORES HIPERPARÂMETROS:
+  • C: 44.683275285359116
+  • class_weight: None
+  • max_iter: 1000
+  • penalty: l2
+  • solver: lbfgs
+
+📊 Score de validação cruzada (CV): 0.9808
+
+📈 PERFORMANCE NO TESTE:
+  • Accuracy:  0.9777
+  • Precision: 0.9778
+  • Recall:    0.9777
+  • F1-Score:  0.9777
+
+
+================================================================================
+RESUMO FINAL - MELHORES HIPERPARÂMETROS
+================================================================================
+
+                                     Dataset Combination       Method         Classifier  CV_Score  Test_F1  Test_Accuracy  N_Combinations                                                                                                                                                Best_Params
+           dataset_sem_stopwords_lemmatizado    completo   GridSearch                SVM  0.980358  0.97732       0.977320               8                                                                                                       {'C': 1.0, 'class_weight': None, 'kernel': 'linear'}
+           dataset_sem_stopwords_lemmatizado    completo RandomSearch                SVM  0.977523  0.97522       0.975220              20                                                                             {'C': np.float64(37.55401188473625), 'class_weight': None, 'kernel': 'linear'}
+           dataset_sem_stopwords_lemmatizado    completo   GridSearch            SVM_RBF  0.979413  0.97690       0.976900               4                                                                                 {'C': 10.0, 'class_weight': 'balanced', 'gamma': 'scale', 'kernel': 'rbf'}
+           dataset_sem_stopwords_lemmatizado    completo RandomSearch       RandomForest  0.968068  0.96808       0.968081              50 {'class_weight': None, 'criterion': 'gini', 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 9, 'n_estimators': 288}
+           dataset_sem_stopwords_lemmatizado    completo   GridSearch LogisticRegression  0.979623  0.97648       0.976480               8                                                             {'C': 100.0, 'class_weight': 'balanced', 'max_iter': 1000, 'penalty': 'l2', 'solver': 'lbfgs'}
+           dataset_sem_stopwords_lemmatizado    completo RandomSearch LogisticRegression  0.979938  0.97648       0.976480              20                                    {'C': np.float64(51.523443841361164), 'class_weight': 'balanced', 'max_iter': 1000, 'penalty': 'l2', 'solver': 'lbfgs'}
+dataset_sem_caracteres_especiais_lemmatizado    completo   GridSearch                SVM  0.981093  0.97984       0.979840               8                                                                                                       {'C': 1.0, 'class_weight': None, 'kernel': 'linear'}
+dataset_sem_caracteres_especiais_lemmatizado    completo RandomSearch                SVM  0.979098  0.97816       0.978160              20                                                                             {'C': np.float64(37.55401188473625), 'class_weight': None, 'kernel': 'linear'}
+dataset_sem_caracteres_especiais_lemmatizado    completo   GridSearch            SVM_RBF  0.980463  0.97774       0.977740               4                                                                                 {'C': 10.0, 'class_weight': 'balanced', 'gamma': 'scale', 'kernel': 'rbf'}
+dataset_sem_caracteres_especiais_lemmatizado    completo RandomSearch       RandomForest  0.969328  0.97018       0.970181              50 {'class_weight': None, 'criterion': 'gini', 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 9, 'n_estimators': 288}
+dataset_sem_caracteres_especiais_lemmatizado    completo   GridSearch LogisticRegression  0.980464  0.97816       0.978160               8                                                             {'C': 100.0, 'class_weight': 'balanced', 'max_iter': 1000, 'penalty': 'l2', 'solver': 'lbfgs'}
+dataset_sem_caracteres_especiais_lemmatizado    completo RandomSearch LogisticRegression  0.980779  0.97774       0.977740              20                                          {'C': np.float64(44.683275285359116), 'class_weight': None, 'max_iter': 1000, 'penalty': 'l2', 'solver': 'lbfgs'}
+
+✅ Resultados salvos em: results_tfidf_hypertuning_fast/melhores_hiperparametros_tfidf.csv
+
+📊 Total de combinações testadas: 220
+
+
+================================================================================
+🏆 CAMPEÕES POR CLASSIFICADOR:
+================================================================================
+
+SVM:
+  Método: GridSearch
+  F1-Score: 0.9798
+  CV Score: 0.9811
+  Parâmetros: {'C': 1.0, 'class_weight': None, 'kernel': 'linear'}
+
+SVM_RBF:
+  Método: GridSearch
+  F1-Score: 0.9777
+  CV Score: 0.9805
+  Parâmetros: {'C': 10.0, 'class_weight': 'balanced', 'gamma': 'scale', 'kernel': 'rbf'}
+
+RandomForest:
+  Método: RandomSearch
+  F1-Score: 0.9702
+  CV Score: 0.9693
+  Parâmetros: {'class_weight': None, 'criterion': 'gini', 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 9, 'n_estimators': 288}
+
+LogisticRegression:
+  Método: GridSearch
+  F1-Score: 0.9782
+  CV Score: 0.9805
+  Parâmetros: {'C': 100.0, 'class_weight': 'balanced', 'max_iter': 1000, 'penalty': 'l2', 'solver': 'lbfgs'}
+
+✅ Modelos salvos em: results_tfidf_hypertuning_fast/best_models_tfidf.pkl
+
+================================================================================
+PROCESSAMENTO CONCLUÍDO!
+Fim: 2025-10-21 08:51:58
+================================================================================

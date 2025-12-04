@@ -1,0 +1,28 @@
+================================================================================
+TREINAMENTO COM OPENAI EMBEDDINGS (text-embedding-3-small)
+Início: 2025-10-12 20:18:06
+================================================================================
+
+✓ API Key OpenAI configurada corretamente
+✓ Modelo: text-embedding-3-small
+✓ Dimensão dos embeddings: 1536
+
+================================================================================
+PROCESSANDO DATASET: dataset_sem_stopwords_lemmatizado
+================================================================================
+
+Carregando ../../bases_preprocessados/dataset_sem_stopwords_lemmatizado.xlsx...
+Dataset carregado: 11902 linhas
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo - Campos: ['Titulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings OpenAI (text-embedding-3-small)...
+    Dimensão: 1536
+    Batch size: 100
+    Total de textos: 11902
+    Processando em 120 batches de até 100 textos
+    ERRO no batch 1: Error code: 400 - {'error': {'message': "'$.input' is invalid. Please check the API reference: https://platform.openai.com/docs/api-reference.", 'type': 'invalid_request_error', 'param': None, 'code': None}}
+    Tentando textos individuais...
+      ERRO: Error code: 400 - {'error': {'message': "'$.input' is invalid. Please check the API reference: https://platform.openai.com/docs/api-reference.", 'type': 'invalid_request_error', 'param': None, 'code': None}}, usando vetor zero

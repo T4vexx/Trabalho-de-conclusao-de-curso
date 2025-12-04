@@ -1,0 +1,440 @@
+================================================================================
+TREINAMENTO COM GTE-MODERNBERT-BASE
+Alibaba-NLP | 149M params | Dim: 768 | MODERN ARCHITECTURE
+Início: 2025-10-14 00:04:21
+================================================================================
+
+✅ Dispositivo: cuda
+✅ GPU: NVIDIA GeForce RTX 3060
+✅ Memória GPU: 12.88 GB
+✅ Otimizações CUDA ativadas
+
+📥 Carregando GTE-ModernBERT: Alibaba-NLP/gte-modernbert-base
+⚠️  ModernBERT = RoPE + Local-Global Attention + Flash Attention!
+
+✓ Modelo carregado!
+✓ Device: cuda:0
+✓ Dimensão: 768
+✓ Max seq length: 1024 (suporta 8192!)
+✓ Batch size: 96
+✓ Arquitetura: 22 layers ModernBERT
+✓ Features: RoPE, alternating attention, unpadding
+
+📊 VRAM alocada: 0.62 GB
+
+🧪 Teste de velocidade...
+   200 textos em 0.26s = 780.0 txt/s
+   ✅ Velocidade EXCELENTE (arquitetura moderna)!
+   Tempo estimado: ~0.3 minutos
+
+================================================================================
+PROCESSANDO DATASET: dataset_sem_stopwords_lemmatizado
+================================================================================
+
+Carregando ../../bases_preprocessados/dataset_sem_stopwords_lemmatizado.xlsx...
+Dataset carregado: 11902 linhas
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo - Campos: ['Titulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings GTE-ModernBERT (USANDO GPU!)...
+    Modelo: Alibaba-NLP/gte-modernbert-base
+    Total de textos: 11902
+    Batch size: 96
+    Device: cuda
+    VRAM antes: 0.63 GB
+    VRAM depois: 0.63 GB
+    ✓ Embeddings gerados: (11902, 768)
+  Embeddings salvos em: embeddings_gte\embeddings_dataset_sem_stopwords_lemmatizado_titulo.npy
+  ✓ Cache GPU limpo (usando 0.63 GB)
+  Dimensão dos embeddings: (11902, 768)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.8198
+      Precision: 0.8238
+      Recall: 0.8198
+      F1-Score: 0.8193
+    Treinando RandomForest...
+      Accuracy: 0.7896
+      Precision: 0.7910
+      Recall: 0.7896
+      F1-Score: 0.7893
+    Treinando LogisticRegression...
+      Accuracy: 0.8148
+      Precision: 0.8171
+      Recall: 0.8148
+      F1-Score: 0.8145
+  [CHECKPOINT] Progresso salvo para titulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: texto - Campos: ['Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings GTE-ModernBERT (USANDO GPU!)...
+    Modelo: Alibaba-NLP/gte-modernbert-base
+    Total de textos: 11902
+    Batch size: 96
+    Device: cuda
+    VRAM antes: 0.63 GB
+    VRAM depois: 0.63 GB
+    ✓ Embeddings gerados: (11902, 768)
+  Embeddings salvos em: embeddings_gte\embeddings_dataset_sem_stopwords_lemmatizado_texto.npy
+  ✓ Cache GPU limpo (usando 0.63 GB)
+  Dimensão dos embeddings: (11902, 768)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.8887
+      Precision: 0.8887
+      Recall: 0.8887
+      F1-Score: 0.8887
+    Treinando RandomForest...
+      Accuracy: 0.8438
+      Precision: 0.8438
+      Recall: 0.8438
+      F1-Score: 0.8438
+    Treinando LogisticRegression...
+      Accuracy: 0.8803
+      Precision: 0.8803
+      Recall: 0.8803
+      F1-Score: 0.8803
+  [CHECKPOINT] Progresso salvo para texto
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: subtitulo - Campos: ['Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings GTE-ModernBERT (USANDO GPU!)...
+    Modelo: Alibaba-NLP/gte-modernbert-base
+    Total de textos: 11902
+    Batch size: 96
+    Device: cuda
+    VRAM antes: 0.63 GB
+    VRAM depois: 0.63 GB
+    ✓ Embeddings gerados: (11902, 768)
+  Embeddings salvos em: embeddings_gte\embeddings_dataset_sem_stopwords_lemmatizado_subtitulo.npy
+  ✓ Cache GPU limpo (usando 0.63 GB)
+  Dimensão dos embeddings: (11902, 768)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.8333
+      Precision: 0.8524
+      Recall: 0.8333
+      F1-Score: 0.8310
+    Treinando RandomForest...
+      Accuracy: 0.8144
+      Precision: 0.8226
+      Recall: 0.8144
+      F1-Score: 0.8132
+    Treinando LogisticRegression...
+      Accuracy: 0.8307
+      Precision: 0.8469
+      Recall: 0.8307
+      F1-Score: 0.8288
+  [CHECKPOINT] Progresso salvo para subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo_subtitulo - Campos: ['Titulo', 'Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings GTE-ModernBERT (USANDO GPU!)...
+    Modelo: Alibaba-NLP/gte-modernbert-base
+    Total de textos: 11902
+    Batch size: 96
+    Device: cuda
+    VRAM antes: 0.63 GB
+    VRAM depois: 0.63 GB
+    ✓ Embeddings gerados: (11902, 768)
+  Embeddings salvos em: embeddings_gte\embeddings_dataset_sem_stopwords_lemmatizado_titulo_subtitulo.npy
+  ✓ Cache GPU limpo (usando 0.63 GB)
+  Dimensão dos embeddings: (11902, 768)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.8841
+      Precision: 0.8880
+      Recall: 0.8841
+      F1-Score: 0.8838
+    Treinando RandomForest...
+      Accuracy: 0.8715
+      Precision: 0.8727
+      Recall: 0.8715
+      F1-Score: 0.8714
+    Treinando LogisticRegression...
+      Accuracy: 0.8824
+      Precision: 0.8844
+      Recall: 0.8824
+      F1-Score: 0.8823
+  [CHECKPOINT] Progresso salvo para titulo_subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: completo - Campos: ['Titulo', 'Subtitulo', 'Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings GTE-ModernBERT (USANDO GPU!)...
+    Modelo: Alibaba-NLP/gte-modernbert-base
+    Total de textos: 11902
+    Batch size: 96
+    Device: cuda
+    VRAM antes: 0.63 GB
+    VRAM depois: 0.63 GB
+    ✓ Embeddings gerados: (11902, 768)
+  Embeddings salvos em: embeddings_gte\embeddings_dataset_sem_stopwords_lemmatizado_completo.npy
+  ✓ Cache GPU limpo (usando 0.63 GB)
+  Dimensão dos embeddings: (11902, 768)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9089
+      Precision: 0.9089
+      Recall: 0.9089
+      F1-Score: 0.9089
+    Treinando RandomForest...
+      Accuracy: 0.8492
+      Precision: 0.8494
+      Recall: 0.8492
+      F1-Score: 0.8492
+    Treinando LogisticRegression...
+      Accuracy: 0.8967
+      Precision: 0.8967
+      Recall: 0.8967
+      F1-Score: 0.8967
+  [CHECKPOINT] Progresso salvo para completo
+
+================================================================================
+PROCESSANDO DATASET: dataset_sem_caracteres_especiais_lemmatizado
+================================================================================
+
+Carregando ../../bases_preprocessados/dataset_sem_caracteres_especiais_lemmatizado.xlsx...
+Dataset carregado: 11902 linhas
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo - Campos: ['Titulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings GTE-ModernBERT (USANDO GPU!)...
+    Modelo: Alibaba-NLP/gte-modernbert-base
+    Total de textos: 11902
+    Batch size: 96
+    Device: cuda
+    VRAM antes: 0.63 GB
+    VRAM depois: 0.63 GB
+    ✓ Embeddings gerados: (11902, 768)
+  Embeddings salvos em: embeddings_gte\embeddings_dataset_sem_caracteres_especiais_lemmatizado_titulo.npy
+  ✓ Cache GPU limpo (usando 0.63 GB)
+  Dimensão dos embeddings: (11902, 768)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.8593
+      Precision: 0.8626
+      Recall: 0.8593
+      F1-Score: 0.8590
+    Treinando RandomForest...
+      Accuracy: 0.8244
+      Precision: 0.8270
+      Recall: 0.8244
+      F1-Score: 0.8241
+    Treinando LogisticRegression...
+      Accuracy: 0.8551
+      Precision: 0.8583
+      Recall: 0.8551
+      F1-Score: 0.8548
+  [CHECKPOINT] Progresso salvo para titulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: texto - Campos: ['Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings GTE-ModernBERT (USANDO GPU!)...
+    Modelo: Alibaba-NLP/gte-modernbert-base
+    Total de textos: 11902
+    Batch size: 96
+    Device: cuda
+    VRAM antes: 0.63 GB
+    VRAM depois: 0.63 GB
+    ✓ Embeddings gerados: (11902, 768)
+  Embeddings salvos em: embeddings_gte\embeddings_dataset_sem_caracteres_especiais_lemmatizado_texto.npy
+  ✓ Cache GPU limpo (usando 0.63 GB)
+  Dimensão dos embeddings: (11902, 768)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.8916
+      Precision: 0.8917
+      Recall: 0.8916
+      F1-Score: 0.8916
+    Treinando RandomForest...
+      Accuracy: 0.8547
+      Precision: 0.8548
+      Recall: 0.8547
+      F1-Score: 0.8547
+    Treinando LogisticRegression...
+      Accuracy: 0.8849
+      Precision: 0.8850
+      Recall: 0.8849
+      F1-Score: 0.8849
+  [CHECKPOINT] Progresso salvo para texto
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: subtitulo - Campos: ['Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings GTE-ModernBERT (USANDO GPU!)...
+    Modelo: Alibaba-NLP/gte-modernbert-base
+    Total de textos: 11902
+    Batch size: 96
+    Device: cuda
+    VRAM antes: 0.63 GB
+    VRAM depois: 0.63 GB
+    ✓ Embeddings gerados: (11902, 768)
+  Embeddings salvos em: embeddings_gte\embeddings_dataset_sem_caracteres_especiais_lemmatizado_subtitulo.npy
+  ✓ Cache GPU limpo (usando 0.63 GB)
+  Dimensão dos embeddings: (11902, 768)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.8442
+      Precision: 0.8661
+      Recall: 0.8442
+      F1-Score: 0.8418
+    Treinando RandomForest...
+      Accuracy: 0.8198
+      Precision: 0.8285
+      Recall: 0.8198
+      F1-Score: 0.8186
+    Treinando LogisticRegression...
+      Accuracy: 0.8337
+      Precision: 0.8504
+      Recall: 0.8337
+      F1-Score: 0.8317
+  [CHECKPOINT] Progresso salvo para subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo_subtitulo - Campos: ['Titulo', 'Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings GTE-ModernBERT (USANDO GPU!)...
+    Modelo: Alibaba-NLP/gte-modernbert-base
+    Total de textos: 11902
+    Batch size: 96
+    Device: cuda
+    VRAM antes: 0.63 GB
+    VRAM depois: 0.63 GB
+    ✓ Embeddings gerados: (11902, 768)
+  Embeddings salvos em: embeddings_gte\embeddings_dataset_sem_caracteres_especiais_lemmatizado_titulo_subtitulo.npy
+  ✓ Cache GPU limpo (usando 0.63 GB)
+  Dimensão dos embeddings: (11902, 768)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.8971
+      Precision: 0.9005
+      Recall: 0.8971
+      F1-Score: 0.8969
+    Treinando RandomForest...
+      Accuracy: 0.8656
+      Precision: 0.8683
+      Recall: 0.8656
+      F1-Score: 0.8654
+    Treinando LogisticRegression...
+      Accuracy: 0.8933
+      Precision: 0.8965
+      Recall: 0.8933
+      F1-Score: 0.8931
+  [CHECKPOINT] Progresso salvo para titulo_subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: completo - Campos: ['Titulo', 'Subtitulo', 'Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings GTE-ModernBERT (USANDO GPU!)...
+    Modelo: Alibaba-NLP/gte-modernbert-base
+    Total de textos: 11902
+    Batch size: 96
+    Device: cuda
+    VRAM antes: 0.63 GB
+    VRAM depois: 0.63 GB
+    ✓ Embeddings gerados: (11902, 768)
+  Embeddings salvos em: embeddings_gte\embeddings_dataset_sem_caracteres_especiais_lemmatizado_completo.npy
+  ✓ Cache GPU limpo (usando 0.63 GB)
+  Dimensão dos embeddings: (11902, 768)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9185
+      Precision: 0.9185
+      Recall: 0.9185
+      F1-Score: 0.9185
+    Treinando RandomForest...
+      Accuracy: 0.8648
+      Precision: 0.8648
+      Recall: 0.8648
+      F1-Score: 0.8648
+    Treinando LogisticRegression...
+      Accuracy: 0.9097
+      Precision: 0.9097
+      Recall: 0.9097
+      F1-Score: 0.9097
+  [CHECKPOINT] Progresso salvo para completo
+
+
+================================================================================
+RESUMO GERAL DOS RESULTADOS
+================================================================================
+
+Resultados salvos em: results_gte\resultados_gte.csv
+
+                                     Dataset      Combination         Classifier  Accuracy  Precision   Recall  F1-Score  Embedding_Dim
+           dataset_sem_stopwords_lemmatizado           titulo                SVM  0.819824   0.823752 0.819824  0.819281            768
+           dataset_sem_stopwords_lemmatizado           titulo       RandomForest  0.789584   0.791005 0.789584  0.789331            768
+           dataset_sem_stopwords_lemmatizado           titulo LogisticRegression  0.814784   0.817072 0.814784  0.814453            768
+           dataset_sem_stopwords_lemmatizado            texto                SVM  0.888702   0.888705 0.888702  0.888702            768
+           dataset_sem_stopwords_lemmatizado            texto       RandomForest  0.843763   0.843824 0.843763  0.843756            768
+           dataset_sem_stopwords_lemmatizado            texto LogisticRegression  0.880302   0.880309 0.880302  0.880302            768
+           dataset_sem_stopwords_lemmatizado        subtitulo                SVM  0.833263   0.852351 0.833263  0.830984            768
+           dataset_sem_stopwords_lemmatizado        subtitulo       RandomForest  0.814364   0.822592 0.814364  0.813180            768
+           dataset_sem_stopwords_lemmatizado        subtitulo LogisticRegression  0.830743   0.846923 0.830743  0.828756            768
+           dataset_sem_stopwords_lemmatizado titulo_subtitulo                SVM  0.884082   0.888029 0.884082  0.883790            768
+           dataset_sem_stopwords_lemmatizado titulo_subtitulo       RandomForest  0.871483   0.872702 0.871483  0.871379            768
+           dataset_sem_stopwords_lemmatizado titulo_subtitulo LogisticRegression  0.882402   0.884412 0.882402  0.882251            768
+           dataset_sem_stopwords_lemmatizado         completo                SVM  0.908862   0.908869 0.908862  0.908862            768
+           dataset_sem_stopwords_lemmatizado         completo       RandomForest  0.849223   0.849352 0.849223  0.849208            768
+           dataset_sem_stopwords_lemmatizado         completo LogisticRegression  0.896682   0.896683 0.896682  0.896682            768
+dataset_sem_caracteres_especiais_lemmatizado           titulo                SVM  0.859303   0.862575 0.859303  0.858988            768
+dataset_sem_caracteres_especiais_lemmatizado           titulo       RandomForest  0.824444   0.827043 0.824444  0.824098            768
+dataset_sem_caracteres_especiais_lemmatizado           titulo LogisticRegression  0.855103   0.858337 0.855103  0.854779            768
+dataset_sem_caracteres_especiais_lemmatizado            texto                SVM  0.891642   0.891697 0.891642  0.891639            768
+dataset_sem_caracteres_especiais_lemmatizado            texto       RandomForest  0.854683   0.854763 0.854683  0.854674            768
+dataset_sem_caracteres_especiais_lemmatizado            texto LogisticRegression  0.884922   0.884976 0.884922  0.884919            768
+dataset_sem_caracteres_especiais_lemmatizado        subtitulo                SVM  0.844183   0.866067 0.844183  0.841829            768
+dataset_sem_caracteres_especiais_lemmatizado        subtitulo       RandomForest  0.819824   0.828467 0.819824  0.818638            768
+dataset_sem_caracteres_especiais_lemmatizado        subtitulo LogisticRegression  0.833683   0.850409 0.833683  0.831684            768
+dataset_sem_caracteres_especiais_lemmatizado titulo_subtitulo                SVM  0.897102   0.900463 0.897102  0.896888            768
+dataset_sem_caracteres_especiais_lemmatizado titulo_subtitulo       RandomForest  0.865603   0.868311 0.865603  0.865358            768
+dataset_sem_caracteres_especiais_lemmatizado titulo_subtitulo LogisticRegression  0.893322   0.896469 0.893322  0.893112            768
+dataset_sem_caracteres_especiais_lemmatizado         completo                SVM  0.918522   0.918523 0.918522  0.918522            768
+dataset_sem_caracteres_especiais_lemmatizado         completo       RandomForest  0.864763   0.864788 0.864763  0.864760            768
+dataset_sem_caracteres_especiais_lemmatizado         completo LogisticRegression  0.909702   0.909716 0.909702  0.909701            768
+
+
+================================================================================
+MELHORES RESULTADOS POR COMBINAÇÃO
+================================================================================
+
+
+Dataset: dataset_sem_stopwords_lemmatizado
+--------------------------------------------------------------------------------
+  titulo               | Melhor: SVM                  | F1: 0.8193 | Acc: 0.8198
+  texto                | Melhor: SVM                  | F1: 0.8887 | Acc: 0.8887
+  subtitulo            | Melhor: SVM                  | F1: 0.8310 | Acc: 0.8333
+  titulo_subtitulo     | Melhor: SVM                  | F1: 0.8838 | Acc: 0.8841
+  completo             | Melhor: SVM                  | F1: 0.9089 | Acc: 0.9089
+
+Dataset: dataset_sem_caracteres_especiais_lemmatizado
+--------------------------------------------------------------------------------
+  titulo               | Melhor: SVM                  | F1: 0.8590 | Acc: 0.8593
+  texto                | Melhor: SVM                  | F1: 0.8916 | Acc: 0.8916
+  subtitulo            | Melhor: SVM                  | F1: 0.8418 | Acc: 0.8442
+  titulo_subtitulo     | Melhor: SVM                  | F1: 0.8969 | Acc: 0.8971
+  completo             | Melhor: SVM                  | F1: 0.9185 | Acc: 0.9185
+
+Resultados salvos em: results_gte\resultados_completos_gte.pkl
+
+================================================================================
+PROCESSAMENTO CONCLUÍDO!
+Fim: 2025-10-14 00:17:11
+================================================================================

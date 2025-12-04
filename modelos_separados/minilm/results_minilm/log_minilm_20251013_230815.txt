@@ -1,0 +1,439 @@
+================================================================================
+TREINAMENTO COM ALL-MINILM-L6-V2
+Sentence-Transformers | 22M params | Dim: 384 | ULTRA RÁPIDO
+Início: 2025-10-13 23:08:15
+================================================================================
+
+✅ Dispositivo: cuda
+✅ GPU: NVIDIA GeForce RTX 3060
+✅ Memória GPU: 12.88 GB
+✅ Otimizações CUDA ativadas
+
+📥 Carregando MiniLM: sentence-transformers/all-MiniLM-L6-v2
+⚠️  Modelo MAIS LEVE (22M) - RAPIDÍSSIMO!
+
+✓ Modelo carregado!
+✓ Device: cuda:0
+✓ Dimensão: 384
+✓ Max seq length: 256
+✓ Batch size: 128 (GIGANTE!)
+✓ Treinado em 1B+ pares de sentenças
+
+📊 VRAM alocada: 0.09 GB (MÍNIMA!)
+
+🧪 Teste de velocidade...
+   200 textos em 0.18s = 1109.8 txt/s
+   ✅ Velocidade EXTREMA - mais rápido que todos!
+   Tempo estimado: ~0.2 minutos
+
+================================================================================
+PROCESSANDO DATASET: dataset_sem_stopwords_lemmatizado
+================================================================================
+
+Carregando ../../bases_preprocessados/dataset_sem_stopwords_lemmatizado.xlsx...
+Dataset carregado: 11902 linhas
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo - Campos: ['Titulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings MiniLM (USANDO GPU!)...
+    Modelo: sentence-transformers/all-MiniLM-L6-v2
+    Total de textos: 11902
+    Batch size: 128
+    Device: cuda
+    VRAM antes: 0.10 GB
+    VRAM depois: 0.10 GB
+    ✓ Embeddings gerados: (11902, 384)
+  Embeddings salvos em: embeddings_minilm\embeddings_dataset_sem_stopwords_lemmatizado_titulo.npy
+  ✓ Cache GPU limpo (usando 0.10 GB)
+  Dimensão dos embeddings: (11902, 384)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.8408
+      Precision: 0.8470
+      Recall: 0.8408
+      F1-Score: 0.8401
+    Treinando RandomForest...
+      Accuracy: 0.8148
+      Precision: 0.8164
+      Recall: 0.8148
+      F1-Score: 0.8146
+    Treinando LogisticRegression...
+      Accuracy: 0.8375
+      Precision: 0.8412
+      Recall: 0.8375
+      F1-Score: 0.8370
+  [CHECKPOINT] Progresso salvo para titulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: texto - Campos: ['Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings MiniLM (USANDO GPU!)...
+    Modelo: sentence-transformers/all-MiniLM-L6-v2
+    Total de textos: 11902
+    Batch size: 128
+    Device: cuda
+    VRAM antes: 0.10 GB
+    VRAM depois: 0.10 GB
+    ✓ Embeddings gerados: (11902, 384)
+  Embeddings salvos em: embeddings_minilm\embeddings_dataset_sem_stopwords_lemmatizado_texto.npy
+  ✓ Cache GPU limpo (usando 0.10 GB)
+  Dimensão dos embeddings: (11902, 384)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.8732
+      Precision: 0.8732
+      Recall: 0.8732
+      F1-Score: 0.8732
+    Treinando RandomForest...
+      Accuracy: 0.8270
+      Precision: 0.8279
+      Recall: 0.8270
+      F1-Score: 0.8268
+    Treinando LogisticRegression...
+      Accuracy: 0.8627
+      Precision: 0.8627
+      Recall: 0.8627
+      F1-Score: 0.8627
+  [CHECKPOINT] Progresso salvo para texto
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: subtitulo - Campos: ['Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings MiniLM (USANDO GPU!)...
+    Modelo: sentence-transformers/all-MiniLM-L6-v2
+    Total de textos: 11902
+    Batch size: 128
+    Device: cuda
+    VRAM antes: 0.10 GB
+    VRAM depois: 0.10 GB
+    ✓ Embeddings gerados: (11902, 384)
+  Embeddings salvos em: embeddings_minilm\embeddings_dataset_sem_stopwords_lemmatizado_subtitulo.npy
+  ✓ Cache GPU limpo (usando 0.10 GB)
+  Dimensão dos embeddings: (11902, 384)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.8274
+      Precision: 0.8456
+      Recall: 0.8274
+      F1-Score: 0.8251
+    Treinando RandomForest...
+      Accuracy: 0.8005
+      Precision: 0.8040
+      Recall: 0.8005
+      F1-Score: 0.7999
+    Treinando LogisticRegression...
+      Accuracy: 0.8173
+      Precision: 0.8309
+      Recall: 0.8173
+      F1-Score: 0.8154
+  [CHECKPOINT] Progresso salvo para subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo_subtitulo - Campos: ['Titulo', 'Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings MiniLM (USANDO GPU!)...
+    Modelo: sentence-transformers/all-MiniLM-L6-v2
+    Total de textos: 11902
+    Batch size: 128
+    Device: cuda
+    VRAM antes: 0.10 GB
+    VRAM depois: 0.10 GB
+    ✓ Embeddings gerados: (11902, 384)
+  Embeddings salvos em: embeddings_minilm\embeddings_dataset_sem_stopwords_lemmatizado_titulo_subtitulo.npy
+  ✓ Cache GPU limpo (usando 0.10 GB)
+  Dimensão dos embeddings: (11902, 384)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.8782
+      Precision: 0.8809
+      Recall: 0.8782
+      F1-Score: 0.8780
+    Treinando RandomForest...
+      Accuracy: 0.8564
+      Precision: 0.8575
+      Recall: 0.8564
+      F1-Score: 0.8562
+    Treinando LogisticRegression...
+      Accuracy: 0.8685
+      Precision: 0.8703
+      Recall: 0.8685
+      F1-Score: 0.8684
+  [CHECKPOINT] Progresso salvo para titulo_subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: completo - Campos: ['Titulo', 'Subtitulo', 'Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings MiniLM (USANDO GPU!)...
+    Modelo: sentence-transformers/all-MiniLM-L6-v2
+    Total de textos: 11902
+    Batch size: 128
+    Device: cuda
+    VRAM antes: 0.10 GB
+    VRAM depois: 0.10 GB
+    ✓ Embeddings gerados: (11902, 384)
+  Embeddings salvos em: embeddings_minilm\embeddings_dataset_sem_stopwords_lemmatizado_completo.npy
+  ✓ Cache GPU limpo (usando 0.10 GB)
+  Dimensão dos embeddings: (11902, 384)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9139
+      Precision: 0.9139
+      Recall: 0.9139
+      F1-Score: 0.9139
+    Treinando RandomForest...
+      Accuracy: 0.8496
+      Precision: 0.8505
+      Recall: 0.8496
+      F1-Score: 0.8495
+    Treinando LogisticRegression...
+      Accuracy: 0.9013
+      Precision: 0.9014
+      Recall: 0.9013
+      F1-Score: 0.9013
+  [CHECKPOINT] Progresso salvo para completo
+
+================================================================================
+PROCESSANDO DATASET: dataset_sem_caracteres_especiais_lemmatizado
+================================================================================
+
+Carregando ../../bases_preprocessados/dataset_sem_caracteres_especiais_lemmatizado.xlsx...
+Dataset carregado: 11902 linhas
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo - Campos: ['Titulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings MiniLM (USANDO GPU!)...
+    Modelo: sentence-transformers/all-MiniLM-L6-v2
+    Total de textos: 11902
+    Batch size: 128
+    Device: cuda
+    VRAM antes: 0.10 GB
+    VRAM depois: 0.10 GB
+    ✓ Embeddings gerados: (11902, 384)
+  Embeddings salvos em: embeddings_minilm\embeddings_dataset_sem_caracteres_especiais_lemmatizado_titulo.npy
+  ✓ Cache GPU limpo (usando 0.10 GB)
+  Dimensão dos embeddings: (11902, 384)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.8669
+      Precision: 0.8732
+      Recall: 0.8669
+      F1-Score: 0.8663
+    Treinando RandomForest...
+      Accuracy: 0.8270
+      Precision: 0.8300
+      Recall: 0.8270
+      F1-Score: 0.8266
+    Treinando LogisticRegression...
+      Accuracy: 0.8585
+      Precision: 0.8621
+      Recall: 0.8585
+      F1-Score: 0.8581
+  [CHECKPOINT] Progresso salvo para titulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: texto - Campos: ['Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings MiniLM (USANDO GPU!)...
+    Modelo: sentence-transformers/all-MiniLM-L6-v2
+    Total de textos: 11902
+    Batch size: 128
+    Device: cuda
+    VRAM antes: 0.10 GB
+    VRAM depois: 0.10 GB
+    ✓ Embeddings gerados: (11902, 384)
+  Embeddings salvos em: embeddings_minilm\embeddings_dataset_sem_caracteres_especiais_lemmatizado_texto.npy
+  ✓ Cache GPU limpo (usando 0.10 GB)
+  Dimensão dos embeddings: (11902, 384)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.8685
+      Precision: 0.8685
+      Recall: 0.8685
+      F1-Score: 0.8685
+    Treinando RandomForest...
+      Accuracy: 0.8261
+      Precision: 0.8268
+      Recall: 0.8261
+      F1-Score: 0.8260
+    Treinando LogisticRegression...
+      Accuracy: 0.8610
+      Precision: 0.8610
+      Recall: 0.8610
+      F1-Score: 0.8610
+  [CHECKPOINT] Progresso salvo para texto
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: subtitulo - Campos: ['Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings MiniLM (USANDO GPU!)...
+    Modelo: sentence-transformers/all-MiniLM-L6-v2
+    Total de textos: 11902
+    Batch size: 128
+    Device: cuda
+    VRAM antes: 0.10 GB
+    VRAM depois: 0.10 GB
+    ✓ Embeddings gerados: (11902, 384)
+  Embeddings salvos em: embeddings_minilm\embeddings_dataset_sem_caracteres_especiais_lemmatizado_subtitulo.npy
+  ✓ Cache GPU limpo (usando 0.10 GB)
+  Dimensão dos embeddings: (11902, 384)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.8286
+      Precision: 0.8488
+      Recall: 0.8286
+      F1-Score: 0.8261
+    Treinando RandomForest...
+      Accuracy: 0.8051
+      Precision: 0.8098
+      Recall: 0.8051
+      F1-Score: 0.8044
+    Treinando LogisticRegression...
+      Accuracy: 0.8181
+      Precision: 0.8330
+      Recall: 0.8181
+      F1-Score: 0.8161
+  [CHECKPOINT] Progresso salvo para subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo_subtitulo - Campos: ['Titulo', 'Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings MiniLM (USANDO GPU!)...
+    Modelo: sentence-transformers/all-MiniLM-L6-v2
+    Total de textos: 11902
+    Batch size: 128
+    Device: cuda
+    VRAM antes: 0.10 GB
+    VRAM depois: 0.10 GB
+    ✓ Embeddings gerados: (11902, 384)
+  Embeddings salvos em: embeddings_minilm\embeddings_dataset_sem_caracteres_especiais_lemmatizado_titulo_subtitulo.npy
+  ✓ Cache GPU limpo (usando 0.10 GB)
+  Dimensão dos embeddings: (11902, 384)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.8866
+      Precision: 0.8897
+      Recall: 0.8866
+      F1-Score: 0.8864
+    Treinando RandomForest...
+      Accuracy: 0.8622
+      Precision: 0.8647
+      Recall: 0.8622
+      F1-Score: 0.8620
+    Treinando LogisticRegression...
+      Accuracy: 0.8795
+      Precision: 0.8815
+      Recall: 0.8795
+      F1-Score: 0.8793
+  [CHECKPOINT] Progresso salvo para titulo_subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: completo - Campos: ['Titulo', 'Subtitulo', 'Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings MiniLM (USANDO GPU!)...
+    Modelo: sentence-transformers/all-MiniLM-L6-v2
+    Total de textos: 11902
+    Batch size: 128
+    Device: cuda
+    VRAM antes: 0.10 GB
+    VRAM depois: 0.10 GB
+    ✓ Embeddings gerados: (11902, 384)
+  Embeddings salvos em: embeddings_minilm\embeddings_dataset_sem_caracteres_especiais_lemmatizado_completo.npy
+  ✓ Cache GPU limpo (usando 0.10 GB)
+  Dimensão dos embeddings: (11902, 384)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9114
+      Precision: 0.9114
+      Recall: 0.9114
+      F1-Score: 0.9114
+    Treinando RandomForest...
+      Accuracy: 0.8593
+      Precision: 0.8602
+      Recall: 0.8593
+      F1-Score: 0.8592
+    Treinando LogisticRegression...
+      Accuracy: 0.9051
+      Precision: 0.9052
+      Recall: 0.9051
+      F1-Score: 0.9051
+  [CHECKPOINT] Progresso salvo para completo
+
+
+================================================================================
+RESUMO GERAL DOS RESULTADOS
+================================================================================
+
+Resultados salvos em: results_minilm\resultados_minilm.csv
+
+                                     Dataset      Combination         Classifier  Accuracy  Precision   Recall  F1-Score  Embedding_Dim
+           dataset_sem_stopwords_lemmatizado           titulo                SVM  0.840823   0.847021 0.840823  0.840115            384
+           dataset_sem_stopwords_lemmatizado           titulo       RandomForest  0.814784   0.816402 0.814784  0.814550            384
+           dataset_sem_stopwords_lemmatizado           titulo LogisticRegression  0.837463   0.841232 0.837463  0.837018            384
+           dataset_sem_stopwords_lemmatizado            texto                SVM  0.873163   0.873201 0.873163  0.873160            384
+           dataset_sem_stopwords_lemmatizado            texto       RandomForest  0.826963   0.827907 0.826963  0.826836            384
+           dataset_sem_stopwords_lemmatizado            texto LogisticRegression  0.862663   0.862707 0.862663  0.862659            384
+           dataset_sem_stopwords_lemmatizado        subtitulo                SVM  0.827383   0.845568 0.827383  0.825093            384
+           dataset_sem_stopwords_lemmatizado        subtitulo       RandomForest  0.800504   0.803972 0.800504  0.799939            384
+           dataset_sem_stopwords_lemmatizado        subtitulo LogisticRegression  0.817304   0.830876 0.817304  0.815421            384
+           dataset_sem_stopwords_lemmatizado titulo_subtitulo                SVM  0.878202   0.880894 0.878202  0.877989            384
+           dataset_sem_stopwords_lemmatizado titulo_subtitulo       RandomForest  0.856363   0.857533 0.856363  0.856247            384
+           dataset_sem_stopwords_lemmatizado titulo_subtitulo LogisticRegression  0.868543   0.870347 0.868543  0.868385            384
+           dataset_sem_stopwords_lemmatizado         completo                SVM  0.913902   0.913904 0.913902  0.913902            384
+           dataset_sem_stopwords_lemmatizado         completo       RandomForest  0.849643   0.850530 0.849643  0.849546            384
+           dataset_sem_stopwords_lemmatizado         completo LogisticRegression  0.901302   0.901384 0.901302  0.901297            384
+dataset_sem_caracteres_especiais_lemmatizado           titulo                SVM  0.866863   0.873195 0.866863  0.866300            384
+dataset_sem_caracteres_especiais_lemmatizado           titulo       RandomForest  0.826963   0.829996 0.826963  0.826569            384
+dataset_sem_caracteres_especiais_lemmatizado           titulo LogisticRegression  0.858463   0.862086 0.858463  0.858111            384
+dataset_sem_caracteres_especiais_lemmatizado            texto                SVM  0.868543   0.868549 0.868543  0.868542            384
+dataset_sem_caracteres_especiais_lemmatizado            texto       RandomForest  0.826123   0.826793 0.826123  0.826032            384
+dataset_sem_caracteres_especiais_lemmatizado            texto LogisticRegression  0.860983   0.860983 0.860983  0.860983            384
+dataset_sem_caracteres_especiais_lemmatizado        subtitulo                SVM  0.828643   0.848786 0.828643  0.826144            384
+dataset_sem_caracteres_especiais_lemmatizado        subtitulo       RandomForest  0.805124   0.809793 0.805124  0.804393            384
+dataset_sem_caracteres_especiais_lemmatizado        subtitulo LogisticRegression  0.818144   0.832958 0.818144  0.816108            384
+dataset_sem_caracteres_especiais_lemmatizado titulo_subtitulo                SVM  0.886602   0.889696 0.886602  0.886379            384
+dataset_sem_caracteres_especiais_lemmatizado titulo_subtitulo       RandomForest  0.862243   0.864719 0.862243  0.862011            384
+dataset_sem_caracteres_especiais_lemmatizado titulo_subtitulo LogisticRegression  0.879462   0.881503 0.879462  0.879303            384
+dataset_sem_caracteres_especiais_lemmatizado         completo                SVM  0.911382   0.911431 0.911382  0.911379            384
+dataset_sem_caracteres_especiais_lemmatizado         completo       RandomForest  0.859303   0.860246 0.859303  0.859209            384
+dataset_sem_caracteres_especiais_lemmatizado         completo LogisticRegression  0.905082   0.905156 0.905082  0.905078            384
+
+
+================================================================================
+MELHORES RESULTADOS POR COMBINAÇÃO
+================================================================================
+
+
+Dataset: dataset_sem_stopwords_lemmatizado
+--------------------------------------------------------------------------------
+  titulo               | Melhor: SVM                  | F1: 0.8401 | Acc: 0.8408
+  texto                | Melhor: SVM                  | F1: 0.8732 | Acc: 0.8732
+  subtitulo            | Melhor: SVM                  | F1: 0.8251 | Acc: 0.8274
+  titulo_subtitulo     | Melhor: SVM                  | F1: 0.8780 | Acc: 0.8782
+  completo             | Melhor: SVM                  | F1: 0.9139 | Acc: 0.9139
+
+Dataset: dataset_sem_caracteres_especiais_lemmatizado
+--------------------------------------------------------------------------------
+  titulo               | Melhor: SVM                  | F1: 0.8663 | Acc: 0.8669
+  texto                | Melhor: SVM                  | F1: 0.8685 | Acc: 0.8685
+  subtitulo            | Melhor: SVM                  | F1: 0.8261 | Acc: 0.8286
+  titulo_subtitulo     | Melhor: SVM                  | F1: 0.8864 | Acc: 0.8866
+  completo             | Melhor: SVM                  | F1: 0.9114 | Acc: 0.9114
+
+Resultados salvos em: results_minilm\resultados_completos_minilm.pkl
+
+================================================================================
+PROCESSAMENTO CONCLUÍDO!
+Fim: 2025-10-13 23:10:54
+================================================================================

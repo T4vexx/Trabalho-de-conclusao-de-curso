@@ -1,0 +1,412 @@
+================================================================================
+TREINAMENTO COM SERAFIM EMBEDDINGS
+Início: 2025-10-12 23:08:32
+================================================================================
+
+Dispositivo: cuda
+GPU: NVIDIA GeForce RTX 3060
+Memória GPU disponível: 12.88 GB
+
+Carregando modelo SERAFIM: PORTULAN/serafim-900m-portuguese-pt-sentence-encoder
+Aguarde... (primeira vez pode demorar para baixar o modelo)
+✓ Modelo carregado com sucesso!
+✓ Dimensão dos embeddings: 1536
+✓ Max sequence length: 128
+
+================================================================================
+PROCESSANDO DATASET: dataset_sem_stopwords_lemmatizado
+================================================================================
+
+Carregando ../../bases_preprocessados/dataset_sem_stopwords_lemmatizado.xlsx...
+Dataset carregado: 11902 linhas
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo - Campos: ['Titulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Aviso: 30 textos vazios encontrados
+  Gerando embeddings SERAFIM (usando cuda)...
+    Modelo: PORTULAN/serafim-900m-portuguese-pt-sentence-encoder
+    Batch size: 32
+    Dimensão: 1536
+    Total de textos: 11902
+    Processando em batches de 32...
+    ✓ Embeddings gerados: (11902, 1536)
+  Embeddings salvos em: embeddings_serafim\embeddings_dataset_sem_stopwords_lemmatizado_titulo.npy
+  Dimensão dos embeddings: (11902, 1536)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.8862
+      Precision: 0.8875
+      Recall: 0.8862
+      F1-Score: 0.8861
+    Treinando RandomForest...
+      Accuracy: 0.8610
+      Precision: 0.8619
+      Recall: 0.8610
+      F1-Score: 0.8609
+    Treinando LogisticRegression...
+      Accuracy: 0.8774
+      Precision: 0.8781
+      Recall: 0.8774
+      F1-Score: 0.8773
+  [CHECKPOINT] Progresso salvo para titulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: texto - Campos: ['Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings SERAFIM (usando cuda)...
+    Modelo: PORTULAN/serafim-900m-portuguese-pt-sentence-encoder
+    Batch size: 32
+    Dimensão: 1536
+    Total de textos: 11902
+    Processando em batches de 32...
+    ✓ Embeddings gerados: (11902, 1536)
+  Embeddings salvos em: embeddings_serafim\embeddings_dataset_sem_stopwords_lemmatizado_texto.npy
+  Dimensão dos embeddings: (11902, 1536)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9135
+      Precision: 0.9135
+      Recall: 0.9135
+      F1-Score: 0.9135
+    Treinando RandomForest...
+      Accuracy: 0.8732
+      Precision: 0.8738
+      Recall: 0.8732
+      F1-Score: 0.8731
+    Treinando LogisticRegression...
+      Accuracy: 0.9034
+      Precision: 0.9035
+      Recall: 0.9034
+      F1-Score: 0.9034
+  [CHECKPOINT] Progresso salvo para texto
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: subtitulo - Campos: ['Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Aviso: 6322 textos vazios encontrados
+  Gerando embeddings SERAFIM (usando cuda)...
+    Modelo: PORTULAN/serafim-900m-portuguese-pt-sentence-encoder
+    Batch size: 32
+    Dimensão: 1536
+    Total de textos: 11902
+    Processando em batches de 32...
+    ✓ Embeddings gerados: (11902, 1536)
+  Embeddings salvos em: embeddings_serafim\embeddings_dataset_sem_stopwords_lemmatizado_subtitulo.npy
+  Dimensão dos embeddings: (11902, 1536)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.8522
+      Precision: 0.8747
+      Recall: 0.8522
+      F1-Score: 0.8499
+    Treinando RandomForest...
+      Accuracy: 0.8370
+      Precision: 0.8481
+      Recall: 0.8370
+      F1-Score: 0.8357
+    Treinando LogisticRegression...
+      Accuracy: 0.8488
+      Precision: 0.8680
+      Recall: 0.8488
+      F1-Score: 0.8468
+  [CHECKPOINT] Progresso salvo para subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo_subtitulo - Campos: ['Titulo', 'Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Aviso: 30 textos vazios encontrados
+  Gerando embeddings SERAFIM (usando cuda)...
+    Modelo: PORTULAN/serafim-900m-portuguese-pt-sentence-encoder
+    Batch size: 32
+    Dimensão: 1536
+    Total de textos: 11902
+    Processando em batches de 32...
+    ✓ Embeddings gerados: (11902, 1536)
+  Embeddings salvos em: embeddings_serafim\embeddings_dataset_sem_stopwords_lemmatizado_titulo_subtitulo.npy
+  Dimensão dos embeddings: (11902, 1536)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9210
+      Precision: 0.9225
+      Recall: 0.9210
+      F1-Score: 0.9210
+    Treinando RandomForest...
+      Accuracy: 0.9026
+      Precision: 0.9033
+      Recall: 0.9026
+      F1-Score: 0.9025
+    Treinando LogisticRegression...
+      Accuracy: 0.9126
+      Precision: 0.9131
+      Recall: 0.9126
+      F1-Score: 0.9126
+  [CHECKPOINT] Progresso salvo para titulo_subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: completo - Campos: ['Titulo', 'Subtitulo', 'Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings SERAFIM (usando cuda)...
+    Modelo: PORTULAN/serafim-900m-portuguese-pt-sentence-encoder
+    Batch size: 32
+    Dimensão: 1536
+    Total de textos: 11902
+    Processando em batches de 32...
+    ✓ Embeddings gerados: (11902, 1536)
+  Embeddings salvos em: embeddings_serafim\embeddings_dataset_sem_stopwords_lemmatizado_completo.npy
+  Dimensão dos embeddings: (11902, 1536)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9609
+      Precision: 0.9610
+      Recall: 0.9609
+      F1-Score: 0.9609
+    Treinando RandomForest...
+      Accuracy: 0.9219
+      Precision: 0.9221
+      Recall: 0.9219
+      F1-Score: 0.9219
+    Treinando LogisticRegression...
+      Accuracy: 0.9517
+      Precision: 0.9517
+      Recall: 0.9517
+      F1-Score: 0.9517
+  [CHECKPOINT] Progresso salvo para completo
+
+================================================================================
+PROCESSANDO DATASET: dataset_sem_caracteres_especiais_lemmatizado
+================================================================================
+
+Carregando ../../bases_preprocessados/dataset_sem_caracteres_especiais_lemmatizado.xlsx...
+Dataset carregado: 11902 linhas
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo - Campos: ['Titulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Aviso: 30 textos vazios encontrados
+  Gerando embeddings SERAFIM (usando cuda)...
+    Modelo: PORTULAN/serafim-900m-portuguese-pt-sentence-encoder
+    Batch size: 32
+    Dimensão: 1536
+    Total de textos: 11902
+    Processando em batches de 32...
+    ✓ Embeddings gerados: (11902, 1536)
+  Embeddings salvos em: embeddings_serafim\embeddings_dataset_sem_caracteres_especiais_lemmatizado_titulo.npy
+  Dimensão dos embeddings: (11902, 1536)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9324
+      Precision: 0.9324
+      Recall: 0.9324
+      F1-Score: 0.9324
+    Treinando RandomForest...
+      Accuracy: 0.8799
+      Precision: 0.8807
+      Recall: 0.8799
+      F1-Score: 0.8798
+    Treinando LogisticRegression...
+      Accuracy: 0.9147
+      Precision: 0.9148
+      Recall: 0.9147
+      F1-Score: 0.9147
+  [CHECKPOINT] Progresso salvo para titulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: texto - Campos: ['Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings SERAFIM (usando cuda)...
+    Modelo: PORTULAN/serafim-900m-portuguese-pt-sentence-encoder
+    Batch size: 32
+    Dimensão: 1536
+    Total de textos: 11902
+    Processando em batches de 32...
+    ✓ Embeddings gerados: (11902, 1536)
+  Embeddings salvos em: embeddings_serafim\embeddings_dataset_sem_caracteres_especiais_lemmatizado_texto.npy
+  Dimensão dos embeddings: (11902, 1536)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9118
+      Precision: 0.9118
+      Recall: 0.9118
+      F1-Score: 0.9118
+    Treinando RandomForest...
+      Accuracy: 0.8648
+      Precision: 0.8650
+      Recall: 0.8648
+      F1-Score: 0.8647
+    Treinando LogisticRegression...
+      Accuracy: 0.9021
+      Precision: 0.9022
+      Recall: 0.9021
+      F1-Score: 0.9021
+  [CHECKPOINT] Progresso salvo para texto
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: subtitulo - Campos: ['Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Aviso: 6322 textos vazios encontrados
+  Gerando embeddings SERAFIM (usando cuda)...
+    Modelo: PORTULAN/serafim-900m-portuguese-pt-sentence-encoder
+    Batch size: 32
+    Dimensão: 1536
+    Total de textos: 11902
+    Processando em batches de 32...
+    ✓ Embeddings gerados: (11902, 1536)
+  Embeddings salvos em: embeddings_serafim\embeddings_dataset_sem_caracteres_especiais_lemmatizado_subtitulo.npy
+  Dimensão dos embeddings: (11902, 1536)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.8522
+      Precision: 0.8741
+      Recall: 0.8522
+      F1-Score: 0.8500
+    Treinando RandomForest...
+      Accuracy: 0.8349
+      Precision: 0.8452
+      Recall: 0.8349
+      F1-Score: 0.8337
+    Treinando LogisticRegression...
+      Accuracy: 0.8475
+      Precision: 0.8654
+      Recall: 0.8475
+      F1-Score: 0.8457
+  [CHECKPOINT] Progresso salvo para subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo_subtitulo - Campos: ['Titulo', 'Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Aviso: 30 textos vazios encontrados
+  Gerando embeddings SERAFIM (usando cuda)...
+    Modelo: PORTULAN/serafim-900m-portuguese-pt-sentence-encoder
+    Batch size: 32
+    Dimensão: 1536
+    Total de textos: 11902
+    Processando em batches de 32...
+    ✓ Embeddings gerados: (11902, 1536)
+  Embeddings salvos em: embeddings_serafim\embeddings_dataset_sem_caracteres_especiais_lemmatizado_titulo_subtitulo.npy
+  Dimensão dos embeddings: (11902, 1536)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9429
+      Precision: 0.9432
+      Recall: 0.9429
+      F1-Score: 0.9429
+    Treinando RandomForest...
+      Accuracy: 0.9105
+      Precision: 0.9113
+      Recall: 0.9105
+      F1-Score: 0.9105
+    Treinando LogisticRegression...
+      Accuracy: 0.9265
+      Precision: 0.9267
+      Recall: 0.9265
+      F1-Score: 0.9265
+  [CHECKPOINT] Progresso salvo para titulo_subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: completo - Campos: ['Titulo', 'Subtitulo', 'Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings SERAFIM (usando cuda)...
+    Modelo: PORTULAN/serafim-900m-portuguese-pt-sentence-encoder
+    Batch size: 32
+    Dimensão: 1536
+    Total de textos: 11902
+    Processando em batches de 32...
+    ✓ Embeddings gerados: (11902, 1536)
+  Embeddings salvos em: embeddings_serafim\embeddings_dataset_sem_caracteres_especiais_lemmatizado_completo.npy
+  Dimensão dos embeddings: (11902, 1536)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9693
+      Precision: 0.9693
+      Recall: 0.9693
+      F1-Score: 0.9693
+    Treinando RandomForest...
+      Accuracy: 0.9378
+      Precision: 0.9378
+      Recall: 0.9378
+      F1-Score: 0.9378
+    Treinando LogisticRegression...
+      Accuracy: 0.9601
+      Precision: 0.9601
+      Recall: 0.9601
+      F1-Score: 0.9601
+  [CHECKPOINT] Progresso salvo para completo
+
+
+================================================================================
+RESUMO GERAL DOS RESULTADOS
+================================================================================
+
+Resultados salvos em: results_serafim\resultados_serafim.csv
+
+                                     Dataset      Combination         Classifier  Accuracy  Precision   Recall  F1-Score  Embedding_Dim
+           dataset_sem_stopwords_lemmatizado           titulo                SVM  0.886182   0.887487 0.886182  0.886088           1536
+           dataset_sem_stopwords_lemmatizado           titulo       RandomForest  0.860983   0.861936 0.860983  0.860893           1536
+           dataset_sem_stopwords_lemmatizado           titulo LogisticRegression  0.877362   0.878143 0.877362  0.877301           1536
+           dataset_sem_stopwords_lemmatizado            texto                SVM  0.913482   0.913483 0.913482  0.913482           1536
+           dataset_sem_stopwords_lemmatizado            texto       RandomForest  0.873163   0.873768 0.873163  0.873110           1536
+           dataset_sem_stopwords_lemmatizado            texto LogisticRegression  0.903402   0.903516 0.903402  0.903395           1536
+           dataset_sem_stopwords_lemmatizado        subtitulo                SVM  0.852163   0.874716 0.852163  0.849914           1536
+           dataset_sem_stopwords_lemmatizado        subtitulo       RandomForest  0.837043   0.848092 0.837043  0.835747           1536
+           dataset_sem_stopwords_lemmatizado        subtitulo LogisticRegression  0.848803   0.868025 0.848803  0.846811           1536
+           dataset_sem_stopwords_lemmatizado titulo_subtitulo                SVM  0.921042   0.922504 0.921042  0.920974           1536
+           dataset_sem_stopwords_lemmatizado titulo_subtitulo       RandomForest  0.902562   0.903275 0.902562  0.902520           1536
+           dataset_sem_stopwords_lemmatizado titulo_subtitulo LogisticRegression  0.912642   0.913109 0.912642  0.912618           1536
+           dataset_sem_stopwords_lemmatizado         completo                SVM  0.960941   0.960957 0.960941  0.960940           1536
+           dataset_sem_stopwords_lemmatizado         completo       RandomForest  0.921882   0.922052 0.921882  0.921873           1536
+           dataset_sem_stopwords_lemmatizado         completo LogisticRegression  0.951701   0.951739 0.951701  0.951700           1536
+dataset_sem_caracteres_especiais_lemmatizado           titulo                SVM  0.932381   0.932382 0.932381  0.932381           1536
+dataset_sem_caracteres_especiais_lemmatizado           titulo       RandomForest  0.879882   0.880727 0.879882  0.879817           1536
+dataset_sem_caracteres_especiais_lemmatizado           titulo LogisticRegression  0.914742   0.914777 0.914742  0.914740           1536
+dataset_sem_caracteres_especiais_lemmatizado            texto                SVM  0.911802   0.911802 0.911802  0.911802           1536
+dataset_sem_caracteres_especiais_lemmatizado            texto       RandomForest  0.864763   0.864963 0.864763  0.864743           1536
+dataset_sem_caracteres_especiais_lemmatizado            texto LogisticRegression  0.902142   0.902156 0.902142  0.902141           1536
+dataset_sem_caracteres_especiais_lemmatizado        subtitulo                SVM  0.852163   0.874065 0.852163  0.849976           1536
+dataset_sem_caracteres_especiais_lemmatizado        subtitulo       RandomForest  0.834943   0.845189 0.834943  0.833717           1536
+dataset_sem_caracteres_especiais_lemmatizado        subtitulo LogisticRegression  0.847543   0.865386 0.847543  0.845667           1536
+dataset_sem_caracteres_especiais_lemmatizado titulo_subtitulo                SVM  0.942881   0.943163 0.942881  0.942872           1536
+dataset_sem_caracteres_especiais_lemmatizado titulo_subtitulo       RandomForest  0.910542   0.911298 0.910542  0.910502           1536
+dataset_sem_caracteres_especiais_lemmatizado titulo_subtitulo LogisticRegression  0.926501   0.926722 0.926501  0.926492           1536
+dataset_sem_caracteres_especiais_lemmatizado         completo                SVM  0.969341   0.969344 0.969341  0.969341           1536
+dataset_sem_caracteres_especiais_lemmatizado         completo       RandomForest  0.937841   0.937846 0.937841  0.937841           1536
+dataset_sem_caracteres_especiais_lemmatizado         completo LogisticRegression  0.960101   0.960109 0.960101  0.960101           1536
+
+
+================================================================================
+MELHORES RESULTADOS POR COMBINAÇÃO
+================================================================================
+
+
+Dataset: dataset_sem_stopwords_lemmatizado
+--------------------------------------------------------------------------------
+  titulo               | Melhor: SVM                  | F1: 0.8861 | Acc: 0.8862
+  texto                | Melhor: SVM                  | F1: 0.9135 | Acc: 0.9135
+  subtitulo            | Melhor: SVM                  | F1: 0.8499 | Acc: 0.8522
+  titulo_subtitulo     | Melhor: SVM                  | F1: 0.9210 | Acc: 0.9210
+  completo             | Melhor: SVM                  | F1: 0.9609 | Acc: 0.9609
+
+Dataset: dataset_sem_caracteres_especiais_lemmatizado
+--------------------------------------------------------------------------------
+  titulo               | Melhor: SVM                  | F1: 0.9324 | Acc: 0.9324
+  texto                | Melhor: SVM                  | F1: 0.9118 | Acc: 0.9118
+  subtitulo            | Melhor: SVM                  | F1: 0.8500 | Acc: 0.8522
+  titulo_subtitulo     | Melhor: SVM                  | F1: 0.9429 | Acc: 0.9429
+  completo             | Melhor: SVM                  | F1: 0.9693 | Acc: 0.9693
+
+Resultados completos salvos em: results_serafim\resultados_completos_serafim.pkl
+
+================================================================================
+PROCESSAMENTO CONCLUÍDO!
+Fim: 2025-10-12 23:51:04
+================================================================================

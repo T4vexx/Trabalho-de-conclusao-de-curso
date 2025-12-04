@@ -1,0 +1,12 @@
+================================================================================
+SFR-MISTRAL: HYPERPARAMETER TUNING COM GPU
+================================================================================
+GPU Status:
+  • cuML (classificadores): ✅ ATIVO
+  • PyTorch (embeddings): ❌ CPU
+Início: 2025-10-21 09:57:30
+================================================================================
+
+⚠️  PyTorch CUDA não disponível (embeddings em CPU)
+
+Carregando SFR-Mistral...

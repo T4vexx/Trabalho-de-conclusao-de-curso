@@ -1,0 +1,102 @@
+================================================================================
+TREINAMENTO COM SFR-EMBEDDING-MISTRAL
+Otimizado para RTX 3060 16GB com FP16
+Início: 2025-10-13 00:16:53
+================================================================================
+
+Dispositivo: cuda
+GPU: NVIDIA GeForce RTX 3060
+Memória GPU total: 12.88 GB
+✓ Otimizações CUDA ativadas
+
+Carregando modelo SFR-Mistral: Salesforce/SFR-Embedding-Mistral
+⚠️  ATENÇÃO: Primeira execução irá baixar ~14GB
+⚠️  Usando FP16 para balance entre performance e VRAM...
+✓ Modelo carregado com sucesso!
+✓ Dimensão dos embeddings: 4096
+✓ Max sequence length: 256
+✓ VRAM alocada: 14.22 GB
+✓ VRAM reservada: 14.36 GB
+✓ VRAM disponível: -1.47 GB
+
+================================================================================
+PROCESSANDO DATASET: dataset_sem_stopwords_lemmatizado
+================================================================================
+
+Carregando ../../bases_preprocessados/dataset_sem_stopwords_lemmatizado.xlsx...
+Dataset carregado: 11902 linhas
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo - Campos: ['Titulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings SFR-Mistral (usando cuda)...
+    Modelo: Salesforce/SFR-Embedding-Mistral
+    ⚠️  FP16 precision - monitorar VRAM
+    Total de textos: 11902
+    Batch size: 12
+    ✓ Instruções SFR adicionadas aos textos
+    ✓ Embeddings gerados: (11902, 4096)
+  Embeddings salvos em: embeddings_sfr\embeddings_dataset_sem_stopwords_lemmatizado_titulo.npy
+  ✓ Cache GPU limpo (usando 14.23 GB)
+  Dimensão dos embeddings: (11902, 4096)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.8979
+      Precision: 0.9000
+      Recall: 0.8979
+      F1-Score: 0.8978
+    Treinando RandomForest...
+      Accuracy: 0.8568
+      Precision: 0.8572
+      Recall: 0.8568
+      F1-Score: 0.8567
+    Treinando LogisticRegression...
+      Accuracy: 0.8912
+      Precision: 0.8932
+      Recall: 0.8912
+      F1-Score: 0.8911
+  [CHECKPOINT] Progresso salvo para titulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: texto - Campos: ['Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings SFR-Mistral (usando cuda)...
+    Modelo: Salesforce/SFR-Embedding-Mistral
+    ⚠️  FP16 precision - monitorar VRAM
+    Total de textos: 11902
+    Batch size: 12
+    ✓ Instruções SFR adicionadas aos textos
+    ✓ Embeddings gerados: (11902, 4096)
+  Embeddings salvos em: embeddings_sfr\embeddings_dataset_sem_stopwords_lemmatizado_texto.npy
+  ✓ Cache GPU limpo (usando 14.23 GB)
+  Dimensão dos embeddings: (11902, 4096)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9353
+      Precision: 0.9354
+      Recall: 0.9353
+      F1-Score: 0.9353
+    Treinando RandomForest...
+      Accuracy: 0.8908
+      Precision: 0.8922
+      Recall: 0.8908
+      F1-Score: 0.8907
+    Treinando LogisticRegression...
+      Accuracy: 0.9189
+      Precision: 0.9190
+      Recall: 0.9189
+      F1-Score: 0.9189
+  [CHECKPOINT] Progresso salvo para texto
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: subtitulo - Campos: ['Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings SFR-Mistral (usando cuda)...
+    Modelo: Salesforce/SFR-Embedding-Mistral
+    ⚠️  FP16 precision - monitorar VRAM
+    Total de textos: 11902
+    Batch size: 12
+    ✓ Instruções SFR adicionadas aos textos

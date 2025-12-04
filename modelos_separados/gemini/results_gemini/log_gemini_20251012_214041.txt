@@ -1,0 +1,29 @@
+================================================================================
+TREINAMENTO COM GOOGLE GEMINI EMBEDDINGS (OTIMIZADO)
+Início: 2025-10-12 21:40:41
+================================================================================
+
+Inicializando cliente Gemini...
+✓ API Gemini configurada corretamente
+✓ Modelo: models/embedding-001
+✓ Dimensão dos embeddings: 768
+✓ Max text length: 10000 chars
+✓ Rate limit delay: 0.05s
+
+================================================================================
+PROCESSANDO DATASET: dataset_sem_stopwords_lemmatizado
+================================================================================
+
+Carregando ../../bases_preprocessados/dataset_sem_stopwords_lemmatizado.xlsx...
+Dataset carregado: 11902 linhas
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo - Campos: ['Titulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Verificando cache de embeddings...
+  Gerando embeddings Gemini (models/embedding-001)...
+    Total de textos: 11902
+    Processando com truncamento inteligente (max 10000 chars)...
+      ⚠️  ERRO no texto 52: Invalid input: 'content' argument must not be empty. Please provide a non-empty value., usando vetor zero
+      ✓ Processados 100/11902 textos

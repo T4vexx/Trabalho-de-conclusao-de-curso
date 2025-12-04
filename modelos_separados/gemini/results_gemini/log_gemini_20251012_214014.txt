@@ -1,0 +1,20 @@
+================================================================================
+TREINAMENTO COM GOOGLE GEMINI EMBEDDINGS (OTIMIZADO)
+Início: 2025-10-12 21:40:14
+================================================================================
+
+Inicializando cliente Gemini...
+✓ API Gemini configurada corretamente
+✓ Modelo: models/embedding-001
+✓ Dimensão dos embeddings: 768
+✓ Max text length: 10000 chars
+✓ Rate limit delay: 0.05s
+
+AVISO: Dataset dataset_sem_stopwords_lemmatizado.xlsx não encontrado, pulando...
+
+AVISO: Dataset dataset_sem_caracteres_especiais_lemmatizado.xlsx não encontrado, pulando...
+
+================================================================================
+PROCESSAMENTO CONCLUÍDO!
+Fim: 2025-10-12 21:40:16
+================================================================================

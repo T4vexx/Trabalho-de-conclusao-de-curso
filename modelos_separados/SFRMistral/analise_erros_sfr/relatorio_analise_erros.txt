@@ -1,0 +1,39 @@
+================================================================================
+RELATÓRIO COMPLETO DE ANÁLISE DE ERROS
+SFR-Embedding-Mistral
+================================================================================
+
+CONFIGURAÇÃO DO MELHOR MODELO:
+--------------------------------------------------------------------------------
+Dataset: dataset_sem_caracteres_especiais_lemmatizado
+Combinação de campos: completo
+Classificador: SVM
+Dimensão dos embeddings: 4096
+
+MÉTRICAS DE DESEMPENHO:
+--------------------------------------------------------------------------------
+Accuracy: 0.972701 (97.27%)
+Precision: 0.972717
+Recall: 0.972701
+F1-Score: 0.972700
+
+MATRIZ DE CONFUSÃO:
+--------------------------------------------------------------------------------
+Verdadeiros Positivos (VP): 1154
+Verdadeiros Negativos (VN): 1162
+Falsos Positivos (FP): 29 <- Notícias VERDADEIRAS classificadas como FALSAS
+Falsos Negativos (FN): 36 <- Notícias FALSAS classificadas como VERDADEIRAS
+
+RESUMO DE ERROS:
+--------------------------------------------------------------------------------
+Total de erros: 65 de 2381 amostras
+Taxa de erro: 2.73%
+Taxa de acerto: 97.27%
+
+ARQUIVOS GERADOS:
+--------------------------------------------------------------------------------
+1. falsos_positivos_sfr.csv - Exemplos de FPs
+2. falsos_negativos_sfr.csv - Exemplos de FNs
+3. matriz_confusao_sfr.png - Visualização da matriz
+4. analise_padroes_erros.txt - Análise de padrões
+5. relatorio_analise_erros.txt - Este relatório

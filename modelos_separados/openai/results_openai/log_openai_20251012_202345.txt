@@ -1,0 +1,2776 @@
+================================================================================
+TREINAMENTO COM OPENAI EMBEDDINGS (text-embedding-3-small)
+Início: 2025-10-12 20:23:45
+================================================================================
+
+✓ API Key OpenAI configurada corretamente
+✓ Modelo: text-embedding-3-small
+✓ Dimensão dos embeddings: 1536
+
+================================================================================
+PROCESSANDO DATASET: dataset_sem_stopwords_lemmatizado
+================================================================================
+
+Carregando ../../bases_preprocessados/dataset_sem_stopwords_lemmatizado.xlsx...
+Dataset carregado: 11902 linhas
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo - Campos: ['Titulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Aviso: 30 textos vazios encontrados (serão tratados)
+  Gerando embeddings OpenAI (text-embedding-3-small)...
+    Dimensão: 1536
+    Batch size: 50
+    Total de textos: 11902
+    Processando em 239 batches de até 50 textos
+      Batch 1/239: 861 tokens usados
+      Batch 2/239: 859 tokens usados
+      Batch 3/239: 904 tokens usados
+      Batch 4/239: 898 tokens usados
+      Batch 5/239: 863 tokens usados
+      Batch 6/239: 888 tokens usados
+      Batch 7/239: 877 tokens usados
+      Batch 8/239: 819 tokens usados
+      Batch 9/239: 834 tokens usados
+      Batch 10/239: 843 tokens usados
+      Batch 11/239: 844 tokens usados
+      Batch 12/239: 899 tokens usados
+      Batch 13/239: 832 tokens usados
+      Batch 14/239: 888 tokens usados
+      Batch 15/239: 887 tokens usados
+      Batch 16/239: 806 tokens usados
+      Batch 17/239: 880 tokens usados
+      Batch 18/239: 872 tokens usados
+      Batch 19/239: 875 tokens usados
+      Batch 20/239: 906 tokens usados
+      Batch 21/239: 863 tokens usados
+      Batch 22/239: 859 tokens usados
+      Batch 23/239: 817 tokens usados
+      Batch 24/239: 891 tokens usados
+      Batch 25/239: 894 tokens usados
+      Batch 26/239: 845 tokens usados
+      Batch 27/239: 847 tokens usados
+      Batch 28/239: 869 tokens usados
+      Batch 29/239: 855 tokens usados
+      Batch 30/239: 917 tokens usados
+      Batch 31/239: 851 tokens usados
+      Batch 32/239: 845 tokens usados
+      Batch 33/239: 862 tokens usados
+      Batch 34/239: 827 tokens usados
+      Batch 35/239: 845 tokens usados
+      Batch 36/239: 904 tokens usados
+      Batch 37/239: 835 tokens usados
+      Batch 38/239: 855 tokens usados
+      Batch 39/239: 909 tokens usados
+      Batch 40/239: 885 tokens usados
+      Batch 41/239: 835 tokens usados
+      Batch 42/239: 858 tokens usados
+      Batch 43/239: 897 tokens usados
+      Batch 44/239: 904 tokens usados
+      Batch 45/239: 881 tokens usados
+      Batch 46/239: 837 tokens usados
+      Batch 47/239: 896 tokens usados
+      Batch 48/239: 876 tokens usados
+      Batch 49/239: 890 tokens usados
+      Batch 50/239: 912 tokens usados
+      Batch 51/239: 896 tokens usados
+      Batch 52/239: 889 tokens usados
+      Batch 53/239: 855 tokens usados
+      Batch 54/239: 848 tokens usados
+      Batch 55/239: 847 tokens usados
+      Batch 56/239: 904 tokens usados
+      Batch 57/239: 827 tokens usados
+      Batch 58/239: 848 tokens usados
+      Batch 59/239: 885 tokens usados
+      Batch 60/239: 826 tokens usados
+      Batch 61/239: 907 tokens usados
+      Batch 62/239: 900 tokens usados
+      Batch 63/239: 901 tokens usados
+      Batch 64/239: 909 tokens usados
+      Batch 65/239: 863 tokens usados
+      Batch 66/239: 837 tokens usados
+      Batch 67/239: 884 tokens usados
+      Batch 68/239: 856 tokens usados
+      Batch 69/239: 890 tokens usados
+      Batch 70/239: 833 tokens usados
+      Batch 71/239: 874 tokens usados
+      Batch 72/239: 879 tokens usados
+      Batch 73/239: 861 tokens usados
+      Batch 74/239: 864 tokens usados
+      Batch 75/239: 846 tokens usados
+      Batch 76/239: 901 tokens usados
+      Batch 77/239: 934 tokens usados
+      Batch 78/239: 835 tokens usados
+      Batch 79/239: 833 tokens usados
+      Batch 80/239: 879 tokens usados
+      Batch 81/239: 861 tokens usados
+      Batch 82/239: 852 tokens usados
+      Batch 83/239: 872 tokens usados
+      Batch 84/239: 851 tokens usados
+      Batch 85/239: 818 tokens usados
+      Batch 86/239: 898 tokens usados
+      Batch 87/239: 863 tokens usados
+      Batch 88/239: 888 tokens usados
+      Batch 89/239: 899 tokens usados
+      Batch 90/239: 871 tokens usados
+      Batch 91/239: 850 tokens usados
+      Batch 92/239: 923 tokens usados
+      Batch 93/239: 872 tokens usados
+      Batch 94/239: 853 tokens usados
+      Batch 95/239: 783 tokens usados
+      Batch 96/239: 822 tokens usados
+      Batch 97/239: 813 tokens usados
+      Batch 98/239: 853 tokens usados
+      Batch 99/239: 863 tokens usados
+      Batch 100/239: 802 tokens usados
+      Batch 101/239: 813 tokens usados
+      Batch 102/239: 873 tokens usados
+      Batch 103/239: 859 tokens usados
+      Batch 104/239: 833 tokens usados
+      Batch 105/239: 889 tokens usados
+      Batch 106/239: 859 tokens usados
+      Batch 107/239: 849 tokens usados
+      Batch 108/239: 915 tokens usados
+      Batch 109/239: 888 tokens usados
+      Batch 110/239: 885 tokens usados
+      Batch 111/239: 858 tokens usados
+      Batch 112/239: 854 tokens usados
+      Batch 113/239: 886 tokens usados
+      Batch 114/239: 823 tokens usados
+      Batch 115/239: 838 tokens usados
+      Batch 116/239: 878 tokens usados
+      Batch 117/239: 870 tokens usados
+      Batch 118/239: 837 tokens usados
+      Batch 119/239: 894 tokens usados
+      Batch 120/239: 881 tokens usados
+      Batch 121/239: 845 tokens usados
+      Batch 122/239: 873 tokens usados
+      Batch 123/239: 895 tokens usados
+      Batch 124/239: 837 tokens usados
+      Batch 125/239: 889 tokens usados
+      Batch 126/239: 930 tokens usados
+      Batch 127/239: 857 tokens usados
+      Batch 128/239: 875 tokens usados
+      Batch 129/239: 892 tokens usados
+      Batch 130/239: 866 tokens usados
+      Batch 131/239: 889 tokens usados
+      Batch 132/239: 846 tokens usados
+      Batch 133/239: 860 tokens usados
+      Batch 134/239: 852 tokens usados
+      Batch 135/239: 858 tokens usados
+      Batch 136/239: 865 tokens usados
+      Batch 137/239: 853 tokens usados
+      Batch 138/239: 884 tokens usados
+      Batch 139/239: 858 tokens usados
+      Batch 140/239: 854 tokens usados
+      Batch 141/239: 822 tokens usados
+      Batch 142/239: 802 tokens usados
+      Batch 143/239: 835 tokens usados
+      Batch 144/239: 901 tokens usados
+      Batch 145/239: 852 tokens usados
+      Batch 146/239: 867 tokens usados
+      Batch 147/239: 862 tokens usados
+      Batch 148/239: 882 tokens usados
+      Batch 149/239: 861 tokens usados
+      Batch 150/239: 902 tokens usados
+      Batch 151/239: 892 tokens usados
+      Batch 152/239: 855 tokens usados
+      Batch 153/239: 871 tokens usados
+      Batch 154/239: 891 tokens usados
+      Batch 155/239: 875 tokens usados
+      Batch 156/239: 834 tokens usados
+      Batch 157/239: 802 tokens usados
+      Batch 158/239: 896 tokens usados
+      Batch 159/239: 872 tokens usados
+      Batch 160/239: 886 tokens usados
+      Batch 161/239: 862 tokens usados
+      Batch 162/239: 866 tokens usados
+      Batch 163/239: 856 tokens usados
+      Batch 164/239: 872 tokens usados
+      Batch 165/239: 866 tokens usados
+      Batch 166/239: 907 tokens usados
+      Batch 167/239: 909 tokens usados
+      Batch 168/239: 882 tokens usados
+      Batch 169/239: 884 tokens usados
+      Batch 170/239: 829 tokens usados
+      Batch 171/239: 823 tokens usados
+      Batch 172/239: 869 tokens usados
+      Batch 173/239: 859 tokens usados
+      Batch 174/239: 842 tokens usados
+      Batch 175/239: 872 tokens usados
+      Batch 176/239: 856 tokens usados
+      Batch 177/239: 841 tokens usados
+      Batch 178/239: 857 tokens usados
+      Batch 179/239: 832 tokens usados
+      Batch 180/239: 905 tokens usados
+      Batch 181/239: 874 tokens usados
+      Batch 182/239: 836 tokens usados
+      Batch 183/239: 832 tokens usados
+      Batch 184/239: 864 tokens usados
+      Batch 185/239: 869 tokens usados
+      Batch 186/239: 837 tokens usados
+      Batch 187/239: 886 tokens usados
+      Batch 188/239: 862 tokens usados
+      Batch 189/239: 826 tokens usados
+      Batch 190/239: 842 tokens usados
+      Batch 191/239: 922 tokens usados
+      Batch 192/239: 887 tokens usados
+      Batch 193/239: 846 tokens usados
+      Batch 194/239: 881 tokens usados
+      Batch 195/239: 852 tokens usados
+      Batch 196/239: 900 tokens usados
+      Batch 197/239: 840 tokens usados
+      Batch 198/239: 887 tokens usados
+      Batch 199/239: 842 tokens usados
+      Batch 200/239: 827 tokens usados
+      Batch 201/239: 852 tokens usados
+      Batch 202/239: 885 tokens usados
+      Batch 203/239: 904 tokens usados
+      Batch 204/239: 855 tokens usados
+      Batch 205/239: 886 tokens usados
+      Batch 206/239: 836 tokens usados
+      Batch 207/239: 847 tokens usados
+      Batch 208/239: 889 tokens usados
+      Batch 209/239: 900 tokens usados
+      Batch 210/239: 788 tokens usados
+      Batch 211/239: 893 tokens usados
+      Batch 212/239: 874 tokens usados
+      Batch 213/239: 856 tokens usados
+      Batch 214/239: 827 tokens usados
+      Batch 215/239: 839 tokens usados
+      Batch 216/239: 824 tokens usados
+      Batch 217/239: 892 tokens usados
+      Batch 218/239: 853 tokens usados
+      Batch 219/239: 909 tokens usados
+      Batch 220/239: 859 tokens usados
+      Batch 221/239: 865 tokens usados
+      Batch 222/239: 867 tokens usados
+      Batch 223/239: 800 tokens usados
+      Batch 224/239: 861 tokens usados
+      Batch 225/239: 876 tokens usados
+      Batch 226/239: 866 tokens usados
+      Batch 227/239: 906 tokens usados
+      Batch 228/239: 880 tokens usados
+      Batch 229/239: 863 tokens usados
+      Batch 230/239: 840 tokens usados
+      Batch 231/239: 863 tokens usados
+      Batch 232/239: 871 tokens usados
+      Batch 233/239: 886 tokens usados
+      Batch 234/239: 845 tokens usados
+      Batch 235/239: 878 tokens usados
+      Batch 236/239: 872 tokens usados
+      Batch 237/239: 885 tokens usados
+      Batch 238/239: 853 tokens usados
+      Batch 239/239: 38 tokens usados
+  Embeddings salvos em: embeddings_openai\embeddings_dataset_sem_stopwords_lemmatizado_titulo.npy
+  Dimensão dos embeddings: (11902, 1536)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9093
+      Precision: 0.9100
+      Recall: 0.9093
+      F1-Score: 0.9092
+    Treinando RandomForest...
+      Accuracy: 0.8631
+      Precision: 0.8637
+      Recall: 0.8631
+      F1-Score: 0.8630
+    Treinando LogisticRegression...
+      Accuracy: 0.8921
+      Precision: 0.8932
+      Recall: 0.8921
+      F1-Score: 0.8920
+  [CHECKPOINT] Progresso salvo para titulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: texto - Campos: ['Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings OpenAI (text-embedding-3-small)...
+    Dimensão: 1536
+    Batch size: 50
+    Total de textos: 11902
+    Processando em 239 batches de até 50 textos
+      Batch 1/239: 6316 tokens usados
+      Batch 2/239: 7566 tokens usados
+      Batch 3/239: 6456 tokens usados
+      Batch 4/239: 8254 tokens usados
+      Batch 5/239: 6831 tokens usados
+      Batch 6/239: 7957 tokens usados
+      Batch 7/239: 7089 tokens usados
+      Batch 8/239: 8286 tokens usados
+      Batch 9/239: 7186 tokens usados
+      Batch 10/239: 7470 tokens usados
+      Batch 11/239: 6692 tokens usados
+      Batch 12/239: 6517 tokens usados
+      Batch 13/239: 7596 tokens usados
+      Batch 14/239: 6007 tokens usados
+      Batch 15/239: 6287 tokens usados
+      Batch 16/239: 7249 tokens usados
+      Batch 17/239: 7889 tokens usados
+      Batch 18/239: 9192 tokens usados
+      Batch 19/239: 6824 tokens usados
+      Batch 20/239: 9991 tokens usados
+      Batch 21/239: 6473 tokens usados
+      Batch 22/239: 7200 tokens usados
+      Batch 23/239: 6421 tokens usados
+      Batch 24/239: 7435 tokens usados
+      Batch 25/239: 6792 tokens usados
+      Batch 26/239: 7595 tokens usados
+      Batch 27/239: 7085 tokens usados
+      Batch 28/239: 6721 tokens usados
+      Batch 29/239: 5751 tokens usados
+      Batch 30/239: 6566 tokens usados
+      Batch 31/239: 8487 tokens usados
+      Batch 32/239: 7932 tokens usados
+      Batch 33/239: 7468 tokens usados
+      Batch 34/239: 8420 tokens usados
+      Batch 35/239: 6506 tokens usados
+      Batch 36/239: 7388 tokens usados
+      Batch 37/239: 7986 tokens usados
+      Batch 38/239: 7020 tokens usados
+      Batch 39/239: 7159 tokens usados
+      Batch 40/239: 7573 tokens usados
+      Batch 41/239: 7038 tokens usados
+      Batch 42/239: 8380 tokens usados
+      Batch 43/239: 7316 tokens usados
+      Batch 44/239: 8191 tokens usados
+      Batch 45/239: 7138 tokens usados
+      Batch 46/239: 6769 tokens usados
+      Batch 47/239: 7033 tokens usados
+      Batch 48/239: 6544 tokens usados
+      Batch 49/239: 7759 tokens usados
+      Batch 50/239: 6969 tokens usados
+      Batch 51/239: 6681 tokens usados
+      Batch 52/239: 7533 tokens usados
+      Batch 53/239: 7557 tokens usados
+      Batch 54/239: 7544 tokens usados
+      Batch 55/239: 6783 tokens usados
+      Batch 56/239: 8853 tokens usados
+      Batch 57/239: 6885 tokens usados
+      Batch 58/239: 5756 tokens usados
+      Batch 59/239: 6361 tokens usados
+      Batch 60/239: 6581 tokens usados
+      Batch 61/239: 9434 tokens usados
+      Batch 62/239: 8561 tokens usados
+      Batch 63/239: 6683 tokens usados
+      Batch 64/239: 7750 tokens usados
+      Batch 65/239: 7312 tokens usados
+      Batch 66/239: 6654 tokens usados
+      Batch 67/239: 7390 tokens usados
+      Batch 68/239: 6144 tokens usados
+      Batch 69/239: 7705 tokens usados
+      Batch 70/239: 7012 tokens usados
+      Batch 71/239: 7156 tokens usados
+      Batch 72/239: 6624 tokens usados
+      Batch 73/239: 5981 tokens usados
+      Batch 74/239: 7149 tokens usados
+      Batch 75/239: 6770 tokens usados
+      Batch 76/239: 7585 tokens usados
+      Batch 77/239: 6738 tokens usados
+      Batch 78/239: 6831 tokens usados
+      Batch 79/239: 6168 tokens usados
+      Batch 80/239: 7523 tokens usados
+      Batch 81/239: 6135 tokens usados
+      Batch 82/239: 8054 tokens usados
+      Batch 83/239: 7394 tokens usados
+      Batch 84/239: 6709 tokens usados
+      Batch 85/239: 7265 tokens usados
+      Batch 86/239: 6064 tokens usados
+      Batch 87/239: 6360 tokens usados
+      Batch 88/239: 8554 tokens usados
+      Batch 89/239: 7491 tokens usados
+      Batch 90/239: 7006 tokens usados
+      Batch 91/239: 7050 tokens usados
+      Batch 92/239: 7449 tokens usados
+      Batch 93/239: 6416 tokens usados
+      Batch 94/239: 6474 tokens usados
+      Batch 95/239: 6078 tokens usados
+      Batch 96/239: 6779 tokens usados
+      Batch 97/239: 8469 tokens usados
+      Batch 98/239: 6834 tokens usados
+      Batch 99/239: 6321 tokens usados
+      Batch 100/239: 7519 tokens usados
+      Batch 101/239: 7386 tokens usados
+      Batch 102/239: 5937 tokens usados
+      Batch 103/239: 6868 tokens usados
+      Batch 104/239: 6675 tokens usados
+      Batch 105/239: 7848 tokens usados
+      Batch 106/239: 7539 tokens usados
+      Batch 107/239: 7417 tokens usados
+      Batch 108/239: 6882 tokens usados
+      Batch 109/239: 6399 tokens usados
+      Batch 110/239: 6504 tokens usados
+      Batch 111/239: 6438 tokens usados
+      Batch 112/239: 6961 tokens usados
+      Batch 113/239: 8557 tokens usados
+      Batch 114/239: 7828 tokens usados
+      Batch 115/239: 6816 tokens usados
+      Batch 116/239: 8592 tokens usados
+      Batch 117/239: 6296 tokens usados
+      Batch 118/239: 6702 tokens usados
+      Batch 119/239: 7029 tokens usados
+      Batch 120/239: 6195 tokens usados
+      Batch 121/239: 6238 tokens usados
+      Batch 122/239: 6250 tokens usados
+      Batch 123/239: 7738 tokens usados
+      Batch 124/239: 7007 tokens usados
+      Batch 125/239: 7119 tokens usados
+      Batch 126/239: 8858 tokens usados
+      Batch 127/239: 6810 tokens usados
+      Batch 128/239: 6443 tokens usados
+      Batch 129/239: 6162 tokens usados
+      Batch 130/239: 6381 tokens usados
+      Batch 131/239: 8222 tokens usados
+      Batch 132/239: 6736 tokens usados
+      Batch 133/239: 7138 tokens usados
+      Batch 134/239: 7251 tokens usados
+      Batch 135/239: 6914 tokens usados
+      Batch 136/239: 6694 tokens usados
+      Batch 137/239: 6739 tokens usados
+      Batch 138/239: 6422 tokens usados
+      Batch 139/239: 6135 tokens usados
+      Batch 140/239: 8027 tokens usados
+      Batch 141/239: 6919 tokens usados
+      Batch 142/239: 7568 tokens usados
+      Batch 143/239: 6853 tokens usados
+      Batch 144/239: 7764 tokens usados
+      Batch 145/239: 6820 tokens usados
+      Batch 146/239: 8134 tokens usados
+      Batch 147/239: 7196 tokens usados
+      Batch 148/239: 6450 tokens usados
+      Batch 149/239: 7191 tokens usados
+      Batch 150/239: 8129 tokens usados
+      Batch 151/239: 7717 tokens usados
+      Batch 152/239: 5916 tokens usados
+      Batch 153/239: 6699 tokens usados
+      Batch 154/239: 6981 tokens usados
+      Batch 155/239: 7857 tokens usados
+      Batch 156/239: 6945 tokens usados
+      Batch 157/239: 7441 tokens usados
+      Batch 158/239: 7756 tokens usados
+      Batch 159/239: 6486 tokens usados
+      Batch 160/239: 7298 tokens usados
+      Batch 161/239: 7407 tokens usados
+      Batch 162/239: 7084 tokens usados
+      Batch 163/239: 6415 tokens usados
+      Batch 164/239: 7116 tokens usados
+      Batch 165/239: 8151 tokens usados
+      Batch 166/239: 6855 tokens usados
+      Batch 167/239: 6496 tokens usados
+      Batch 168/239: 9442 tokens usados
+      Batch 169/239: 9018 tokens usados
+      Batch 170/239: 6148 tokens usados
+      Batch 171/239: 7540 tokens usados
+      Batch 172/239: 7032 tokens usados
+      Batch 173/239: 6984 tokens usados
+      Batch 174/239: 7038 tokens usados
+      Batch 175/239: 7311 tokens usados
+      Batch 176/239: 7034 tokens usados
+      Batch 177/239: 7052 tokens usados
+      Batch 178/239: 7530 tokens usados
+      Batch 179/239: 7147 tokens usados
+      Batch 180/239: 6762 tokens usados
+      Batch 181/239: 6926 tokens usados
+      Batch 182/239: 7120 tokens usados
+      Batch 183/239: 6922 tokens usados
+      Batch 184/239: 7006 tokens usados
+      Batch 185/239: 6684 tokens usados
+      Batch 186/239: 6435 tokens usados
+      Batch 187/239: 9445 tokens usados
+      Batch 188/239: 6550 tokens usados
+      Batch 189/239: 6672 tokens usados
+      Batch 190/239: 6446 tokens usados
+      Batch 191/239: 6575 tokens usados
+      Batch 192/239: 7321 tokens usados
+      Batch 193/239: 6911 tokens usados
+      Batch 194/239: 6454 tokens usados
+      Batch 195/239: 7077 tokens usados
+      Batch 196/239: 7204 tokens usados
+      Batch 197/239: 7090 tokens usados
+      Batch 198/239: 6731 tokens usados
+      Batch 199/239: 7288 tokens usados
+      Batch 200/239: 6150 tokens usados
+      Batch 201/239: 7154 tokens usados
+      Batch 202/239: 7293 tokens usados
+      Batch 203/239: 8737 tokens usados
+      Batch 204/239: 6555 tokens usados
+      Batch 205/239: 7086 tokens usados
+      Batch 206/239: 7440 tokens usados
+      Batch 207/239: 6770 tokens usados
+      Batch 208/239: 6846 tokens usados
+      Batch 209/239: 6783 tokens usados
+      Batch 210/239: 6711 tokens usados
+      Batch 211/239: 6879 tokens usados
+      Batch 212/239: 5800 tokens usados
+      Batch 213/239: 6866 tokens usados
+      Batch 214/239: 7283 tokens usados
+      Batch 215/239: 6911 tokens usados
+      Batch 216/239: 6589 tokens usados
+      Batch 217/239: 6373 tokens usados
+      Batch 218/239: 6907 tokens usados
+      Batch 219/239: 7659 tokens usados
+      Batch 220/239: 7349 tokens usados
+      Batch 221/239: 6442 tokens usados
+      Batch 222/239: 6788 tokens usados
+      Batch 223/239: 8617 tokens usados
+      Batch 224/239: 6786 tokens usados
+      Batch 225/239: 7126 tokens usados
+      Batch 226/239: 7983 tokens usados
+      Batch 227/239: 9466 tokens usados
+      Batch 228/239: 7151 tokens usados
+      Batch 229/239: 8101 tokens usados
+      Batch 230/239: 8219 tokens usados
+      Batch 231/239: 7685 tokens usados
+      Batch 232/239: 8368 tokens usados
+      Batch 233/239: 9377 tokens usados
+      Batch 234/239: 7345 tokens usados
+      Batch 235/239: 6461 tokens usados
+      Batch 236/239: 7420 tokens usados
+      Batch 237/239: 7234 tokens usados
+      Batch 238/239: 7376 tokens usados
+      Batch 239/239: 304 tokens usados
+  Embeddings salvos em: embeddings_openai\embeddings_dataset_sem_stopwords_lemmatizado_texto.npy
+  Dimensão dos embeddings: (11902, 1536)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9441
+      Precision: 0.9441
+      Recall: 0.9441
+      F1-Score: 0.9441
+    Treinando RandomForest...
+      Accuracy: 0.8874
+      Precision: 0.8885
+      Recall: 0.8874
+      F1-Score: 0.8874
+    Treinando LogisticRegression...
+      Accuracy: 0.9307
+      Precision: 0.9307
+      Recall: 0.9307
+      F1-Score: 0.9307
+  [CHECKPOINT] Progresso salvo para texto
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: subtitulo - Campos: ['Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Aviso: 6322 textos vazios encontrados (serão tratados)
+  Gerando embeddings OpenAI (text-embedding-3-small)...
+    Dimensão: 1536
+    Batch size: 50
+    Total de textos: 11902
+    Processando em 239 batches de até 50 textos
+      Batch 1/239: 1119 tokens usados
+      Batch 2/239: 718 tokens usados
+      Batch 3/239: 1004 tokens usados
+      Batch 4/239: 969 tokens usados
+      Batch 5/239: 808 tokens usados
+      Batch 6/239: 1093 tokens usados
+      Batch 7/239: 901 tokens usados
+      Batch 8/239: 796 tokens usados
+      Batch 9/239: 773 tokens usados
+      Batch 10/239: 715 tokens usados
+      Batch 11/239: 952 tokens usados
+      Batch 12/239: 1167 tokens usados
+      Batch 13/239: 765 tokens usados
+      Batch 14/239: 969 tokens usados
+      Batch 15/239: 1001 tokens usados
+      Batch 16/239: 746 tokens usados
+      Batch 17/239: 861 tokens usados
+      Batch 18/239: 803 tokens usados
+      Batch 19/239: 956 tokens usados
+      Batch 20/239: 911 tokens usados
+      Batch 21/239: 945 tokens usados
+      Batch 22/239: 961 tokens usados
+      Batch 23/239: 1018 tokens usados
+      Batch 24/239: 1032 tokens usados
+      Batch 25/239: 862 tokens usados
+      Batch 26/239: 1138 tokens usados
+      Batch 27/239: 833 tokens usados
+      Batch 28/239: 735 tokens usados
+      Batch 29/239: 1141 tokens usados
+      Batch 30/239: 821 tokens usados
+      Batch 31/239: 929 tokens usados
+      Batch 32/239: 946 tokens usados
+      Batch 33/239: 934 tokens usados
+      Batch 34/239: 785 tokens usados
+      Batch 35/239: 906 tokens usados
+      Batch 36/239: 967 tokens usados
+      Batch 37/239: 818 tokens usados
+      Batch 38/239: 1040 tokens usados
+      Batch 39/239: 1025 tokens usados
+      Batch 40/239: 1027 tokens usados
+      Batch 41/239: 884 tokens usados
+      Batch 42/239: 875 tokens usados
+      Batch 43/239: 947 tokens usados
+      Batch 44/239: 943 tokens usados
+      Batch 45/239: 1013 tokens usados
+      Batch 46/239: 1025 tokens usados
+      Batch 47/239: 839 tokens usados
+      Batch 48/239: 1109 tokens usados
+      Batch 49/239: 845 tokens usados
+      Batch 50/239: 826 tokens usados
+      Batch 51/239: 1156 tokens usados
+      Batch 52/239: 1079 tokens usados
+      Batch 53/239: 1014 tokens usados
+      Batch 54/239: 859 tokens usados
+      Batch 55/239: 883 tokens usados
+      Batch 56/239: 823 tokens usados
+      Batch 57/239: 1133 tokens usados
+      Batch 58/239: 1273 tokens usados
+      Batch 59/239: 1000 tokens usados
+      Batch 60/239: 829 tokens usados
+      Batch 61/239: 1235 tokens usados
+      Batch 62/239: 870 tokens usados
+      Batch 63/239: 865 tokens usados
+      Batch 64/239: 785 tokens usados
+      Batch 65/239: 959 tokens usados
+      Batch 66/239: 770 tokens usados
+      Batch 67/239: 925 tokens usados
+      Batch 68/239: 1031 tokens usados
+      Batch 69/239: 959 tokens usados
+      Batch 70/239: 1192 tokens usados
+      Batch 71/239: 838 tokens usados
+      Batch 72/239: 949 tokens usados
+      Batch 73/239: 950 tokens usados
+      Batch 74/239: 743 tokens usados
+      Batch 75/239: 619 tokens usados
+      Batch 76/239: 762 tokens usados
+      Batch 77/239: 888 tokens usados
+      Batch 78/239: 948 tokens usados
+      Batch 79/239: 926 tokens usados
+      Batch 80/239: 979 tokens usados
+      Batch 81/239: 785 tokens usados
+      Batch 82/239: 893 tokens usados
+      Batch 83/239: 1110 tokens usados
+      Batch 84/239: 699 tokens usados
+      Batch 85/239: 1327 tokens usados
+      Batch 86/239: 965 tokens usados
+      Batch 87/239: 861 tokens usados
+      Batch 88/239: 854 tokens usados
+      Batch 89/239: 797 tokens usados
+      Batch 90/239: 784 tokens usados
+      Batch 91/239: 1109 tokens usados
+      Batch 92/239: 869 tokens usados
+      Batch 93/239: 815 tokens usados
+      Batch 94/239: 671 tokens usados
+      Batch 95/239: 745 tokens usados
+      Batch 96/239: 819 tokens usados
+      Batch 97/239: 875 tokens usados
+      Batch 98/239: 873 tokens usados
+      Batch 99/239: 1064 tokens usados
+      Batch 100/239: 1156 tokens usados
+      Batch 101/239: 775 tokens usados
+      Batch 102/239: 1100 tokens usados
+      Batch 103/239: 1014 tokens usados
+      Batch 104/239: 1064 tokens usados
+      Batch 105/239: 740 tokens usados
+      Batch 106/239: 975 tokens usados
+      Batch 107/239: 864 tokens usados
+      Batch 108/239: 880 tokens usados
+      Batch 109/239: 1205 tokens usados
+      Batch 110/239: 812 tokens usados
+      Batch 111/239: 912 tokens usados
+      Batch 112/239: 819 tokens usados
+      Batch 113/239: 591 tokens usados
+      Batch 114/239: 810 tokens usados
+      Batch 115/239: 971 tokens usados
+      Batch 116/239: 950 tokens usados
+      Batch 117/239: 802 tokens usados
+      Batch 118/239: 750 tokens usados
+      Batch 119/239: 940 tokens usados
+      Batch 120/239: 973 tokens usados
+      Batch 121/239: 1136 tokens usados
+      Batch 122/239: 806 tokens usados
+      Batch 123/239: 952 tokens usados
+      Batch 124/239: 881 tokens usados
+      Batch 125/239: 944 tokens usados
+      Batch 126/239: 1007 tokens usados
+      Batch 127/239: 1062 tokens usados
+      Batch 128/239: 764 tokens usados
+      Batch 129/239: 955 tokens usados
+      Batch 130/239: 1099 tokens usados
+      Batch 131/239: 579 tokens usados
+      Batch 132/239: 998 tokens usados
+      Batch 133/239: 764 tokens usados
+      Batch 134/239: 941 tokens usados
+      Batch 135/239: 914 tokens usados
+      Batch 136/239: 950 tokens usados
+      Batch 137/239: 936 tokens usados
+      Batch 138/239: 964 tokens usados
+      Batch 139/239: 762 tokens usados
+      Batch 140/239: 742 tokens usados
+      Batch 141/239: 965 tokens usados
+      Batch 142/239: 953 tokens usados
+      Batch 143/239: 555 tokens usados
+      Batch 144/239: 928 tokens usados
+      Batch 145/239: 1109 tokens usados
+      Batch 146/239: 1098 tokens usados
+      Batch 147/239: 804 tokens usados
+      Batch 148/239: 976 tokens usados
+      Batch 149/239: 1138 tokens usados
+      Batch 150/239: 934 tokens usados
+      Batch 151/239: 893 tokens usados
+      Batch 152/239: 687 tokens usados
+      Batch 153/239: 785 tokens usados
+      Batch 154/239: 942 tokens usados
+      Batch 155/239: 1157 tokens usados
+      Batch 156/239: 861 tokens usados
+      Batch 157/239: 964 tokens usados
+      Batch 158/239: 908 tokens usados
+      Batch 159/239: 1061 tokens usados
+      Batch 160/239: 842 tokens usados
+      Batch 161/239: 943 tokens usados
+      Batch 162/239: 1089 tokens usados
+      Batch 163/239: 672 tokens usados
+      Batch 164/239: 858 tokens usados
+      Batch 165/239: 1033 tokens usados
+      Batch 166/239: 1068 tokens usados
+      Batch 167/239: 964 tokens usados
+      Batch 168/239: 929 tokens usados
+      Batch 169/239: 979 tokens usados
+      Batch 170/239: 844 tokens usados
+      Batch 171/239: 780 tokens usados
+      Batch 172/239: 840 tokens usados
+      Batch 173/239: 653 tokens usados
+      Batch 174/239: 1027 tokens usados
+      Batch 175/239: 836 tokens usados
+      Batch 176/239: 1004 tokens usados
+      Batch 177/239: 761 tokens usados
+      Batch 178/239: 920 tokens usados
+      Batch 179/239: 917 tokens usados
+      Batch 180/239: 888 tokens usados
+      Batch 181/239: 1216 tokens usados
+      Batch 182/239: 1238 tokens usados
+      Batch 183/239: 833 tokens usados
+      Batch 184/239: 858 tokens usados
+      Batch 185/239: 974 tokens usados
+      Batch 186/239: 925 tokens usados
+      Batch 187/239: 838 tokens usados
+      Batch 188/239: 618 tokens usados
+      Batch 189/239: 1043 tokens usados
+      Batch 190/239: 854 tokens usados
+      Batch 191/239: 855 tokens usados
+      Batch 192/239: 824 tokens usados
+      Batch 193/239: 1055 tokens usados
+      Batch 194/239: 1302 tokens usados
+      Batch 195/239: 886 tokens usados
+      Batch 196/239: 984 tokens usados
+      Batch 197/239: 831 tokens usados
+      Batch 198/239: 764 tokens usados
+      Batch 199/239: 806 tokens usados
+      Batch 200/239: 903 tokens usados
+      Batch 201/239: 685 tokens usados
+      Batch 202/239: 1032 tokens usados
+      Batch 203/239: 1191 tokens usados
+      Batch 204/239: 1021 tokens usados
+      Batch 205/239: 901 tokens usados
+      Batch 206/239: 728 tokens usados
+      Batch 207/239: 957 tokens usados
+      Batch 208/239: 1330 tokens usados
+      Batch 209/239: 903 tokens usados
+      Batch 210/239: 760 tokens usados
+      Batch 211/239: 822 tokens usados
+      Batch 212/239: 995 tokens usados
+      Batch 213/239: 692 tokens usados
+      Batch 214/239: 725 tokens usados
+      Batch 215/239: 764 tokens usados
+      Batch 216/239: 1014 tokens usados
+      Batch 217/239: 1015 tokens usados
+      Batch 218/239: 786 tokens usados
+      Batch 219/239: 987 tokens usados
+      Batch 220/239: 934 tokens usados
+      Batch 221/239: 654 tokens usados
+      Batch 222/239: 672 tokens usados
+      Batch 223/239: 815 tokens usados
+      Batch 224/239: 977 tokens usados
+      Batch 225/239: 1114 tokens usados
+      Batch 226/239: 910 tokens usados
+      Batch 227/239: 959 tokens usados
+      Batch 228/239: 885 tokens usados
+      Batch 229/239: 993 tokens usados
+      Batch 230/239: 999 tokens usados
+      Batch 231/239: 754 tokens usados
+      Batch 232/239: 935 tokens usados
+      Batch 233/239: 692 tokens usados
+      Batch 234/239: 908 tokens usados
+      Batch 235/239: 950 tokens usados
+      Batch 236/239: 838 tokens usados
+      Batch 237/239: 1077 tokens usados
+      Batch 238/239: 1213 tokens usados
+      Batch 239/239: 30 tokens usados
+  Embeddings salvos em: embeddings_openai\embeddings_dataset_sem_stopwords_lemmatizado_subtitulo.npy
+  Dimensão dos embeddings: (11902, 1536)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.8601
+      Precision: 0.8837
+      Recall: 0.8601
+      F1-Score: 0.8580
+    Treinando RandomForest...
+      Accuracy: 0.8341
+      Precision: 0.8452
+      Recall: 0.8341
+      F1-Score: 0.8328
+    Treinando LogisticRegression...
+      Accuracy: 0.8568
+      Precision: 0.8772
+      Recall: 0.8568
+      F1-Score: 0.8548
+  [CHECKPOINT] Progresso salvo para subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo_subtitulo - Campos: ['Titulo', 'Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Aviso: 30 textos vazios encontrados (serão tratados)
+  Gerando embeddings OpenAI (text-embedding-3-small)...
+    Dimensão: 1536
+    Batch size: 50
+    Total de textos: 11902
+    Processando em 239 batches de até 50 textos
+      Batch 1/239: 1920 tokens usados
+      Batch 2/239: 1506 tokens usados
+      Batch 3/239: 1850 tokens usados
+      Batch 4/239: 1807 tokens usados
+      Batch 5/239: 1616 tokens usados
+      Batch 6/239: 1930 tokens usados
+      Batch 7/239: 1721 tokens usados
+      Batch 8/239: 1551 tokens usados
+      Batch 9/239: 1543 tokens usados
+      Batch 10/239: 1497 tokens usados
+      Batch 11/239: 1731 tokens usados
+      Batch 12/239: 2020 tokens usados
+      Batch 13/239: 1533 tokens usados
+      Batch 14/239: 1807 tokens usados
+      Batch 15/239: 1837 tokens usados
+      Batch 16/239: 1488 tokens usados
+      Batch 17/239: 1685 tokens usados
+      Batch 18/239: 1616 tokens usados
+      Batch 19/239: 1782 tokens usados
+      Batch 20/239: 1753 tokens usados
+      Batch 21/239: 1738 tokens usados
+      Batch 22/239: 1763 tokens usados
+      Batch 23/239: 1785 tokens usados
+      Batch 24/239: 1860 tokens usados
+      Batch 25/239: 1696 tokens usados
+      Batch 26/239: 1931 tokens usados
+      Batch 27/239: 1618 tokens usados
+      Batch 28/239: 1543 tokens usados
+      Batch 29/239: 1946 tokens usados
+      Batch 30/239: 1676 tokens usados
+      Batch 31/239: 1715 tokens usados
+      Batch 32/239: 1737 tokens usados
+      Batch 33/239: 1728 tokens usados
+      Batch 34/239: 1553 tokens usados
+      Batch 35/239: 1681 tokens usados
+      Batch 36/239: 1815 tokens usados
+      Batch 37/239: 1590 tokens usados
+      Batch 38/239: 1834 tokens usados
+      Batch 39/239: 1884 tokens usados
+      Batch 40/239: 1850 tokens usados
+      Batch 41/239: 1662 tokens usados
+      Batch 42/239: 1670 tokens usados
+      Batch 43/239: 1780 tokens usados
+      Batch 44/239: 1788 tokens usados
+      Batch 45/239: 1834 tokens usados
+      Batch 46/239: 1805 tokens usados
+      Batch 47/239: 1670 tokens usados
+      Batch 48/239: 1938 tokens usados
+      Batch 49/239: 1684 tokens usados
+      Batch 50/239: 1674 tokens usados
+      Batch 51/239: 2002 tokens usados
+      Batch 52/239: 1920 tokens usados
+      Batch 53/239: 1801 tokens usados
+      Batch 54/239: 1646 tokens usados
+      Batch 55/239: 1673 tokens usados
+      Batch 56/239: 1668 tokens usados
+      Batch 57/239: 1907 tokens usados
+      Batch 58/239: 2066 tokens usados
+      Batch 59/239: 1827 tokens usados
+      Batch 60/239: 1596 tokens usados
+      Batch 61/239: 2096 tokens usados
+      Batch 62/239: 1713 tokens usados
+      Batch 63/239: 1703 tokens usados
+      Batch 64/239: 1631 tokens usados
+      Batch 65/239: 1772 tokens usados
+      Batch 66/239: 1546 tokens usados
+      Batch 67/239: 1755 tokens usados
+      Batch 68/239: 1831 tokens usados
+      Batch 69/239: 1792 tokens usados
+      Batch 70/239: 1982 tokens usados
+      Batch 71/239: 1656 tokens usados
+      Batch 72/239: 1766 tokens usados
+      Batch 73/239: 1753 tokens usados
+      Batch 74/239: 1550 tokens usados
+      Batch 75/239: 1403 tokens usados
+      Batch 76/239: 1599 tokens usados
+      Batch 77/239: 1762 tokens usados
+      Batch 78/239: 1728 tokens usados
+      Batch 79/239: 1701 tokens usados
+      Batch 80/239: 1805 tokens usados
+      Batch 81/239: 1584 tokens usados
+      Batch 82/239: 1677 tokens usados
+      Batch 83/239: 1927 tokens usados
+      Batch 84/239: 1481 tokens usados
+      Batch 85/239: 2095 tokens usados
+      Batch 86/239: 1809 tokens usados
+      Batch 87/239: 1657 tokens usados
+      Batch 88/239: 1683 tokens usados
+      Batch 89/239: 1643 tokens usados
+      Batch 90/239: 1596 tokens usados
+      Batch 91/239: 1901 tokens usados
+      Batch 92/239: 1729 tokens usados
+      Batch 93/239: 1622 tokens usados
+      Batch 94/239: 1460 tokens usados
+      Batch 95/239: 1465 tokens usados
+      Batch 96/239: 1585 tokens usados
+      Batch 97/239: 1626 tokens usados
+      Batch 98/239: 1663 tokens usados
+      Batch 99/239: 1861 tokens usados
+      Batch 100/239: 1900 tokens usados
+      Batch 101/239: 1521 tokens usados
+      Batch 102/239: 1924 tokens usados
+      Batch 103/239: 1816 tokens usados
+      Batch 104/239: 1839 tokens usados
+      Batch 105/239: 1560 tokens usados
+      Batch 106/239: 1779 tokens usados
+      Batch 107/239: 1649 tokens usados
+      Batch 108/239: 1741 tokens usados
+      Batch 109/239: 2039 tokens usados
+      Batch 110/239: 1636 tokens usados
+      Batch 111/239: 1709 tokens usados
+      Batch 112/239: 1607 tokens usados
+      Batch 113/239: 1403 tokens usados
+      Batch 114/239: 1575 tokens usados
+      Batch 115/239: 1746 tokens usados
+      Batch 116/239: 1766 tokens usados
+      Batch 117/239: 1620 tokens usados
+      Batch 118/239: 1520 tokens usados
+      Batch 119/239: 1782 tokens usados
+      Batch 120/239: 1791 tokens usados
+      Batch 121/239: 1928 tokens usados
+      Batch 122/239: 1613 tokens usados
+      Batch 123/239: 1791 tokens usados
+      Batch 124/239: 1658 tokens usados
+      Batch 125/239: 1782 tokens usados
+      Batch 126/239: 1882 tokens usados
+      Batch 127/239: 1862 tokens usados
+      Batch 128/239: 1578 tokens usados
+      Batch 129/239: 1792 tokens usados
+      Batch 130/239: 1920 tokens usados
+      Batch 131/239: 1404 tokens usados
+      Batch 132/239: 1793 tokens usados
+      Batch 133/239: 1561 tokens usados
+      Batch 134/239: 1738 tokens usados
+      Batch 135/239: 1710 tokens usados
+      Batch 136/239: 1764 tokens usados
+      Batch 137/239: 1740 tokens usados
+      Batch 138/239: 1797 tokens usados
+      Batch 139/239: 1562 tokens usados
+      Batch 140/239: 1530 tokens usados
+      Batch 141/239: 1724 tokens usados
+      Batch 142/239: 1690 tokens usados
+      Batch 143/239: 1314 tokens usados
+      Batch 144/239: 1781 tokens usados
+      Batch 145/239: 1909 tokens usados
+      Batch 146/239: 1912 tokens usados
+      Batch 147/239: 1602 tokens usados
+      Batch 148/239: 1800 tokens usados
+      Batch 149/239: 1940 tokens usados
+      Batch 150/239: 1773 tokens usados
+      Batch 151/239: 1722 tokens usados
+      Batch 152/239: 1477 tokens usados
+      Batch 153/239: 1600 tokens usados
+      Batch 154/239: 1782 tokens usados
+      Batch 155/239: 1974 tokens usados
+      Batch 156/239: 1642 tokens usados
+      Batch 157/239: 1706 tokens usados
+      Batch 158/239: 1747 tokens usados
+      Batch 159/239: 1876 tokens usados
+      Batch 160/239: 1660 tokens usados
+      Batch 161/239: 1738 tokens usados
+      Batch 162/239: 1901 tokens usados
+      Batch 163/239: 1455 tokens usados
+      Batch 164/239: 1662 tokens usados
+      Batch 165/239: 1842 tokens usados
+      Batch 166/239: 1919 tokens usados
+      Batch 167/239: 1813 tokens usados
+      Batch 168/239: 1761 tokens usados
+      Batch 169/239: 1807 tokens usados
+      Batch 170/239: 1611 tokens usados
+      Batch 171/239: 1542 tokens usados
+      Batch 172/239: 1654 tokens usados
+      Batch 173/239: 1448 tokens usados
+      Batch 174/239: 1811 tokens usados
+      Batch 175/239: 1646 tokens usados
+      Batch 176/239: 1807 tokens usados
+      Batch 177/239: 1537 tokens usados
+      Batch 178/239: 1722 tokens usados
+      Batch 179/239: 1685 tokens usados
+      Batch 180/239: 1732 tokens usados
+      Batch 181/239: 2042 tokens usados
+      Batch 182/239: 2027 tokens usados
+      Batch 183/239: 1599 tokens usados
+      Batch 184/239: 1664 tokens usados
+      Batch 185/239: 1785 tokens usados
+      Batch 186/239: 1705 tokens usados
+      Batch 187/239: 1661 tokens usados
+      Batch 188/239: 1400 tokens usados
+      Batch 189/239: 1818 tokens usados
+      Batch 190/239: 1636 tokens usados
+      Batch 191/239: 1722 tokens usados
+      Batch 192/239: 1648 tokens usados
+      Batch 193/239: 1836 tokens usados
+      Batch 194/239: 2134 tokens usados
+      Batch 195/239: 1681 tokens usados
+      Batch 196/239: 1830 tokens usados
+      Batch 197/239: 1601 tokens usados
+      Batch 198/239: 1590 tokens usados
+      Batch 199/239: 1586 tokens usados
+      Batch 200/239: 1672 tokens usados
+      Batch 201/239: 1465 tokens usados
+      Batch 202/239: 1875 tokens usados
+      Batch 203/239: 2056 tokens usados
+      Batch 204/239: 1814 tokens usados
+      Batch 205/239: 1717 tokens usados
+      Batch 206/239: 1506 tokens usados
+      Batch 207/239: 1748 tokens usados
+      Batch 208/239: 2167 tokens usados
+      Batch 209/239: 1745 tokens usados
+      Batch 210/239: 1487 tokens usados
+      Batch 211/239: 1660 tokens usados
+      Batch 212/239: 1805 tokens usados
+      Batch 213/239: 1471 tokens usados
+      Batch 214/239: 1490 tokens usados
+      Batch 215/239: 1528 tokens usados
+      Batch 216/239: 1790 tokens usados
+      Batch 217/239: 1847 tokens usados
+      Batch 218/239: 1565 tokens usados
+      Batch 219/239: 1838 tokens usados
+      Batch 220/239: 1734 tokens usados
+      Batch 221/239: 1444 tokens usados
+      Batch 222/239: 1470 tokens usados
+      Batch 223/239: 1556 tokens usados
+      Batch 224/239: 1774 tokens usados
+      Batch 225/239: 1933 tokens usados
+      Batch 226/239: 1723 tokens usados
+      Batch 227/239: 1804 tokens usados
+      Batch 228/239: 1708 tokens usados
+      Batch 229/239: 1798 tokens usados
+      Batch 230/239: 1787 tokens usados
+      Batch 231/239: 1563 tokens usados
+      Batch 232/239: 1750 tokens usados
+      Batch 233/239: 1506 tokens usados
+      Batch 234/239: 1687 tokens usados
+      Batch 235/239: 1772 tokens usados
+      Batch 236/239: 1649 tokens usados
+      Batch 237/239: 1908 tokens usados
+      Batch 238/239: 2005 tokens usados
+      Batch 239/239: 66 tokens usados
+  Embeddings salvos em: embeddings_openai\embeddings_dataset_sem_stopwords_lemmatizado_titulo_subtitulo.npy
+  Dimensão dos embeddings: (11902, 1536)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9303
+      Precision: 0.9312
+      Recall: 0.9303
+      F1-Score: 0.9302
+    Treinando RandomForest...
+      Accuracy: 0.8975
+      Precision: 0.8979
+      Recall: 0.8975
+      F1-Score: 0.8975
+    Treinando LogisticRegression...
+      Accuracy: 0.9215
+      Precision: 0.9219
+      Recall: 0.9215
+      F1-Score: 0.9214
+  [CHECKPOINT] Progresso salvo para titulo_subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: completo - Campos: ['Titulo', 'Subtitulo', 'Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings OpenAI (text-embedding-3-small)...
+    Dimensão: 1536
+    Batch size: 50
+    Total de textos: 11902
+    Processando em 239 batches de até 50 textos
+      Batch 1/239: 8217 tokens usados
+      Batch 2/239: 9055 tokens usados
+      Batch 3/239: 8283 tokens usados
+      Batch 4/239: 10045 tokens usados
+      Batch 5/239: 8429 tokens usados
+      Batch 6/239: 9869 tokens usados
+      Batch 7/239: 8794 tokens usados
+      Batch 8/239: 9817 tokens usados
+      Batch 9/239: 8714 tokens usados
+      Batch 10/239: 8946 tokens usados
+      Batch 11/239: 8403 tokens usados
+      Batch 12/239: 8517 tokens usados
+      Batch 13/239: 9111 tokens usados
+      Batch 14/239: 7790 tokens usados
+      Batch 15/239: 8107 tokens usados
+      Batch 16/239: 8722 tokens usados
+      Batch 17/239: 9556 tokens usados
+      Batch 18/239: 10772 tokens usados
+      Batch 19/239: 8580 tokens usados
+      Batch 20/239: 11720 tokens usados
+      Batch 21/239: 8190 tokens usados
+      Batch 22/239: 8947 tokens usados
+      Batch 23/239: 8189 tokens usados
+      Batch 24/239: 9276 tokens usados
+      Batch 25/239: 8467 tokens usados
+      Batch 26/239: 9508 tokens usados
+      Batch 27/239: 8689 tokens usados
+      Batch 28/239: 8242 tokens usados
+      Batch 29/239: 7683 tokens usados
+      Batch 30/239: 8219 tokens usados
+      Batch 31/239: 10165 tokens usados
+      Batch 32/239: 9645 tokens usados
+      Batch 33/239: 9175 tokens usados
+      Batch 34/239: 9956 tokens usados
+      Batch 35/239: 8171 tokens usados
+      Batch 36/239: 9187 tokens usados
+      Batch 37/239: 9567 tokens usados
+      Batch 38/239: 8841 tokens usados
+      Batch 39/239: 9023 tokens usados
+      Batch 40/239: 9395 tokens usados
+      Batch 41/239: 8686 tokens usados
+      Batch 42/239: 10030 tokens usados
+      Batch 43/239: 9074 tokens usados
+      Batch 44/239: 9964 tokens usados
+      Batch 45/239: 8956 tokens usados
+      Batch 46/239: 8557 tokens usados
+      Batch 47/239: 8685 tokens usados
+      Batch 48/239: 8469 tokens usados
+      Batch 49/239: 9425 tokens usados
+      Batch 50/239: 8622 tokens usados
+      Batch 51/239: 8665 tokens usados
+      Batch 52/239: 9433 tokens usados
+      Batch 53/239: 9338 tokens usados
+      Batch 54/239: 9177 tokens usados
+      Batch 55/239: 8437 tokens usados
+      Batch 56/239: 10504 tokens usados
+      Batch 57/239: 8777 tokens usados
+      Batch 58/239: 7803 tokens usados
+      Batch 59/239: 8169 tokens usados
+      Batch 60/239: 8154 tokens usados
+      Batch 61/239: 11489 tokens usados
+      Batch 62/239: 10256 tokens usados
+      Batch 63/239: 8368 tokens usados
+      Batch 64/239: 9361 tokens usados
+      Batch 65/239: 9068 tokens usados
+      Batch 66/239: 8181 tokens usados
+      Batch 67/239: 9124 tokens usados
+      Batch 68/239: 7958 tokens usados
+      Batch 69/239: 9489 tokens usados
+      Batch 70/239: 8974 tokens usados
+      Batch 71/239: 8795 tokens usados
+      Batch 72/239: 8364 tokens usados
+      Batch 73/239: 7713 tokens usados
+      Batch 74/239: 8676 tokens usados
+      Batch 75/239: 8159 tokens usados
+      Batch 76/239: 9161 tokens usados
+      Batch 77/239: 8483 tokens usados
+      Batch 78/239: 8535 tokens usados
+      Batch 79/239: 7849 tokens usados
+      Batch 80/239: 9313 tokens usados
+      Batch 81/239: 7702 tokens usados
+      Batch 82/239: 9708 tokens usados
+      Batch 83/239: 9300 tokens usados
+      Batch 84/239: 8170 tokens usados
+      Batch 85/239: 9343 tokens usados
+      Batch 86/239: 7854 tokens usados
+      Batch 87/239: 7996 tokens usados
+      Batch 88/239: 10225 tokens usados
+      Batch 89/239: 9110 tokens usados
+      Batch 90/239: 8584 tokens usados
+      Batch 91/239: 8929 tokens usados
+      Batch 92/239: 9159 tokens usados
+      Batch 93/239: 8015 tokens usados
+      Batch 94/239: 7911 tokens usados
+      Batch 95/239: 7520 tokens usados
+      Batch 96/239: 8344 tokens usados
+      Batch 97/239: 10080 tokens usados
+      Batch 98/239: 8477 tokens usados
+      Batch 99/239: 8161 tokens usados
+      Batch 100/239: 9401 tokens usados
+      Batch 101/239: 8884 tokens usados
+      Batch 102/239: 7847 tokens usados
+      Batch 103/239: 8662 tokens usados
+      Batch 104/239: 8486 tokens usados
+      Batch 105/239: 9379 tokens usados
+      Batch 106/239: 9302 tokens usados
+      Batch 107/239: 9050 tokens usados
+      Batch 108/239: 8610 tokens usados
+      Batch 109/239: 8419 tokens usados
+      Batch 110/239: 8123 tokens usados
+      Batch 111/239: 8127 tokens usados
+      Batch 112/239: 8550 tokens usados
+      Batch 113/239: 9938 tokens usados
+      Batch 114/239: 9381 tokens usados
+      Batch 115/239: 8537 tokens usados
+      Batch 116/239: 10338 tokens usados
+      Batch 117/239: 7898 tokens usados
+      Batch 118/239: 8204 tokens usados
+      Batch 119/239: 8785 tokens usados
+      Batch 120/239: 7965 tokens usados
+      Batch 121/239: 8139 tokens usados
+      Batch 122/239: 7842 tokens usados
+      Batch 123/239: 9508 tokens usados
+      Batch 124/239: 8646 tokens usados
+      Batch 125/239: 8876 tokens usados
+      Batch 126/239: 10721 tokens usados
+      Batch 127/239: 8646 tokens usados
+      Batch 128/239: 8003 tokens usados
+      Batch 129/239: 7930 tokens usados
+      Batch 130/239: 8278 tokens usados
+      Batch 131/239: 9605 tokens usados
+      Batch 132/239: 8514 tokens usados
+      Batch 133/239: 8677 tokens usados
+      Batch 134/239: 8968 tokens usados
+      Batch 135/239: 8605 tokens usados
+      Batch 136/239: 8447 tokens usados
+      Batch 137/239: 8456 tokens usados
+      Batch 138/239: 8197 tokens usados
+      Batch 139/239: 7678 tokens usados
+      Batch 140/239: 9543 tokens usados
+      Batch 141/239: 8621 tokens usados
+      Batch 142/239: 9246 tokens usados
+      Batch 143/239: 8152 tokens usados
+      Batch 144/239: 9448 tokens usados
+      Batch 145/239: 8707 tokens usados
+      Batch 146/239: 10032 tokens usados
+      Batch 147/239: 8779 tokens usados
+      Batch 148/239: 8238 tokens usados
+      Batch 149/239: 9121 tokens usados
+      Batch 150/239: 9883 tokens usados
+      Batch 151/239: 9425 tokens usados
+      Batch 152/239: 7377 tokens usados
+      Batch 153/239: 8278 tokens usados
+      Batch 154/239: 8743 tokens usados
+      Batch 155/239: 9811 tokens usados
+      Batch 156/239: 8564 tokens usados
+      Batch 157/239: 9131 tokens usados
+      Batch 158/239: 9484 tokens usados
+      Batch 159/239: 8340 tokens usados
+      Batch 160/239: 8931 tokens usados
+      Batch 161/239: 9121 tokens usados
+      Batch 162/239: 8966 tokens usados
+      Batch 163/239: 7844 tokens usados
+      Batch 164/239: 8761 tokens usados
+      Batch 165/239: 9980 tokens usados
+      Batch 166/239: 8753 tokens usados
+      Batch 167/239: 8294 tokens usados
+      Batch 168/239: 11180 tokens usados
+      Batch 169/239: 10807 tokens usados
+      Batch 170/239: 7739 tokens usados
+      Batch 171/239: 9053 tokens usados
+      Batch 172/239: 8664 tokens usados
+      Batch 173/239: 8405 tokens usados
+      Batch 174/239: 8833 tokens usados
+      Batch 175/239: 8939 tokens usados
+      Batch 176/239: 8823 tokens usados
+      Batch 177/239: 8564 tokens usados
+      Batch 178/239: 9231 tokens usados
+      Batch 179/239: 8812 tokens usados
+      Batch 180/239: 8467 tokens usados
+      Batch 181/239: 8949 tokens usados
+      Batch 182/239: 9122 tokens usados
+      Batch 183/239: 8497 tokens usados
+      Batch 184/239: 8650 tokens usados
+      Batch 185/239: 8450 tokens usados
+      Batch 186/239: 8126 tokens usados
+      Batch 187/239: 11094 tokens usados
+      Batch 188/239: 7923 tokens usados
+      Batch 189/239: 8475 tokens usados
+      Batch 190/239: 8064 tokens usados
+      Batch 191/239: 8265 tokens usados
+      Batch 192/239: 8947 tokens usados
+      Batch 193/239: 8731 tokens usados
+      Batch 194/239: 8568 tokens usados
+      Batch 195/239: 8750 tokens usados
+      Batch 196/239: 9013 tokens usados
+      Batch 197/239: 8667 tokens usados
+      Batch 198/239: 8308 tokens usados
+      Batch 199/239: 8846 tokens usados
+      Batch 200/239: 7801 tokens usados
+      Batch 201/239: 8605 tokens usados
+      Batch 202/239: 9147 tokens usados
+      Batch 203/239: 10775 tokens usados
+      Batch 204/239: 8342 tokens usados
+      Batch 205/239: 8781 tokens usados
+      Batch 206/239: 8926 tokens usados
+      Batch 207/239: 8489 tokens usados
+      Batch 208/239: 9005 tokens usados
+      Batch 209/239: 8508 tokens usados
+      Batch 210/239: 8176 tokens usados
+      Batch 211/239: 8519 tokens usados
+      Batch 212/239: 7585 tokens usados
+      Batch 213/239: 8316 tokens usados
+      Batch 214/239: 8757 tokens usados
+      Batch 215/239: 8421 tokens usados
+      Batch 216/239: 8359 tokens usados
+      Batch 217/239: 8194 tokens usados
+      Batch 218/239: 8458 tokens usados
+      Batch 219/239: 9476 tokens usados
+      Batch 220/239: 9062 tokens usados
+      Batch 221/239: 7867 tokens usados
+      Batch 222/239: 8242 tokens usados
+      Batch 223/239: 10153 tokens usados
+      Batch 224/239: 8539 tokens usados
+      Batch 225/239: 9038 tokens usados
+      Batch 226/239: 9687 tokens usados
+      Batch 227/239: 11256 tokens usados
+      Batch 228/239: 8837 tokens usados
+      Batch 229/239: 9878 tokens usados
+      Batch 230/239: 9989 tokens usados
+      Batch 231/239: 9226 tokens usados
+      Batch 232/239: 10093 tokens usados
+      Batch 233/239: 10854 tokens usados
+      Batch 234/239: 9019 tokens usados
+      Batch 235/239: 8215 tokens usados
+      Batch 236/239: 9048 tokens usados
+      Batch 237/239: 9119 tokens usados
+      Batch 238/239: 9361 tokens usados
+      Batch 239/239: 369 tokens usados
+  Embeddings salvos em: embeddings_openai\embeddings_dataset_sem_stopwords_lemmatizado_completo.npy
+  Dimensão dos embeddings: (11902, 1536)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9647
+      Precision: 0.9647
+      Recall: 0.9647
+      F1-Score: 0.9647
+    Treinando RandomForest...
+      Accuracy: 0.9110
+      Precision: 0.9120
+      Recall: 0.9110
+      F1-Score: 0.9109
+    Treinando LogisticRegression...
+      Accuracy: 0.9580
+      Precision: 0.9580
+      Recall: 0.9580
+      F1-Score: 0.9580
+  [CHECKPOINT] Progresso salvo para completo
+
+================================================================================
+PROCESSANDO DATASET: dataset_sem_caracteres_especiais_lemmatizado
+================================================================================
+
+Carregando ../../bases_preprocessados/dataset_sem_caracteres_especiais_lemmatizado.xlsx...
+Dataset carregado: 11902 linhas
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo - Campos: ['Titulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Aviso: 30 textos vazios encontrados (serão tratados)
+  Gerando embeddings OpenAI (text-embedding-3-small)...
+    Dimensão: 1536
+    Batch size: 50
+    Total de textos: 11902
+    Processando em 239 batches de até 50 textos
+      Batch 1/239: 1169 tokens usados
+      Batch 2/239: 1132 tokens usados
+      Batch 3/239: 1184 tokens usados
+      Batch 4/239: 1178 tokens usados
+      Batch 5/239: 1171 tokens usados
+      Batch 6/239: 1198 tokens usados
+      Batch 7/239: 1186 tokens usados
+      Batch 8/239: 1120 tokens usados
+      Batch 9/239: 1099 tokens usados
+      Batch 10/239: 1110 tokens usados
+      Batch 11/239: 1148 tokens usados
+      Batch 12/239: 1225 tokens usados
+      Batch 13/239: 1123 tokens usados
+      Batch 14/239: 1169 tokens usados
+      Batch 15/239: 1217 tokens usados
+      Batch 16/239: 1086 tokens usados
+      Batch 17/239: 1180 tokens usados
+      Batch 18/239: 1136 tokens usados
+      Batch 19/239: 1184 tokens usados
+      Batch 20/239: 1210 tokens usados
+      Batch 21/239: 1184 tokens usados
+      Batch 22/239: 1155 tokens usados
+      Batch 23/239: 1111 tokens usados
+      Batch 24/239: 1175 tokens usados
+      Batch 25/239: 1175 tokens usados
+      Batch 26/239: 1142 tokens usados
+      Batch 27/239: 1168 tokens usados
+      Batch 28/239: 1166 tokens usados
+      Batch 29/239: 1137 tokens usados
+      Batch 30/239: 1251 tokens usados
+      Batch 31/239: 1094 tokens usados
+      Batch 32/239: 1150 tokens usados
+      Batch 33/239: 1145 tokens usados
+      Batch 34/239: 1129 tokens usados
+      Batch 35/239: 1092 tokens usados
+      Batch 36/239: 1189 tokens usados
+      Batch 37/239: 1118 tokens usados
+      Batch 38/239: 1189 tokens usados
+      Batch 39/239: 1204 tokens usados
+      Batch 40/239: 1203 tokens usados
+      Batch 41/239: 1115 tokens usados
+      Batch 42/239: 1129 tokens usados
+      Batch 43/239: 1205 tokens usados
+      Batch 44/239: 1218 tokens usados
+      Batch 45/239: 1194 tokens usados
+      Batch 46/239: 1112 tokens usados
+      Batch 47/239: 1159 tokens usados
+      Batch 48/239: 1174 tokens usados
+      Batch 49/239: 1160 tokens usados
+      Batch 50/239: 1201 tokens usados
+      Batch 51/239: 1182 tokens usados
+      Batch 52/239: 1226 tokens usados
+      Batch 53/239: 1135 tokens usados
+      Batch 54/239: 1106 tokens usados
+      Batch 55/239: 1156 tokens usados
+      Batch 56/239: 1200 tokens usados
+      Batch 57/239: 1101 tokens usados
+      Batch 58/239: 1091 tokens usados
+      Batch 59/239: 1187 tokens usados
+      Batch 60/239: 1067 tokens usados
+      Batch 61/239: 1206 tokens usados
+      Batch 62/239: 1160 tokens usados
+      Batch 63/239: 1208 tokens usados
+      Batch 64/239: 1192 tokens usados
+      Batch 65/239: 1158 tokens usados
+      Batch 66/239: 1088 tokens usados
+      Batch 67/239: 1164 tokens usados
+      Batch 68/239: 1150 tokens usados
+      Batch 69/239: 1179 tokens usados
+      Batch 70/239: 1121 tokens usados
+      Batch 71/239: 1203 tokens usados
+      Batch 72/239: 1179 tokens usados
+      Batch 73/239: 1105 tokens usados
+      Batch 74/239: 1145 tokens usados
+      Batch 75/239: 1130 tokens usados
+      Batch 76/239: 1187 tokens usados
+      Batch 77/239: 1247 tokens usados
+      Batch 78/239: 1129 tokens usados
+      Batch 79/239: 1123 tokens usados
+      Batch 80/239: 1157 tokens usados
+      Batch 81/239: 1139 tokens usados
+      Batch 82/239: 1162 tokens usados
+      Batch 83/239: 1172 tokens usados
+      Batch 84/239: 1123 tokens usados
+      Batch 85/239: 1098 tokens usados
+      Batch 86/239: 1199 tokens usados
+      Batch 87/239: 1118 tokens usados
+      Batch 88/239: 1215 tokens usados
+      Batch 89/239: 1228 tokens usados
+      Batch 90/239: 1162 tokens usados
+      Batch 91/239: 1135 tokens usados
+      Batch 92/239: 1217 tokens usados
+      Batch 93/239: 1136 tokens usados
+      Batch 94/239: 1155 tokens usados
+      Batch 95/239: 1049 tokens usados
+      Batch 96/239: 1094 tokens usados
+      Batch 97/239: 1105 tokens usados
+      Batch 98/239: 1150 tokens usados
+      Batch 99/239: 1125 tokens usados
+      Batch 100/239: 1113 tokens usados
+      Batch 101/239: 1108 tokens usados
+      Batch 102/239: 1177 tokens usados
+      Batch 103/239: 1127 tokens usados
+      Batch 104/239: 1147 tokens usados
+      Batch 105/239: 1183 tokens usados
+      Batch 106/239: 1139 tokens usados
+      Batch 107/239: 1143 tokens usados
+      Batch 108/239: 1212 tokens usados
+      Batch 109/239: 1150 tokens usados
+      Batch 110/239: 1168 tokens usados
+      Batch 111/239: 1160 tokens usados
+      Batch 112/239: 1117 tokens usados
+      Batch 113/239: 1166 tokens usados
+      Batch 114/239: 1108 tokens usados
+      Batch 115/239: 1134 tokens usados
+      Batch 116/239: 1188 tokens usados
+      Batch 117/239: 1187 tokens usados
+      Batch 118/239: 1093 tokens usados
+      Batch 119/239: 1179 tokens usados
+      Batch 120/239: 1215 tokens usados
+      Batch 121/239: 1114 tokens usados
+      Batch 122/239: 1175 tokens usados
+      Batch 123/239: 1197 tokens usados
+      Batch 124/239: 1098 tokens usados
+      Batch 125/239: 1196 tokens usados
+      Batch 126/239: 1237 tokens usados
+      Batch 127/239: 1159 tokens usados
+      Batch 128/239: 1132 tokens usados
+      Batch 129/239: 1170 tokens usados
+      Batch 130/239: 1176 tokens usados
+      Batch 131/239: 1164 tokens usados
+      Batch 132/239: 1149 tokens usados
+      Batch 133/239: 1138 tokens usados
+      Batch 134/239: 1127 tokens usados
+      Batch 135/239: 1153 tokens usados
+      Batch 136/239: 1166 tokens usados
+      Batch 137/239: 1156 tokens usados
+      Batch 138/239: 1197 tokens usados
+      Batch 139/239: 1157 tokens usados
+      Batch 140/239: 1128 tokens usados
+      Batch 141/239: 1103 tokens usados
+      Batch 142/239: 1111 tokens usados
+      Batch 143/239: 1138 tokens usados
+      Batch 144/239: 1195 tokens usados
+      Batch 145/239: 1139 tokens usados
+      Batch 146/239: 1144 tokens usados
+      Batch 147/239: 1171 tokens usados
+      Batch 148/239: 1151 tokens usados
+      Batch 149/239: 1181 tokens usados
+      Batch 150/239: 1203 tokens usados
+      Batch 151/239: 1172 tokens usados
+      Batch 152/239: 1135 tokens usados
+      Batch 153/239: 1129 tokens usados
+      Batch 154/239: 1179 tokens usados
+      Batch 155/239: 1154 tokens usados
+      Batch 156/239: 1164 tokens usados
+      Batch 157/239: 1074 tokens usados
+      Batch 158/239: 1216 tokens usados
+      Batch 159/239: 1148 tokens usados
+      Batch 160/239: 1188 tokens usados
+      Batch 161/239: 1150 tokens usados
+      Batch 162/239: 1172 tokens usados
+      Batch 163/239: 1114 tokens usados
+      Batch 164/239: 1146 tokens usados
+      Batch 165/239: 1170 tokens usados
+      Batch 166/239: 1205 tokens usados
+      Batch 167/239: 1168 tokens usados
+      Batch 168/239: 1183 tokens usados
+      Batch 169/239: 1180 tokens usados
+      Batch 170/239: 1130 tokens usados
+      Batch 171/239: 1092 tokens usados
+      Batch 172/239: 1161 tokens usados
+      Batch 173/239: 1167 tokens usados
+      Batch 174/239: 1088 tokens usados
+      Batch 175/239: 1140 tokens usados
+      Batch 176/239: 1157 tokens usados
+      Batch 177/239: 1131 tokens usados
+      Batch 178/239: 1162 tokens usados
+      Batch 179/239: 1114 tokens usados
+      Batch 180/239: 1222 tokens usados
+      Batch 181/239: 1153 tokens usados
+      Batch 182/239: 1128 tokens usados
+      Batch 183/239: 1166 tokens usados
+      Batch 184/239: 1192 tokens usados
+      Batch 185/239: 1164 tokens usados
+      Batch 186/239: 1102 tokens usados
+      Batch 187/239: 1204 tokens usados
+      Batch 188/239: 1129 tokens usados
+      Batch 189/239: 1092 tokens usados
+      Batch 190/239: 1145 tokens usados
+      Batch 191/239: 1239 tokens usados
+      Batch 192/239: 1177 tokens usados
+      Batch 193/239: 1128 tokens usados
+      Batch 194/239: 1175 tokens usados
+      Batch 195/239: 1162 tokens usados
+      Batch 196/239: 1199 tokens usados
+      Batch 197/239: 1145 tokens usados
+      Batch 198/239: 1160 tokens usados
+      Batch 199/239: 1123 tokens usados
+      Batch 200/239: 1081 tokens usados
+      Batch 201/239: 1148 tokens usados
+      Batch 202/239: 1160 tokens usados
+      Batch 203/239: 1185 tokens usados
+      Batch 204/239: 1166 tokens usados
+      Batch 205/239: 1172 tokens usados
+      Batch 206/239: 1133 tokens usados
+      Batch 207/239: 1116 tokens usados
+      Batch 208/239: 1191 tokens usados
+      Batch 209/239: 1208 tokens usados
+      Batch 210/239: 1079 tokens usados
+      Batch 211/239: 1144 tokens usados
+      Batch 212/239: 1151 tokens usados
+      Batch 213/239: 1111 tokens usados
+      Batch 214/239: 1103 tokens usados
+      Batch 215/239: 1139 tokens usados
+      Batch 216/239: 1112 tokens usados
+      Batch 217/239: 1193 tokens usados
+      Batch 218/239: 1128 tokens usados
+      Batch 219/239: 1200 tokens usados
+      Batch 220/239: 1160 tokens usados
+      Batch 221/239: 1112 tokens usados
+      Batch 222/239: 1135 tokens usados
+      Batch 223/239: 1078 tokens usados
+      Batch 224/239: 1160 tokens usados
+      Batch 225/239: 1183 tokens usados
+      Batch 226/239: 1172 tokens usados
+      Batch 227/239: 1217 tokens usados
+      Batch 228/239: 1186 tokens usados
+      Batch 229/239: 1160 tokens usados
+      Batch 230/239: 1101 tokens usados
+      Batch 231/239: 1152 tokens usados
+      Batch 232/239: 1163 tokens usados
+      Batch 233/239: 1179 tokens usados
+      Batch 234/239: 1141 tokens usados
+      Batch 235/239: 1152 tokens usados
+      Batch 236/239: 1159 tokens usados
+      Batch 237/239: 1142 tokens usados
+      Batch 238/239: 1115 tokens usados
+      Batch 239/239: 52 tokens usados
+  Embeddings salvos em: embeddings_openai\embeddings_dataset_sem_caracteres_especiais_lemmatizado_titulo.npy
+  Dimensão dos embeddings: (11902, 1536)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9408
+      Precision: 0.9409
+      Recall: 0.9408
+      F1-Score: 0.9408
+    Treinando RandomForest...
+      Accuracy: 0.8988
+      Precision: 0.9015
+      Recall: 0.8988
+      F1-Score: 0.8986
+    Treinando LogisticRegression...
+      Accuracy: 0.9345
+      Precision: 0.9351
+      Recall: 0.9345
+      F1-Score: 0.9345
+  [CHECKPOINT] Progresso salvo para titulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: texto - Campos: ['Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings OpenAI (text-embedding-3-small)...
+    Dimensão: 1536
+    Batch size: 50
+    Total de textos: 11902
+    Processando em 239 batches de até 50 textos
+      Batch 1/239: 6990 tokens usados
+      Batch 2/239: 8340 tokens usados
+      Batch 3/239: 7084 tokens usados
+      Batch 4/239: 9079 tokens usados
+      Batch 5/239: 7485 tokens usados
+      Batch 6/239: 8672 tokens usados
+      Batch 7/239: 7821 tokens usados
+      Batch 8/239: 9186 tokens usados
+      Batch 9/239: 7882 tokens usados
+      Batch 10/239: 8211 tokens usados
+      Batch 11/239: 7435 tokens usados
+      Batch 12/239: 7170 tokens usados
+      Batch 13/239: 8363 tokens usados
+      Batch 14/239: 6595 tokens usados
+      Batch 15/239: 6942 tokens usados
+      Batch 16/239: 7947 tokens usados
+      Batch 17/239: 8698 tokens usados
+      Batch 18/239: 9880 tokens usados
+      Batch 19/239: 7468 tokens usados
+      Batch 20/239: 11001 tokens usados
+      Batch 21/239: 7111 tokens usados
+      Batch 22/239: 8009 tokens usados
+      Batch 23/239: 7058 tokens usados
+      Batch 24/239: 8223 tokens usados
+      Batch 25/239: 7486 tokens usados
+      Batch 26/239: 8324 tokens usados
+      Batch 27/239: 7781 tokens usados
+      Batch 28/239: 7452 tokens usados
+      Batch 29/239: 6333 tokens usados
+      Batch 30/239: 7199 tokens usados
+      Batch 31/239: 9140 tokens usados
+      Batch 32/239: 8682 tokens usados
+      Batch 33/239: 8226 tokens usados
+      Batch 34/239: 9233 tokens usados
+      Batch 35/239: 7227 tokens usados
+      Batch 36/239: 8091 tokens usados
+      Batch 37/239: 8781 tokens usados
+      Batch 38/239: 7721 tokens usados
+      Batch 39/239: 7897 tokens usados
+      Batch 40/239: 8393 tokens usados
+      Batch 41/239: 7720 tokens usados
+      Batch 42/239: 9241 tokens usados
+      Batch 43/239: 8068 tokens usados
+      Batch 44/239: 8977 tokens usados
+      Batch 45/239: 7989 tokens usados
+      Batch 46/239: 7428 tokens usados
+      Batch 47/239: 7735 tokens usados
+      Batch 48/239: 7206 tokens usados
+      Batch 49/239: 8528 tokens usados
+      Batch 50/239: 7731 tokens usados
+      Batch 51/239: 7345 tokens usados
+      Batch 52/239: 8278 tokens usados
+      Batch 53/239: 8315 tokens usados
+      Batch 54/239: 8322 tokens usados
+      Batch 55/239: 7440 tokens usados
+      Batch 56/239: 9802 tokens usados
+      Batch 57/239: 7580 tokens usados
+      Batch 58/239: 6350 tokens usados
+      Batch 59/239: 6966 tokens usados
+      Batch 60/239: 7219 tokens usados
+      Batch 61/239: 10151 tokens usados
+      Batch 62/239: 9441 tokens usados
+      Batch 63/239: 7355 tokens usados
+      Batch 64/239: 8516 tokens usados
+      Batch 65/239: 8066 tokens usados
+      Batch 66/239: 7320 tokens usados
+      Batch 67/239: 8122 tokens usados
+      Batch 68/239: 6774 tokens usados
+      Batch 69/239: 8426 tokens usados
+      Batch 70/239: 7647 tokens usados
+      Batch 71/239: 7920 tokens usados
+      Batch 72/239: 7271 tokens usados
+      Batch 73/239: 6591 tokens usados
+      Batch 74/239: 7915 tokens usados
+      Batch 75/239: 7452 tokens usados
+      Batch 76/239: 8353 tokens usados
+      Batch 77/239: 7426 tokens usados
+      Batch 78/239: 7536 tokens usados
+      Batch 79/239: 6807 tokens usados
+      Batch 80/239: 8212 tokens usados
+      Batch 81/239: 6794 tokens usados
+      Batch 82/239: 8860 tokens usados
+      Batch 83/239: 8204 tokens usados
+      Batch 84/239: 7441 tokens usados
+      Batch 85/239: 7980 tokens usados
+      Batch 86/239: 6701 tokens usados
+      Batch 87/239: 6995 tokens usados
+      Batch 88/239: 9479 tokens usados
+      Batch 89/239: 8257 tokens usados
+      Batch 90/239: 7745 tokens usados
+      Batch 91/239: 7758 tokens usados
+      Batch 92/239: 8181 tokens usados
+      Batch 93/239: 7132 tokens usados
+      Batch 94/239: 7111 tokens usados
+      Batch 95/239: 6690 tokens usados
+      Batch 96/239: 7440 tokens usados
+      Batch 97/239: 9326 tokens usados
+      Batch 98/239: 7452 tokens usados
+      Batch 99/239: 6973 tokens usados
+      Batch 100/239: 8305 tokens usados
+      Batch 101/239: 8129 tokens usados
+      Batch 102/239: 6466 tokens usados
+      Batch 103/239: 7561 tokens usados
+      Batch 104/239: 7366 tokens usados
+      Batch 105/239: 8679 tokens usados
+      Batch 106/239: 8286 tokens usados
+      Batch 107/239: 8193 tokens usados
+      Batch 108/239: 7528 tokens usados
+      Batch 109/239: 7058 tokens usados
+      Batch 110/239: 7097 tokens usados
+      Batch 111/239: 7043 tokens usados
+      Batch 112/239: 7684 tokens usados
+      Batch 113/239: 9426 tokens usados
+      Batch 114/239: 8605 tokens usados
+      Batch 115/239: 7534 tokens usados
+      Batch 116/239: 9439 tokens usados
+      Batch 117/239: 6911 tokens usados
+      Batch 118/239: 7375 tokens usados
+      Batch 119/239: 7660 tokens usados
+      Batch 120/239: 6842 tokens usados
+      Batch 121/239: 6839 tokens usados
+      Batch 122/239: 6916 tokens usados
+      Batch 123/239: 8549 tokens usados
+      Batch 124/239: 7663 tokens usados
+      Batch 125/239: 7815 tokens usados
+      Batch 126/239: 9737 tokens usados
+      Batch 127/239: 7502 tokens usados
+      Batch 128/239: 7084 tokens usados
+      Batch 129/239: 6731 tokens usados
+      Batch 130/239: 7070 tokens usados
+      Batch 131/239: 9107 tokens usados
+      Batch 132/239: 7464 tokens usados
+      Batch 133/239: 7881 tokens usados
+      Batch 134/239: 8012 tokens usados
+      Batch 135/239: 7634 tokens usados
+      Batch 136/239: 7312 tokens usados
+      Batch 137/239: 7404 tokens usados
+      Batch 138/239: 7067 tokens usados
+      Batch 139/239: 6779 tokens usados
+      Batch 140/239: 8793 tokens usados
+      Batch 141/239: 7643 tokens usados
+      Batch 142/239: 8361 tokens usados
+      Batch 143/239: 7545 tokens usados
+      Batch 144/239: 8416 tokens usados
+      Batch 145/239: 7517 tokens usados
+      Batch 146/239: 8907 tokens usados
+      Batch 147/239: 7930 tokens usados
+      Batch 148/239: 7154 tokens usados
+      Batch 149/239: 7977 tokens usados
+      Batch 150/239: 9036 tokens usados
+      Batch 151/239: 8503 tokens usados
+      Batch 152/239: 6542 tokens usados
+      Batch 153/239: 7360 tokens usados
+      Batch 154/239: 7668 tokens usados
+      Batch 155/239: 8692 tokens usados
+      Batch 156/239: 7655 tokens usados
+      Batch 157/239: 8210 tokens usados
+      Batch 158/239: 8576 tokens usados
+      Batch 159/239: 7133 tokens usados
+      Batch 160/239: 8029 tokens usados
+      Batch 161/239: 8179 tokens usados
+      Batch 162/239: 7823 tokens usados
+      Batch 163/239: 7069 tokens usados
+      Batch 164/239: 7864 tokens usados
+      Batch 165/239: 8959 tokens usados
+      Batch 166/239: 7483 tokens usados
+      Batch 167/239: 7142 tokens usados
+      Batch 168/239: 10205 tokens usados
+      Batch 169/239: 9913 tokens usados
+      Batch 170/239: 6780 tokens usados
+      Batch 171/239: 8440 tokens usados
+      Batch 172/239: 7747 tokens usados
+      Batch 173/239: 7685 tokens usados
+      Batch 174/239: 7736 tokens usados
+      Batch 175/239: 8040 tokens usados
+      Batch 176/239: 7715 tokens usados
+      Batch 177/239: 7694 tokens usados
+      Batch 178/239: 8284 tokens usados
+      Batch 179/239: 7899 tokens usados
+      Batch 180/239: 7429 tokens usados
+      Batch 181/239: 7644 tokens usados
+      Batch 182/239: 7815 tokens usados
+      Batch 183/239: 7624 tokens usados
+      Batch 184/239: 7661 tokens usados
+      Batch 185/239: 7311 tokens usados
+      Batch 186/239: 7097 tokens usados
+      Batch 187/239: 10331 tokens usados
+      Batch 188/239: 7235 tokens usados
+      Batch 189/239: 7367 tokens usados
+      Batch 190/239: 7080 tokens usados
+      Batch 191/239: 7222 tokens usados
+      Batch 192/239: 8029 tokens usados
+      Batch 193/239: 7645 tokens usados
+      Batch 194/239: 7090 tokens usados
+      Batch 195/239: 7726 tokens usados
+      Batch 196/239: 7952 tokens usados
+      Batch 197/239: 7822 tokens usados
+      Batch 198/239: 7432 tokens usados
+      Batch 199/239: 8062 tokens usados
+      Batch 200/239: 6781 tokens usados
+      Batch 201/239: 7890 tokens usados
+      Batch 202/239: 8025 tokens usados
+      Batch 203/239: 9596 tokens usados
+      Batch 204/239: 7195 tokens usados
+      Batch 205/239: 7796 tokens usados
+      Batch 206/239: 8190 tokens usados
+      Batch 207/239: 7405 tokens usados
+      Batch 208/239: 7570 tokens usados
+      Batch 209/239: 7513 tokens usados
+      Batch 210/239: 7321 tokens usados
+      Batch 211/239: 7568 tokens usados
+      Batch 212/239: 6348 tokens usados
+      Batch 213/239: 7579 tokens usados
+      Batch 214/239: 8032 tokens usados
+      Batch 215/239: 7624 tokens usados
+      Batch 216/239: 7243 tokens usados
+      Batch 217/239: 7003 tokens usados
+      Batch 218/239: 7624 tokens usados
+      Batch 219/239: 8453 tokens usados
+      Batch 220/239: 8064 tokens usados
+      Batch 221/239: 7102 tokens usados
+      Batch 222/239: 7454 tokens usados
+      Batch 223/239: 9564 tokens usados
+      Batch 224/239: 7523 tokens usados
+      Batch 225/239: 7818 tokens usados
+      Batch 226/239: 8805 tokens usados
+      Batch 227/239: 10433 tokens usados
+      Batch 228/239: 7865 tokens usados
+      Batch 229/239: 8860 tokens usados
+      Batch 230/239: 9012 tokens usados
+      Batch 231/239: 8409 tokens usados
+      Batch 232/239: 9265 tokens usados
+      Batch 233/239: 10258 tokens usados
+      Batch 234/239: 8108 tokens usados
+      Batch 235/239: 7137 tokens usados
+      Batch 236/239: 8182 tokens usados
+      Batch 237/239: 7961 tokens usados
+      Batch 238/239: 8098 tokens usados
+      Batch 239/239: 336 tokens usados
+  Embeddings salvos em: embeddings_openai\embeddings_dataset_sem_caracteres_especiais_lemmatizado_texto.npy
+  Dimensão dos embeddings: (11902, 1536)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9420
+      Precision: 0.9421
+      Recall: 0.9420
+      F1-Score: 0.9420
+    Treinando RandomForest...
+      Accuracy: 0.8828
+      Precision: 0.8835
+      Recall: 0.8828
+      F1-Score: 0.8828
+    Treinando LogisticRegression...
+      Accuracy: 0.9294
+      Precision: 0.9295
+      Recall: 0.9294
+      F1-Score: 0.9294
+  [CHECKPOINT] Progresso salvo para texto
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: subtitulo - Campos: ['Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Aviso: 6322 textos vazios encontrados (serão tratados)
+  Gerando embeddings OpenAI (text-embedding-3-small)...
+    Dimensão: 1536
+    Batch size: 50
+    Total de textos: 11902
+    Processando em 239 batches de até 50 textos
+      Batch 1/239: 1595 tokens usados
+      Batch 2/239: 959 tokens usados
+      Batch 3/239: 1361 tokens usados
+      Batch 4/239: 1342 tokens usados
+      Batch 5/239: 1116 tokens usados
+      Batch 6/239: 1488 tokens usados
+      Batch 7/239: 1244 tokens usados
+      Batch 8/239: 1074 tokens usados
+      Batch 9/239: 1060 tokens usados
+      Batch 10/239: 947 tokens usados
+      Batch 11/239: 1345 tokens usados
+      Batch 12/239: 1676 tokens usados
+      Batch 13/239: 1057 tokens usados
+      Batch 14/239: 1355 tokens usados
+      Batch 15/239: 1379 tokens usados
+      Batch 16/239: 1030 tokens usados
+      Batch 17/239: 1203 tokens usados
+      Batch 18/239: 1102 tokens usados
+      Batch 19/239: 1333 tokens usados
+      Batch 20/239: 1260 tokens usados
+      Batch 21/239: 1297 tokens usados
+      Batch 22/239: 1336 tokens usados
+      Batch 23/239: 1389 tokens usados
+      Batch 24/239: 1397 tokens usados
+      Batch 25/239: 1201 tokens usados
+      Batch 26/239: 1613 tokens usados
+      Batch 27/239: 1137 tokens usados
+      Batch 28/239: 1029 tokens usados
+      Batch 29/239: 1572 tokens usados
+      Batch 30/239: 1151 tokens usados
+      Batch 31/239: 1287 tokens usados
+      Batch 32/239: 1322 tokens usados
+      Batch 33/239: 1273 tokens usados
+      Batch 34/239: 1105 tokens usados
+      Batch 35/239: 1253 tokens usados
+      Batch 36/239: 1365 tokens usados
+      Batch 37/239: 1122 tokens usados
+      Batch 38/239: 1400 tokens usados
+      Batch 39/239: 1440 tokens usados
+      Batch 40/239: 1440 tokens usados
+      Batch 41/239: 1227 tokens usados
+      Batch 42/239: 1202 tokens usados
+      Batch 43/239: 1313 tokens usados
+      Batch 44/239: 1287 tokens usados
+      Batch 45/239: 1381 tokens usados
+      Batch 46/239: 1433 tokens usados
+      Batch 47/239: 1166 tokens usados
+      Batch 48/239: 1566 tokens usados
+      Batch 49/239: 1156 tokens usados
+      Batch 50/239: 1113 tokens usados
+      Batch 51/239: 1598 tokens usados
+      Batch 52/239: 1543 tokens usados
+      Batch 53/239: 1419 tokens usados
+      Batch 54/239: 1189 tokens usados
+      Batch 55/239: 1238 tokens usados
+      Batch 56/239: 1139 tokens usados
+      Batch 57/239: 1603 tokens usados
+      Batch 58/239: 1768 tokens usados
+      Batch 59/239: 1365 tokens usados
+      Batch 60/239: 1160 tokens usados
+      Batch 61/239: 1718 tokens usados
+      Batch 62/239: 1183 tokens usados
+      Batch 63/239: 1225 tokens usados
+      Batch 64/239: 1087 tokens usados
+      Batch 65/239: 1312 tokens usados
+      Batch 66/239: 1057 tokens usados
+      Batch 67/239: 1282 tokens usados
+      Batch 68/239: 1436 tokens usados
+      Batch 69/239: 1298 tokens usados
+      Batch 70/239: 1649 tokens usados
+      Batch 71/239: 1123 tokens usados
+      Batch 72/239: 1292 tokens usados
+      Batch 73/239: 1333 tokens usados
+      Batch 74/239: 1022 tokens usados
+      Batch 75/239: 853 tokens usados
+      Batch 76/239: 1035 tokens usados
+      Batch 77/239: 1239 tokens usados
+      Batch 78/239: 1329 tokens usados
+      Batch 79/239: 1298 tokens usados
+      Batch 80/239: 1369 tokens usados
+      Batch 81/239: 1077 tokens usados
+      Batch 82/239: 1256 tokens usados
+      Batch 83/239: 1522 tokens usados
+      Batch 84/239: 941 tokens usados
+      Batch 85/239: 1846 tokens usados
+      Batch 86/239: 1350 tokens usados
+      Batch 87/239: 1175 tokens usados
+      Batch 88/239: 1213 tokens usados
+      Batch 89/239: 1114 tokens usados
+      Batch 90/239: 1048 tokens usados
+      Batch 91/239: 1534 tokens usados
+      Batch 92/239: 1195 tokens usados
+      Batch 93/239: 1137 tokens usados
+      Batch 94/239: 951 tokens usados
+      Batch 95/239: 1054 tokens usados
+      Batch 96/239: 1117 tokens usados
+      Batch 97/239: 1213 tokens usados
+      Batch 98/239: 1201 tokens usados
+      Batch 99/239: 1491 tokens usados
+      Batch 100/239: 1623 tokens usados
+      Batch 101/239: 1071 tokens usados
+      Batch 102/239: 1549 tokens usados
+      Batch 103/239: 1411 tokens usados
+      Batch 104/239: 1471 tokens usados
+      Batch 105/239: 1015 tokens usados
+      Batch 106/239: 1358 tokens usados
+      Batch 107/239: 1169 tokens usados
+      Batch 108/239: 1242 tokens usados
+      Batch 109/239: 1670 tokens usados
+      Batch 110/239: 1128 tokens usados
+      Batch 111/239: 1285 tokens usados
+      Batch 112/239: 1183 tokens usados
+      Batch 113/239: 778 tokens usados
+      Batch 114/239: 1122 tokens usados
+      Batch 115/239: 1331 tokens usados
+      Batch 116/239: 1333 tokens usados
+      Batch 117/239: 1129 tokens usados
+      Batch 118/239: 1070 tokens usados
+      Batch 119/239: 1301 tokens usados
+      Batch 120/239: 1377 tokens usados
+      Batch 121/239: 1594 tokens usados
+      Batch 122/239: 1154 tokens usados
+      Batch 123/239: 1300 tokens usados
+      Batch 124/239: 1208 tokens usados
+      Batch 125/239: 1338 tokens usados
+      Batch 126/239: 1384 tokens usados
+      Batch 127/239: 1481 tokens usados
+      Batch 128/239: 1036 tokens usados
+      Batch 129/239: 1381 tokens usados
+      Batch 130/239: 1533 tokens usados
+      Batch 131/239: 774 tokens usados
+      Batch 132/239: 1384 tokens usados
+      Batch 133/239: 1082 tokens usados
+      Batch 134/239: 1289 tokens usados
+      Batch 135/239: 1259 tokens usados
+      Batch 136/239: 1352 tokens usados
+      Batch 137/239: 1308 tokens usados
+      Batch 138/239: 1343 tokens usados
+      Batch 139/239: 1070 tokens usados
+      Batch 140/239: 1007 tokens usados
+      Batch 141/239: 1345 tokens usados
+      Batch 142/239: 1308 tokens usados
+      Batch 143/239: 760 tokens usados
+      Batch 144/239: 1277 tokens usados
+      Batch 145/239: 1509 tokens usados
+      Batch 146/239: 1517 tokens usados
+      Batch 147/239: 1154 tokens usados
+      Batch 148/239: 1343 tokens usados
+      Batch 149/239: 1601 tokens usados
+      Batch 150/239: 1297 tokens usados
+      Batch 151/239: 1220 tokens usados
+      Batch 152/239: 939 tokens usados
+      Batch 153/239: 1108 tokens usados
+      Batch 154/239: 1299 tokens usados
+      Batch 155/239: 1591 tokens usados
+      Batch 156/239: 1248 tokens usados
+      Batch 157/239: 1328 tokens usados
+      Batch 158/239: 1281 tokens usados
+      Batch 159/239: 1461 tokens usados
+      Batch 160/239: 1148 tokens usados
+      Batch 161/239: 1297 tokens usados
+      Batch 162/239: 1493 tokens usados
+      Batch 163/239: 898 tokens usados
+      Batch 164/239: 1184 tokens usados
+      Batch 165/239: 1472 tokens usados
+      Batch 166/239: 1440 tokens usados
+      Batch 167/239: 1345 tokens usados
+      Batch 168/239: 1317 tokens usados
+      Batch 169/239: 1355 tokens usados
+      Batch 170/239: 1137 tokens usados
+      Batch 171/239: 1100 tokens usados
+      Batch 172/239: 1165 tokens usados
+      Batch 173/239: 923 tokens usados
+      Batch 174/239: 1398 tokens usados
+      Batch 175/239: 1158 tokens usados
+      Batch 176/239: 1372 tokens usados
+      Batch 177/239: 1040 tokens usados
+      Batch 178/239: 1272 tokens usados
+      Batch 179/239: 1272 tokens usados
+      Batch 180/239: 1209 tokens usados
+      Batch 181/239: 1705 tokens usados
+      Batch 182/239: 1713 tokens usados
+      Batch 183/239: 1169 tokens usados
+      Batch 184/239: 1190 tokens usados
+      Batch 185/239: 1320 tokens usados
+      Batch 186/239: 1268 tokens usados
+      Batch 187/239: 1211 tokens usados
+      Batch 188/239: 852 tokens usados
+      Batch 189/239: 1422 tokens usados
+      Batch 190/239: 1160 tokens usados
+      Batch 191/239: 1155 tokens usados
+      Batch 192/239: 1121 tokens usados
+      Batch 193/239: 1465 tokens usados
+      Batch 194/239: 1804 tokens usados
+      Batch 195/239: 1241 tokens usados
+      Batch 196/239: 1375 tokens usados
+      Batch 197/239: 1128 tokens usados
+      Batch 198/239: 1055 tokens usados
+      Batch 199/239: 1094 tokens usados
+      Batch 200/239: 1230 tokens usados
+      Batch 201/239: 938 tokens usados
+      Batch 202/239: 1431 tokens usados
+      Batch 203/239: 1669 tokens usados
+      Batch 204/239: 1425 tokens usados
+      Batch 205/239: 1241 tokens usados
+      Batch 206/239: 1016 tokens usados
+      Batch 207/239: 1328 tokens usados
+      Batch 208/239: 1847 tokens usados
+      Batch 209/239: 1232 tokens usados
+      Batch 210/239: 1027 tokens usados
+      Batch 211/239: 1152 tokens usados
+      Batch 212/239: 1416 tokens usados
+      Batch 213/239: 969 tokens usados
+      Batch 214/239: 1011 tokens usados
+      Batch 215/239: 1045 tokens usados
+      Batch 216/239: 1397 tokens usados
+      Batch 217/239: 1388 tokens usados
+      Batch 218/239: 1020 tokens usados
+      Batch 219/239: 1387 tokens usados
+      Batch 220/239: 1300 tokens usados
+      Batch 221/239: 883 tokens usados
+      Batch 222/239: 907 tokens usados
+      Batch 223/239: 1107 tokens usados
+      Batch 224/239: 1354 tokens usados
+      Batch 225/239: 1533 tokens usados
+      Batch 226/239: 1242 tokens usados
+      Batch 227/239: 1312 tokens usados
+      Batch 228/239: 1218 tokens usados
+      Batch 229/239: 1401 tokens usados
+      Batch 230/239: 1370 tokens usados
+      Batch 231/239: 1036 tokens usados
+      Batch 232/239: 1275 tokens usados
+      Batch 233/239: 965 tokens usados
+      Batch 234/239: 1249 tokens usados
+      Batch 235/239: 1303 tokens usados
+      Batch 236/239: 1137 tokens usados
+      Batch 237/239: 1487 tokens usados
+      Batch 238/239: 1670 tokens usados
+      Batch 239/239: 44 tokens usados
+  Embeddings salvos em: embeddings_openai\embeddings_dataset_sem_caracteres_especiais_lemmatizado_subtitulo.npy
+  Dimensão dos embeddings: (11902, 1536)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.8618
+      Precision: 0.8852
+      Recall: 0.8618
+      F1-Score: 0.8597
+    Treinando RandomForest...
+      Accuracy: 0.8446
+      Precision: 0.8573
+      Recall: 0.8446
+      F1-Score: 0.8432
+    Treinando LogisticRegression...
+      Accuracy: 0.8589
+      Precision: 0.8809
+      Recall: 0.8589
+      F1-Score: 0.8568
+  [CHECKPOINT] Progresso salvo para subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo_subtitulo - Campos: ['Titulo', 'Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Aviso: 30 textos vazios encontrados (serão tratados)
+  Gerando embeddings OpenAI (text-embedding-3-small)...
+    Dimensão: 1536
+    Batch size: 50
+    Total de textos: 11902
+    Processando em 239 batches de até 50 textos
+      Batch 1/239: 2708 tokens usados
+      Batch 2/239: 2020 tokens usados
+      Batch 3/239: 2488 tokens usados
+      Batch 4/239: 2461 tokens usados
+      Batch 5/239: 2232 tokens usados
+      Batch 6/239: 2637 tokens usados
+      Batch 7/239: 2373 tokens usados
+      Batch 8/239: 2134 tokens usados
+      Batch 9/239: 2096 tokens usados
+      Batch 10/239: 1997 tokens usados
+      Batch 11/239: 2434 tokens usados
+      Batch 12/239: 2859 tokens usados
+      Batch 13/239: 2120 tokens usados
+      Batch 14/239: 2477 tokens usados
+      Batch 15/239: 2546 tokens usados
+      Batch 16/239: 2052 tokens usados
+      Batch 17/239: 2329 tokens usados
+      Batch 18/239: 2179 tokens usados
+      Batch 19/239: 2470 tokens usados
+      Batch 20/239: 2406 tokens usados
+      Batch 21/239: 2418 tokens usados
+      Batch 22/239: 2438 tokens usados
+      Batch 23/239: 2450 tokens usados
+      Batch 24/239: 2511 tokens usados
+      Batch 25/239: 2315 tokens usados
+      Batch 26/239: 2703 tokens usados
+      Batch 27/239: 2244 tokens usados
+      Batch 28/239: 2134 tokens usados
+      Batch 29/239: 2661 tokens usados
+      Batch 30/239: 2340 tokens usados
+      Batch 31/239: 2318 tokens usados
+      Batch 32/239: 2418 tokens usados
+      Batch 33/239: 2350 tokens usados
+      Batch 34/239: 2176 tokens usados
+      Batch 35/239: 2276 tokens usados
+      Batch 36/239: 2500 tokens usados
+      Batch 37/239: 2178 tokens usados
+      Batch 38/239: 2529 tokens usados
+      Batch 39/239: 2598 tokens usados
+      Batch 40/239: 2586 tokens usados
+      Batch 41/239: 2286 tokens usados
+      Batch 42/239: 2273 tokens usados
+      Batch 43/239: 2459 tokens usados
+      Batch 44/239: 2450 tokens usados
+      Batch 45/239: 2514 tokens usados
+      Batch 46/239: 2490 tokens usados
+      Batch 47/239: 2261 tokens usados
+      Batch 48/239: 2696 tokens usados
+      Batch 49/239: 2265 tokens usados
+      Batch 50/239: 2250 tokens usados
+      Batch 51/239: 2730 tokens usados
+      Batch 52/239: 2721 tokens usados
+      Batch 53/239: 2487 tokens usados
+      Batch 54/239: 2237 tokens usados
+      Batch 55/239: 2338 tokens usados
+      Batch 56/239: 2282 tokens usados
+      Batch 57/239: 2654 tokens usados
+      Batch 58/239: 2811 tokens usados
+      Batch 59/239: 2496 tokens usados
+      Batch 60/239: 2171 tokens usados
+      Batch 61/239: 2880 tokens usados
+      Batch 62/239: 2287 tokens usados
+      Batch 63/239: 2374 tokens usados
+      Batch 64/239: 2218 tokens usados
+      Batch 65/239: 2420 tokens usados
+      Batch 66/239: 2087 tokens usados
+      Batch 67/239: 2393 tokens usados
+      Batch 68/239: 2534 tokens usados
+      Batch 69/239: 2423 tokens usados
+      Batch 70/239: 2729 tokens usados
+      Batch 71/239: 2271 tokens usados
+      Batch 72/239: 2416 tokens usados
+      Batch 73/239: 2384 tokens usados
+      Batch 74/239: 2110 tokens usados
+      Batch 75/239: 1923 tokens usados
+      Batch 76/239: 2158 tokens usados
+      Batch 77/239: 2430 tokens usados
+      Batch 78/239: 2405 tokens usados
+      Batch 79/239: 2365 tokens usados
+      Batch 80/239: 2479 tokens usados
+      Batch 81/239: 2154 tokens usados
+      Batch 82/239: 2354 tokens usados
+      Batch 83/239: 2639 tokens usados
+      Batch 84/239: 1997 tokens usados
+      Batch 85/239: 2897 tokens usados
+      Batch 86/239: 2495 tokens usados
+      Batch 87/239: 2230 tokens usados
+      Batch 88/239: 2370 tokens usados
+      Batch 89/239: 2290 tokens usados
+      Batch 90/239: 2152 tokens usados
+      Batch 91/239: 2612 tokens usados
+      Batch 92/239: 2351 tokens usados
+      Batch 93/239: 2210 tokens usados
+      Batch 94/239: 2043 tokens usados
+      Batch 95/239: 2041 tokens usados
+      Batch 96/239: 2156 tokens usados
+      Batch 97/239: 2258 tokens usados
+      Batch 98/239: 2290 tokens usados
+      Batch 99/239: 2554 tokens usados
+      Batch 100/239: 2685 tokens usados
+      Batch 101/239: 2112 tokens usados
+      Batch 102/239: 2679 tokens usados
+      Batch 103/239: 2491 tokens usados
+      Batch 104/239: 2562 tokens usados
+      Batch 105/239: 2130 tokens usados
+      Batch 106/239: 2444 tokens usados
+      Batch 107/239: 2249 tokens usados
+      Batch 108/239: 2401 tokens usados
+      Batch 109/239: 2769 tokens usados
+      Batch 110/239: 2239 tokens usados
+      Batch 111/239: 2385 tokens usados
+      Batch 112/239: 2240 tokens usados
+      Batch 113/239: 1871 tokens usados
+      Batch 114/239: 2173 tokens usados
+      Batch 115/239: 2404 tokens usados
+      Batch 116/239: 2463 tokens usados
+      Batch 117/239: 2268 tokens usados
+      Batch 118/239: 2099 tokens usados
+      Batch 119/239: 2428 tokens usados
+      Batch 120/239: 2531 tokens usados
+      Batch 121/239: 2654 tokens usados
+      Batch 122/239: 2268 tokens usados
+      Batch 123/239: 2443 tokens usados
+      Batch 124/239: 2246 tokens usados
+      Batch 125/239: 2483 tokens usados
+      Batch 126/239: 2566 tokens usados
+      Batch 127/239: 2583 tokens usados
+      Batch 128/239: 2109 tokens usados
+      Batch 129/239: 2501 tokens usados
+      Batch 130/239: 2665 tokens usados
+      Batch 131/239: 1875 tokens usados
+      Batch 132/239: 2485 tokens usados
+      Batch 133/239: 2157 tokens usados
+      Batch 134/239: 2362 tokens usados
+      Batch 135/239: 2350 tokens usados
+      Batch 136/239: 2467 tokens usados
+      Batch 137/239: 2417 tokens usados
+      Batch 138/239: 2492 tokens usados
+      Batch 139/239: 2171 tokens usados
+      Batch 140/239: 2073 tokens usados
+      Batch 141/239: 2390 tokens usados
+      Batch 142/239: 2355 tokens usados
+      Batch 143/239: 1826 tokens usados
+      Batch 144/239: 2425 tokens usados
+      Batch 145/239: 2598 tokens usados
+      Batch 146/239: 2608 tokens usados
+      Batch 147/239: 2262 tokens usados
+      Batch 148/239: 2436 tokens usados
+      Batch 149/239: 2727 tokens usados
+      Batch 150/239: 2441 tokens usados
+      Batch 151/239: 2331 tokens usados
+      Batch 152/239: 2010 tokens usados
+      Batch 153/239: 2181 tokens usados
+      Batch 154/239: 2428 tokens usados
+      Batch 155/239: 2690 tokens usados
+      Batch 156/239: 2359 tokens usados
+      Batch 157/239: 2345 tokens usados
+      Batch 158/239: 2440 tokens usados
+      Batch 159/239: 2556 tokens usados
+      Batch 160/239: 2274 tokens usados
+      Batch 161/239: 2386 tokens usados
+      Batch 162/239: 2613 tokens usados
+      Batch 163/239: 1939 tokens usados
+      Batch 164/239: 2266 tokens usados
+      Batch 165/239: 2586 tokens usados
+      Batch 166/239: 2590 tokens usados
+      Batch 167/239: 2455 tokens usados
+      Batch 168/239: 2452 tokens usados
+      Batch 169/239: 2485 tokens usados
+      Batch 170/239: 2208 tokens usados
+      Batch 171/239: 2132 tokens usados
+      Batch 172/239: 2271 tokens usados
+      Batch 173/239: 2027 tokens usados
+      Batch 174/239: 2430 tokens usados
+      Batch 175/239: 2238 tokens usados
+      Batch 176/239: 2480 tokens usados
+      Batch 177/239: 2112 tokens usados
+      Batch 178/239: 2382 tokens usados
+      Batch 179/239: 2323 tokens usados
+      Batch 180/239: 2373 tokens usados
+      Batch 181/239: 2814 tokens usados
+      Batch 182/239: 2795 tokens usados
+      Batch 183/239: 2269 tokens usados
+      Batch 184/239: 2324 tokens usados
+      Batch 185/239: 2426 tokens usados
+      Batch 186/239: 2315 tokens usados
+      Batch 187/239: 2353 tokens usados
+      Batch 188/239: 1905 tokens usados
+      Batch 189/239: 2464 tokens usados
+      Batch 190/239: 2246 tokens usados
+      Batch 191/239: 2338 tokens usados
+      Batch 192/239: 2237 tokens usados
+      Batch 193/239: 2534 tokens usados
+      Batch 194/239: 2930 tokens usados
+      Batch 195/239: 2348 tokens usados
+      Batch 196/239: 2521 tokens usados
+      Batch 197/239: 2207 tokens usados
+      Batch 198/239: 2156 tokens usados
+      Batch 199/239: 2157 tokens usados
+      Batch 200/239: 2253 tokens usados
+      Batch 201/239: 2015 tokens usados
+      Batch 202/239: 2549 tokens usados
+      Batch 203/239: 2816 tokens usados
+      Batch 204/239: 2535 tokens usados
+      Batch 205/239: 2349 tokens usados
+      Batch 206/239: 2091 tokens usados
+      Batch 207/239: 2395 tokens usados
+      Batch 208/239: 2991 tokens usados
+      Batch 209/239: 2382 tokens usados
+      Batch 210/239: 2047 tokens usados
+      Batch 211/239: 2246 tokens usados
+      Batch 212/239: 2505 tokens usados
+      Batch 213/239: 2008 tokens usados
+      Batch 214/239: 2054 tokens usados
+      Batch 215/239: 2112 tokens usados
+      Batch 216/239: 2461 tokens usados
+      Batch 217/239: 2524 tokens usados
+      Batch 218/239: 2076 tokens usados
+      Batch 219/239: 2533 tokens usados
+      Batch 220/239: 2402 tokens usados
+      Batch 221/239: 1923 tokens usados
+      Batch 222/239: 1975 tokens usados
+      Batch 223/239: 2128 tokens usados
+      Batch 224/239: 2454 tokens usados
+      Batch 225/239: 2664 tokens usados
+      Batch 226/239: 2362 tokens usados
+      Batch 227/239: 2469 tokens usados
+      Batch 228/239: 2349 tokens usados
+      Batch 229/239: 2505 tokens usados
+      Batch 230/239: 2423 tokens usados
+      Batch 231/239: 2134 tokens usados
+      Batch 232/239: 2384 tokens usados
+      Batch 233/239: 2076 tokens usados
+      Batch 234/239: 2324 tokens usados
+      Batch 235/239: 2401 tokens usados
+      Batch 236/239: 2235 tokens usados
+      Batch 237/239: 2578 tokens usados
+      Batch 238/239: 2727 tokens usados
+      Batch 239/239: 94 tokens usados
+  Embeddings salvos em: embeddings_openai\embeddings_dataset_sem_caracteres_especiais_lemmatizado_titulo_subtitulo.npy
+  Dimensão dos embeddings: (11902, 1536)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9563
+      Precision: 0.9563
+      Recall: 0.9563
+      F1-Score: 0.9563
+    Treinando RandomForest...
+      Accuracy: 0.9152
+      Precision: 0.9157
+      Recall: 0.9152
+      F1-Score: 0.9151
+    Treinando LogisticRegression...
+      Accuracy: 0.9471
+      Precision: 0.9474
+      Recall: 0.9471
+      F1-Score: 0.9471
+  [CHECKPOINT] Progresso salvo para titulo_subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: completo - Campos: ['Titulo', 'Subtitulo', 'Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings OpenAI (text-embedding-3-small)...
+    Dimensão: 1536
+    Batch size: 50
+    Total de textos: 11902
+    Processando em 239 batches de até 50 textos
+      Batch 1/239: 9686 tokens usados
+      Batch 2/239: 10356 tokens usados
+      Batch 3/239: 9561 tokens usados
+      Batch 4/239: 11532 tokens usados
+      Batch 5/239: 9706 tokens usados
+      Batch 6/239: 11297 tokens usados
+      Batch 7/239: 10184 tokens usados
+      Batch 8/239: 11308 tokens usados
+      Batch 9/239: 9966 tokens usados
+      Batch 10/239: 10198 tokens usados
+      Batch 11/239: 9855 tokens usados
+      Batch 12/239: 10016 tokens usados
+      Batch 13/239: 10472 tokens usados
+      Batch 14/239: 9054 tokens usados
+      Batch 15/239: 9476 tokens usados
+      Batch 16/239: 9994 tokens usados
+      Batch 17/239: 11020 tokens usados
+      Batch 18/239: 12031 tokens usados
+      Batch 19/239: 9925 tokens usados
+      Batch 20/239: 13381 tokens usados
+      Batch 21/239: 9517 tokens usados
+      Batch 22/239: 10439 tokens usados
+      Batch 23/239: 9500 tokens usados
+      Batch 24/239: 10719 tokens usados
+      Batch 25/239: 9785 tokens usados
+      Batch 26/239: 11016 tokens usados
+      Batch 27/239: 10016 tokens usados
+      Batch 28/239: 9573 tokens usados
+      Batch 29/239: 8988 tokens usados
+      Batch 30/239: 9527 tokens usados
+      Batch 31/239: 11407 tokens usados
+      Batch 32/239: 11088 tokens usados
+      Batch 33/239: 10563 tokens usados
+      Batch 34/239: 11396 tokens usados
+      Batch 35/239: 9493 tokens usados
+      Batch 36/239: 10581 tokens usados
+      Batch 37/239: 10950 tokens usados
+      Batch 38/239: 10241 tokens usados
+      Batch 39/239: 10481 tokens usados
+      Batch 40/239: 10963 tokens usados
+      Batch 41/239: 9999 tokens usados
+      Batch 42/239: 11502 tokens usados
+      Batch 43/239: 10512 tokens usados
+      Batch 44/239: 11417 tokens usados
+      Batch 45/239: 10494 tokens usados
+      Batch 46/239: 9908 tokens usados
+      Batch 47/239: 9985 tokens usados
+      Batch 48/239: 9897 tokens usados
+      Batch 49/239: 10781 tokens usados
+      Batch 50/239: 9970 tokens usados
+      Batch 51/239: 10063 tokens usados
+      Batch 52/239: 10986 tokens usados
+      Batch 53/239: 10792 tokens usados
+      Batch 54/239: 10551 tokens usados
+      Batch 55/239: 9769 tokens usados
+      Batch 56/239: 12071 tokens usados
+      Batch 57/239: 10227 tokens usados
+      Batch 58/239: 9148 tokens usados
+      Batch 59/239: 9447 tokens usados
+      Batch 60/239: 9374 tokens usados
+      Batch 61/239: 13004 tokens usados
+      Batch 62/239: 11722 tokens usados
+      Batch 63/239: 9719 tokens usados
+      Batch 64/239: 10727 tokens usados
+      Batch 65/239: 10475 tokens usados
+      Batch 66/239: 9395 tokens usados
+      Batch 67/239: 10501 tokens usados
+      Batch 68/239: 9298 tokens usados
+      Batch 69/239: 10847 tokens usados
+      Batch 70/239: 10366 tokens usados
+      Batch 71/239: 10180 tokens usados
+      Batch 72/239: 9671 tokens usados
+      Batch 73/239: 8963 tokens usados
+      Batch 74/239: 10009 tokens usados
+      Batch 75/239: 9367 tokens usados
+      Batch 76/239: 10501 tokens usados
+      Batch 77/239: 9844 tokens usados
+      Batch 78/239: 9927 tokens usados
+      Batch 79/239: 9162 tokens usados
+      Batch 80/239: 10683 tokens usados
+      Batch 81/239: 8942 tokens usados
+      Batch 82/239: 11203 tokens usados
+      Batch 83/239: 10835 tokens usados
+      Batch 84/239: 9429 tokens usados
+      Batch 85/239: 10868 tokens usados
+      Batch 86/239: 9184 tokens usados
+      Batch 87/239: 9210 tokens usados
+      Batch 88/239: 11840 tokens usados
+      Batch 89/239: 10533 tokens usados
+      Batch 90/239: 9889 tokens usados
+      Batch 91/239: 10358 tokens usados
+      Batch 92/239: 10522 tokens usados
+      Batch 93/239: 9324 tokens usados
+      Batch 94/239: 9142 tokens usados
+      Batch 95/239: 8718 tokens usados
+      Batch 96/239: 9583 tokens usados
+      Batch 97/239: 11573 tokens usados
+      Batch 98/239: 9729 tokens usados
+      Batch 99/239: 9517 tokens usados
+      Batch 100/239: 10979 tokens usados
+      Batch 101/239: 10229 tokens usados
+      Batch 102/239: 9137 tokens usados
+      Batch 103/239: 10037 tokens usados
+      Batch 104/239: 9908 tokens usados
+      Batch 105/239: 10793 tokens usados
+      Batch 106/239: 10721 tokens usados
+      Batch 107/239: 10429 tokens usados
+      Batch 108/239: 9921 tokens usados
+      Batch 109/239: 9819 tokens usados
+      Batch 110/239: 9326 tokens usados
+      Batch 111/239: 9416 tokens usados
+      Batch 112/239: 9913 tokens usados
+      Batch 113/239: 11285 tokens usados
+      Batch 114/239: 10762 tokens usados
+      Batch 115/239: 9922 tokens usados
+      Batch 116/239: 11890 tokens usados
+      Batch 117/239: 9172 tokens usados
+      Batch 118/239: 9465 tokens usados
+      Batch 119/239: 10070 tokens usados
+      Batch 120/239: 9357 tokens usados
+      Batch 121/239: 9477 tokens usados
+      Batch 122/239: 9169 tokens usados
+      Batch 123/239: 10978 tokens usados
+      Batch 124/239: 9897 tokens usados
+      Batch 125/239: 10281 tokens usados
+      Batch 126/239: 12291 tokens usados
+      Batch 127/239: 10069 tokens usados
+      Batch 128/239: 9180 tokens usados
+      Batch 129/239: 9217 tokens usados
+      Batch 130/239: 9716 tokens usados
+      Batch 131/239: 10972 tokens usados
+      Batch 132/239: 9938 tokens usados
+      Batch 133/239: 10029 tokens usados
+      Batch 134/239: 10362 tokens usados
+      Batch 135/239: 9973 tokens usados
+      Batch 136/239: 9772 tokens usados
+      Batch 137/239: 9809 tokens usados
+      Batch 138/239: 9544 tokens usados
+      Batch 139/239: 8938 tokens usados
+      Batch 140/239: 10860 tokens usados
+      Batch 141/239: 10022 tokens usados
+      Batch 142/239: 10713 tokens usados
+      Batch 143/239: 9365 tokens usados
+      Batch 144/239: 10739 tokens usados
+      Batch 145/239: 10098 tokens usados
+      Batch 146/239: 11506 tokens usados
+      Batch 147/239: 10182 tokens usados
+      Batch 148/239: 9587 tokens usados
+      Batch 149/239: 10699 tokens usados
+      Batch 150/239: 11470 tokens usados
+      Batch 151/239: 10823 tokens usados
+      Batch 152/239: 8543 tokens usados
+      Batch 153/239: 9531 tokens usados
+      Batch 154/239: 10083 tokens usados
+      Batch 155/239: 11368 tokens usados
+      Batch 156/239: 10001 tokens usados
+      Batch 157/239: 10545 tokens usados
+      Batch 158/239: 11006 tokens usados
+      Batch 159/239: 9678 tokens usados
+      Batch 160/239: 10286 tokens usados
+      Batch 161/239: 10553 tokens usados
+      Batch 162/239: 10424 tokens usados
+      Batch 163/239: 8993 tokens usados
+      Batch 164/239: 10121 tokens usados
+      Batch 165/239: 11537 tokens usados
+      Batch 166/239: 10058 tokens usados
+      Batch 167/239: 9589 tokens usados
+      Batch 168/239: 12639 tokens usados
+      Batch 169/239: 12382 tokens usados
+      Batch 170/239: 8976 tokens usados
+      Batch 171/239: 10553 tokens usados
+      Batch 172/239: 10004 tokens usados
+      Batch 173/239: 9692 tokens usados
+      Batch 174/239: 10156 tokens usados
+      Batch 175/239: 10268 tokens usados
+      Batch 176/239: 10183 tokens usados
+      Batch 177/239: 9794 tokens usados
+      Batch 178/239: 10654 tokens usados
+      Batch 179/239: 10210 tokens usados
+      Batch 180/239: 9785 tokens usados
+      Batch 181/239: 10440 tokens usados
+      Batch 182/239: 10595 tokens usados
+      Batch 183/239: 9878 tokens usados
+      Batch 184/239: 9973 tokens usados
+      Batch 185/239: 9728 tokens usados
+      Batch 186/239: 9402 tokens usados
+      Batch 187/239: 12676 tokens usados
+      Batch 188/239: 9123 tokens usados
+      Batch 189/239: 9825 tokens usados
+      Batch 190/239: 9314 tokens usados
+      Batch 191/239: 9541 tokens usados
+      Batch 192/239: 10247 tokens usados
+      Batch 193/239: 10172 tokens usados
+      Batch 194/239: 10007 tokens usados
+      Batch 195/239: 10071 tokens usados
+      Batch 196/239: 10458 tokens usados
+      Batch 197/239: 10015 tokens usados
+      Batch 198/239: 9578 tokens usados
+      Batch 199/239: 10204 tokens usados
+      Batch 200/239: 9020 tokens usados
+      Batch 201/239: 9899 tokens usados
+      Batch 202/239: 10563 tokens usados
+      Batch 203/239: 12399 tokens usados
+      Batch 204/239: 9709 tokens usados
+      Batch 205/239: 10134 tokens usados
+      Batch 206/239: 10266 tokens usados
+      Batch 207/239: 9783 tokens usados
+      Batch 208/239: 10556 tokens usados
+      Batch 209/239: 9885 tokens usados
+      Batch 210/239: 9355 tokens usados
+      Batch 211/239: 9803 tokens usados
+      Batch 212/239: 8842 tokens usados
+      Batch 213/239: 9573 tokens usados
+      Batch 214/239: 10074 tokens usados
+      Batch 215/239: 9727 tokens usados
+      Batch 216/239: 9691 tokens usados
+      Batch 217/239: 9514 tokens usados
+      Batch 218/239: 9695 tokens usados
+      Batch 219/239: 10975 tokens usados
+      Batch 220/239: 10454 tokens usados
+      Batch 221/239: 9010 tokens usados
+      Batch 222/239: 9423 tokens usados
+      Batch 223/239: 11675 tokens usados
+      Batch 224/239: 9968 tokens usados
+      Batch 225/239: 10468 tokens usados
+      Batch 226/239: 11157 tokens usados
+      Batch 227/239: 12895 tokens usados
+      Batch 228/239: 10199 tokens usados
+      Batch 229/239: 11352 tokens usados
+      Batch 230/239: 11427 tokens usados
+      Batch 231/239: 10529 tokens usados
+      Batch 232/239: 11636 tokens usados
+      Batch 233/239: 12317 tokens usados
+      Batch 234/239: 10428 tokens usados
+      Batch 235/239: 9523 tokens usados
+      Batch 236/239: 10406 tokens usados
+      Batch 237/239: 10527 tokens usados
+      Batch 238/239: 10812 tokens usados
+      Batch 239/239: 430 tokens usados
+  Embeddings salvos em: embeddings_openai\embeddings_dataset_sem_caracteres_especiais_lemmatizado_completo.npy
+  Dimensão dos embeddings: (11902, 1536)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9698
+      Precision: 0.9698
+      Recall: 0.9698
+      F1-Score: 0.9698
+    Treinando RandomForest...
+      Accuracy: 0.9315
+      Precision: 0.9318
+      Recall: 0.9315
+      F1-Score: 0.9315
+    Treinando LogisticRegression...
+      Accuracy: 0.9605
+      Precision: 0.9605
+      Recall: 0.9605
+      F1-Score: 0.9605
+  [CHECKPOINT] Progresso salvo para completo
+
+
+================================================================================
+RESUMO GERAL DOS RESULTADOS
+================================================================================
+
+Resultados salvos em: results_openai\resultados_openai.csv
+
+                                     Dataset      Combination         Classifier  Accuracy  Precision   Recall  F1-Score  Embedding_Dim
+           dataset_sem_stopwords_lemmatizado           titulo                SVM  0.909282   0.910007 0.909282  0.909243           1536
+           dataset_sem_stopwords_lemmatizado           titulo       RandomForest  0.863083   0.863676 0.863083  0.863028           1536
+           dataset_sem_stopwords_lemmatizado           titulo LogisticRegression  0.892062   0.893166 0.892062  0.891988           1536
+           dataset_sem_stopwords_lemmatizado            texto                SVM  0.944141   0.944149 0.944141  0.944141           1536
+           dataset_sem_stopwords_lemmatizado            texto       RandomForest  0.887442   0.888494 0.887442  0.887365           1536
+           dataset_sem_stopwords_lemmatizado            texto LogisticRegression  0.930701   0.930738 0.930701  0.930700           1536
+           dataset_sem_stopwords_lemmatizado        subtitulo                SVM  0.860143   0.883713 0.860143  0.857970           1536
+           dataset_sem_stopwords_lemmatizado        subtitulo       RandomForest  0.834103   0.845163 0.834103  0.832771           1536
+           dataset_sem_stopwords_lemmatizado        subtitulo LogisticRegression  0.856783   0.877214 0.856783  0.854825           1536
+           dataset_sem_stopwords_lemmatizado titulo_subtitulo                SVM  0.930281   0.931170 0.930281  0.930246           1536
+           dataset_sem_stopwords_lemmatizado titulo_subtitulo       RandomForest  0.897522   0.897929 0.897522  0.897497           1536
+           dataset_sem_stopwords_lemmatizado titulo_subtitulo LogisticRegression  0.921462   0.921870 0.921462  0.921443           1536
+           dataset_sem_stopwords_lemmatizado         completo                SVM  0.964721   0.964732 0.964721  0.964720           1536
+           dataset_sem_stopwords_lemmatizado         completo       RandomForest  0.910962   0.912006 0.910962  0.910904           1536
+           dataset_sem_stopwords_lemmatizado         completo LogisticRegression  0.958001   0.958047 0.958001  0.958000           1536
+dataset_sem_caracteres_especiais_lemmatizado           titulo                SVM  0.940781   0.940894 0.940781  0.940778           1536
+dataset_sem_caracteres_especiais_lemmatizado           titulo       RandomForest  0.898782   0.901450 0.898782  0.898615           1536
+dataset_sem_caracteres_especiais_lemmatizado           titulo LogisticRegression  0.934481   0.935132 0.934481  0.934457           1536
+dataset_sem_caracteres_especiais_lemmatizado            texto                SVM  0.942041   0.942103 0.942041  0.942039           1536
+dataset_sem_caracteres_especiais_lemmatizado            texto       RandomForest  0.882822   0.883470 0.882822  0.882772           1536
+dataset_sem_caracteres_especiais_lemmatizado            texto LogisticRegression  0.929441   0.929501 0.929441  0.929439           1536
+dataset_sem_caracteres_especiais_lemmatizado        subtitulo                SVM  0.861823   0.885163 0.861823  0.859706           1536
+dataset_sem_caracteres_especiais_lemmatizado        subtitulo       RandomForest  0.844603   0.857261 0.844603  0.843222           1536
+dataset_sem_caracteres_especiais_lemmatizado        subtitulo LogisticRegression  0.858883   0.880874 0.858883  0.856824           1536
+dataset_sem_caracteres_especiais_lemmatizado titulo_subtitulo                SVM  0.956321   0.956342 0.956321  0.956320           1536
+dataset_sem_caracteres_especiais_lemmatizado titulo_subtitulo       RandomForest  0.915162   0.915731 0.915162  0.915133           1536
+dataset_sem_caracteres_especiais_lemmatizado titulo_subtitulo LogisticRegression  0.947081   0.947447 0.947081  0.947071           1536
+dataset_sem_caracteres_especiais_lemmatizado         completo                SVM  0.969761   0.969762 0.969761  0.969761           1536
+dataset_sem_caracteres_especiais_lemmatizado         completo       RandomForest  0.931541   0.931833 0.931541  0.931529           1536
+dataset_sem_caracteres_especiais_lemmatizado         completo LogisticRegression  0.960521   0.960526 0.960521  0.960521           1536
+
+
+================================================================================
+MELHORES RESULTADOS POR COMBINAÇÃO
+================================================================================
+
+
+Dataset: dataset_sem_stopwords_lemmatizado
+--------------------------------------------------------------------------------
+  titulo               | Melhor: SVM                  | F1: 0.9092 | Acc: 0.9093
+  texto                | Melhor: SVM                  | F1: 0.9441 | Acc: 0.9441
+  subtitulo            | Melhor: SVM                  | F1: 0.8580 | Acc: 0.8601
+  titulo_subtitulo     | Melhor: SVM                  | F1: 0.9302 | Acc: 0.9303
+  completo             | Melhor: SVM                  | F1: 0.9647 | Acc: 0.9647
+
+Dataset: dataset_sem_caracteres_especiais_lemmatizado
+--------------------------------------------------------------------------------
+  titulo               | Melhor: SVM                  | F1: 0.9408 | Acc: 0.9408
+  texto                | Melhor: SVM                  | F1: 0.9420 | Acc: 0.9420
+  subtitulo            | Melhor: SVM                  | F1: 0.8597 | Acc: 0.8618
+  titulo_subtitulo     | Melhor: SVM                  | F1: 0.9563 | Acc: 0.9563
+  completo             | Melhor: SVM                  | F1: 0.9698 | Acc: 0.9698
+
+Resultados completos salvos em: results_openai\resultados_completos_openai.pkl
+
+================================================================================
+PROCESSAMENTO CONCLUÍDO!
+Fim: 2025-10-12 21:16:36
+================================================================================

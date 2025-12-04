@@ -1,0 +1,431 @@
+================================================================================
+TREINAMENTO COM SFR-EMBEDDING-MISTRAL [CORRIGIDO - GPU]
+Otimizado para RTX 3060 16GB
+Início: 2025-10-13 13:02:22
+================================================================================
+
+✅ Dispositivo: cuda
+✅ GPU: NVIDIA GeForce RTX 3060
+✅ Memória GPU total: 12.88 GB
+✅ CUDA Version: 12.6
+✅ PyTorch Version: 2.8.0+cu126
+✅ Otimizações CUDA ativadas
+
+📥 Carregando modelo SFR-Mistral: Salesforce/SFR-Embedding-Mistral
+⚠️  Forçando uso de GPU...
+
+✓ Modelo carregado!
+✓ Device do modelo: cuda:0
+✓ Dimensão dos embeddings: 4096
+✓ Max sequence length: 256
+✓ Batch size: 32
+
+📊 Memória GPU:
+   Alocada: 7.25 GB
+   Reservada: 7.55 GB
+   Disponível: 5.33 GB
+
+🧪 Teste de velocidade...
+   100 textos em 1.57s = 63.5 textos/seg
+   ✅ Velocidade OK - usando GPU!
+   Tempo estimado para 11.902 textos: ~3.1 minutos
+
+================================================================================
+PROCESSANDO DATASET: dataset_sem_stopwords_lemmatizado
+================================================================================
+
+Carregando ../../bases_preprocessados/dataset_sem_stopwords_lemmatizado.xlsx...
+Dataset carregado: 11902 linhas
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo - Campos: ['Titulo']
+--------------------------------------------------------------------------------
+  [CHECKPOINT] Carregando embeddings salvos...
+  Dimensão dos embeddings: (11902, 4096)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.8979
+      Precision: 0.9000
+      Recall: 0.8979
+      F1-Score: 0.8978
+    Treinando RandomForest...
+      Accuracy: 0.8568
+      Precision: 0.8572
+      Recall: 0.8568
+      F1-Score: 0.8567
+    Treinando LogisticRegression...
+      Accuracy: 0.8912
+      Precision: 0.8932
+      Recall: 0.8912
+      F1-Score: 0.8911
+  [CHECKPOINT] Progresso salvo para titulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: texto - Campos: ['Noticia']
+--------------------------------------------------------------------------------
+  [CHECKPOINT] Carregando embeddings salvos...
+  Dimensão dos embeddings: (11902, 4096)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9353
+      Precision: 0.9354
+      Recall: 0.9353
+      F1-Score: 0.9353
+    Treinando RandomForest...
+      Accuracy: 0.8908
+      Precision: 0.8922
+      Recall: 0.8908
+      F1-Score: 0.8907
+    Treinando LogisticRegression...
+      Accuracy: 0.9189
+      Precision: 0.9190
+      Recall: 0.9189
+      F1-Score: 0.9189
+  [CHECKPOINT] Progresso salvo para texto
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: subtitulo - Campos: ['Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings SFR-Mistral (USANDO GPU!)...
+    Modelo: Salesforce/SFR-Embedding-Mistral
+    Total de textos: 11902
+    Batch size: 32
+    Device em uso: cuda
+    ✓ Instruções SFR adicionadas aos textos
+    VRAM antes: 7.26 GB
+    VRAM depois: 7.26 GB
+    ✓ Embeddings gerados: (11902, 4096)
+  Embeddings salvos em: embeddings_sfr\embeddings_dataset_sem_stopwords_lemmatizado_subtitulo.npy
+  ✓ Cache GPU limpo (usando 7.26 GB)
+  Dimensão dos embeddings: (11902, 4096)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.8589
+      Precision: 0.8829
+      Recall: 0.8589
+      F1-Score: 0.8566
+    Treinando RandomForest...
+      Accuracy: 0.8270
+      Precision: 0.8355
+      Recall: 0.8270
+      F1-Score: 0.8259
+    Treinando LogisticRegression...
+      Accuracy: 0.8530
+      Precision: 0.8728
+      Recall: 0.8530
+      F1-Score: 0.8510
+  [CHECKPOINT] Progresso salvo para subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo_subtitulo - Campos: ['Titulo', 'Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings SFR-Mistral (USANDO GPU!)...
+    Modelo: Salesforce/SFR-Embedding-Mistral
+    Total de textos: 11902
+    Batch size: 32
+    Device em uso: cuda
+    ✓ Instruções SFR adicionadas aos textos
+    VRAM antes: 7.26 GB
+    VRAM depois: 7.26 GB
+    ✓ Embeddings gerados: (11902, 4096)
+  Embeddings salvos em: embeddings_sfr\embeddings_dataset_sem_stopwords_lemmatizado_titulo_subtitulo.npy
+  ✓ Cache GPU limpo (usando 7.26 GB)
+  Dimensão dos embeddings: (11902, 4096)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9261
+      Precision: 0.9273
+      Recall: 0.9261
+      F1-Score: 0.9260
+    Treinando RandomForest...
+      Accuracy: 0.9084
+      Precision: 0.9089
+      Recall: 0.9084
+      F1-Score: 0.9084
+    Treinando LogisticRegression...
+      Accuracy: 0.9202
+      Precision: 0.9208
+      Recall: 0.9202
+      F1-Score: 0.9202
+  [CHECKPOINT] Progresso salvo para titulo_subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: completo - Campos: ['Titulo', 'Subtitulo', 'Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings SFR-Mistral (USANDO GPU!)...
+    Modelo: Salesforce/SFR-Embedding-Mistral
+    Total de textos: 11902
+    Batch size: 32
+    Device em uso: cuda
+    ✓ Instruções SFR adicionadas aos textos
+    VRAM antes: 7.26 GB
+    VRAM depois: 7.26 GB
+    ✓ Embeddings gerados: (11902, 4096)
+  Embeddings salvos em: embeddings_sfr\embeddings_dataset_sem_stopwords_lemmatizado_completo.npy
+  ✓ Cache GPU limpo (usando 7.26 GB)
+  Dimensão dos embeddings: (11902, 4096)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9672
+      Precision: 0.9673
+      Recall: 0.9672
+      F1-Score: 0.9672
+    Treinando RandomForest...
+      Accuracy: 0.9126
+      Precision: 0.9134
+      Recall: 0.9126
+      F1-Score: 0.9126
+    Treinando LogisticRegression...
+      Accuracy: 0.9475
+      Precision: 0.9476
+      Recall: 0.9475
+      F1-Score: 0.9475
+  [CHECKPOINT] Progresso salvo para completo
+
+================================================================================
+PROCESSANDO DATASET: dataset_sem_caracteres_especiais_lemmatizado
+================================================================================
+
+Carregando ../../bases_preprocessados/dataset_sem_caracteres_especiais_lemmatizado.xlsx...
+Dataset carregado: 11902 linhas
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo - Campos: ['Titulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings SFR-Mistral (USANDO GPU!)...
+    Modelo: Salesforce/SFR-Embedding-Mistral
+    Total de textos: 11902
+    Batch size: 32
+    Device em uso: cuda
+    ✓ Instruções SFR adicionadas aos textos
+    VRAM antes: 7.26 GB
+    VRAM depois: 7.26 GB
+    ✓ Embeddings gerados: (11902, 4096)
+  Embeddings salvos em: embeddings_sfr\embeddings_dataset_sem_caracteres_especiais_lemmatizado_titulo.npy
+  ✓ Cache GPU limpo (usando 7.26 GB)
+  Dimensão dos embeddings: (11902, 4096)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9395
+      Precision: 0.9398
+      Recall: 0.9395
+      F1-Score: 0.9395
+    Treinando RandomForest...
+      Accuracy: 0.8849
+      Precision: 0.8849
+      Recall: 0.8849
+      F1-Score: 0.8849
+    Treinando LogisticRegression...
+      Accuracy: 0.9194
+      Precision: 0.9198
+      Recall: 0.9194
+      F1-Score: 0.9193
+  [CHECKPOINT] Progresso salvo para titulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: texto - Campos: ['Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings SFR-Mistral (USANDO GPU!)...
+    Modelo: Salesforce/SFR-Embedding-Mistral
+    Total de textos: 11902
+    Batch size: 32
+    Device em uso: cuda
+    ✓ Instruções SFR adicionadas aos textos
+    VRAM antes: 7.26 GB
+    VRAM depois: 7.26 GB
+    ✓ Embeddings gerados: (11902, 4096)
+  Embeddings salvos em: embeddings_sfr\embeddings_dataset_sem_caracteres_especiais_lemmatizado_texto.npy
+  ✓ Cache GPU limpo (usando 7.26 GB)
+  Dimensão dos embeddings: (11902, 4096)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9395
+      Precision: 0.9395
+      Recall: 0.9395
+      F1-Score: 0.9395
+    Treinando RandomForest...
+      Accuracy: 0.8891
+      Precision: 0.8902
+      Recall: 0.8891
+      F1-Score: 0.8890
+    Treinando LogisticRegression...
+      Accuracy: 0.9168
+      Precision: 0.9169
+      Recall: 0.9168
+      F1-Score: 0.9168
+  [CHECKPOINT] Progresso salvo para texto
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: subtitulo - Campos: ['Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings SFR-Mistral (USANDO GPU!)...
+    Modelo: Salesforce/SFR-Embedding-Mistral
+    Total de textos: 11902
+    Batch size: 32
+    Device em uso: cuda
+    ✓ Instruções SFR adicionadas aos textos
+    VRAM antes: 7.26 GB
+    VRAM depois: 7.26 GB
+    ✓ Embeddings gerados: (11902, 4096)
+  Embeddings salvos em: embeddings_sfr\embeddings_dataset_sem_caracteres_especiais_lemmatizado_subtitulo.npy
+  ✓ Cache GPU limpo (usando 7.26 GB)
+  Dimensão dos embeddings: (11902, 4096)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.8576
+      Precision: 0.8807
+      Recall: 0.8576
+      F1-Score: 0.8554
+    Treinando RandomForest...
+      Accuracy: 0.8345
+      Precision: 0.8447
+      Recall: 0.8345
+      F1-Score: 0.8333
+    Treinando LogisticRegression...
+      Accuracy: 0.8547
+      Precision: 0.8751
+      Recall: 0.8547
+      F1-Score: 0.8527
+  [CHECKPOINT] Progresso salvo para subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo_subtitulo - Campos: ['Titulo', 'Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings SFR-Mistral (USANDO GPU!)...
+    Modelo: Salesforce/SFR-Embedding-Mistral
+    Total de textos: 11902
+    Batch size: 32
+    Device em uso: cuda
+    ✓ Instruções SFR adicionadas aos textos
+    VRAM antes: 7.26 GB
+    VRAM depois: 7.26 GB
+    ✓ Embeddings gerados: (11902, 4096)
+  Embeddings salvos em: embeddings_sfr\embeddings_dataset_sem_caracteres_especiais_lemmatizado_titulo_subtitulo.npy
+  ✓ Cache GPU limpo (usando 7.26 GB)
+  Dimensão dos embeddings: (11902, 4096)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9483
+      Precision: 0.9485
+      Recall: 0.9483
+      F1-Score: 0.9483
+    Treinando RandomForest...
+      Accuracy: 0.9034
+      Precision: 0.9035
+      Recall: 0.9034
+      F1-Score: 0.9034
+    Treinando LogisticRegression...
+      Accuracy: 0.9341
+      Precision: 0.9345
+      Recall: 0.9341
+      F1-Score: 0.9340
+  [CHECKPOINT] Progresso salvo para titulo_subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: completo - Campos: ['Titulo', 'Subtitulo', 'Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings SFR-Mistral (USANDO GPU!)...
+    Modelo: Salesforce/SFR-Embedding-Mistral
+    Total de textos: 11902
+    Batch size: 32
+    Device em uso: cuda
+    ✓ Instruções SFR adicionadas aos textos
+    VRAM antes: 7.26 GB
+    VRAM depois: 7.26 GB
+    ✓ Embeddings gerados: (11902, 4096)
+  Embeddings salvos em: embeddings_sfr\embeddings_dataset_sem_caracteres_especiais_lemmatizado_completo.npy
+  ✓ Cache GPU limpo (usando 7.26 GB)
+  Dimensão dos embeddings: (11902, 4096)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9727
+      Precision: 0.9727
+      Recall: 0.9727
+      F1-Score: 0.9727
+    Treinando RandomForest...
+      Accuracy: 0.9240
+      Precision: 0.9257
+      Recall: 0.9240
+      F1-Score: 0.9239
+    Treinando LogisticRegression...
+      Accuracy: 0.9580
+      Precision: 0.9582
+      Recall: 0.9580
+      F1-Score: 0.9580
+  [CHECKPOINT] Progresso salvo para completo
+
+
+================================================================================
+RESUMO GERAL DOS RESULTADOS
+================================================================================
+
+Resultados salvos em: results_sfr\resultados_sfr.csv
+
+                                     Dataset      Combination         Classifier  Accuracy  Precision   Recall  F1-Score  Embedding_Dim
+           dataset_sem_stopwords_lemmatizado           titulo                SVM  0.897942   0.899984 0.897942  0.897813           4096
+           dataset_sem_stopwords_lemmatizado           titulo       RandomForest  0.856783   0.857168 0.856783  0.856745           4096
+           dataset_sem_stopwords_lemmatizado           titulo LogisticRegression  0.891222   0.893230 0.891222  0.891085           4096
+           dataset_sem_stopwords_lemmatizado            texto                SVM  0.935321   0.935352 0.935321  0.935320           4096
+           dataset_sem_stopwords_lemmatizado            texto       RandomForest  0.890802   0.892155 0.890802  0.890706           4096
+           dataset_sem_stopwords_lemmatizado            texto LogisticRegression  0.918942   0.919048 0.918942  0.918936           4096
+           dataset_sem_stopwords_lemmatizado        subtitulo                SVM  0.858883   0.882883 0.858883  0.856645           4096
+           dataset_sem_stopwords_lemmatizado        subtitulo       RandomForest  0.826963   0.835520 0.826963  0.825860           4096
+           dataset_sem_stopwords_lemmatizado        subtitulo LogisticRegression  0.853003   0.872759 0.853003  0.851038           4096
+           dataset_sem_stopwords_lemmatizado titulo_subtitulo                SVM  0.926081   0.927318 0.926081  0.926029           4096
+           dataset_sem_stopwords_lemmatizado titulo_subtitulo       RandomForest  0.908442   0.908905 0.908442  0.908417           4096
+           dataset_sem_stopwords_lemmatizado titulo_subtitulo LogisticRegression  0.920202   0.920831 0.920202  0.920172           4096
+           dataset_sem_stopwords_lemmatizado         completo                SVM  0.967241   0.967262 0.967241  0.967240           4096
+           dataset_sem_stopwords_lemmatizado         completo       RandomForest  0.912642   0.913429 0.912642  0.912599           4096
+           dataset_sem_stopwords_lemmatizado         completo LogisticRegression  0.947501   0.947592 0.947501  0.947498           4096
+dataset_sem_caracteres_especiais_lemmatizado           titulo                SVM  0.939521   0.939840 0.939521  0.939511           4096
+dataset_sem_caracteres_especiais_lemmatizado           titulo       RandomForest  0.884922   0.884940 0.884922  0.884921           4096
+dataset_sem_caracteres_especiais_lemmatizado           titulo LogisticRegression  0.919362   0.919837 0.919362  0.919339           4096
+dataset_sem_caracteres_especiais_lemmatizado            texto                SVM  0.939521   0.939521 0.939521  0.939521           4096
+dataset_sem_caracteres_especiais_lemmatizado            texto       RandomForest  0.889122   0.890178 0.889122  0.889046           4096
+dataset_sem_caracteres_especiais_lemmatizado            texto LogisticRegression  0.916842   0.916871 0.916842  0.916840           4096
+dataset_sem_caracteres_especiais_lemmatizado        subtitulo                SVM  0.857623   0.880692 0.857623  0.855441           4096
+dataset_sem_caracteres_especiais_lemmatizado        subtitulo       RandomForest  0.834523   0.844654 0.834523  0.833306           4096
+dataset_sem_caracteres_especiais_lemmatizado        subtitulo LogisticRegression  0.854683   0.875150 0.854683  0.852682           4096
+dataset_sem_caracteres_especiais_lemmatizado titulo_subtitulo                SVM  0.948341   0.948481 0.948341  0.948337           4096
+dataset_sem_caracteres_especiais_lemmatizado titulo_subtitulo       RandomForest  0.903402   0.903495 0.903402  0.903397           4096
+dataset_sem_caracteres_especiais_lemmatizado titulo_subtitulo LogisticRegression  0.934061   0.934482 0.934061  0.934046           4096
+dataset_sem_caracteres_especiais_lemmatizado         completo                SVM  0.972701   0.972717 0.972701  0.972700           4096
+dataset_sem_caracteres_especiais_lemmatizado         completo       RandomForest  0.923982   0.925669 0.923982  0.923905           4096
+dataset_sem_caracteres_especiais_lemmatizado         completo LogisticRegression  0.958001   0.958157 0.958001  0.957997           4096
+
+
+================================================================================
+MELHORES RESULTADOS POR COMBINAÇÃO
+================================================================================
+
+
+Dataset: dataset_sem_stopwords_lemmatizado
+--------------------------------------------------------------------------------
+  titulo               | Melhor: SVM                  | F1: 0.8978 | Acc: 0.8979
+  texto                | Melhor: SVM                  | F1: 0.9353 | Acc: 0.9353
+  subtitulo            | Melhor: SVM                  | F1: 0.8566 | Acc: 0.8589
+  titulo_subtitulo     | Melhor: SVM                  | F1: 0.9260 | Acc: 0.9261
+  completo             | Melhor: SVM                  | F1: 0.9672 | Acc: 0.9672
+
+Dataset: dataset_sem_caracteres_especiais_lemmatizado
+--------------------------------------------------------------------------------
+  titulo               | Melhor: SVM                  | F1: 0.9395 | Acc: 0.9395
+  texto                | Melhor: SVM                  | F1: 0.9395 | Acc: 0.9395
+  subtitulo            | Melhor: SVM                  | F1: 0.8554 | Acc: 0.8576
+  titulo_subtitulo     | Melhor: SVM                  | F1: 0.9483 | Acc: 0.9483
+  completo             | Melhor: SVM                  | F1: 0.9727 | Acc: 0.9727
+
+Resultados completos salvos em: results_sfr\resultados_completos_sfr.pkl
+
+================================================================================
+PROCESSAMENTO CONCLUÍDO!
+Fim: 2025-10-13 15:04:29
+================================================================================

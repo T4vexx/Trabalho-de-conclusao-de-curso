@@ -1,0 +1,460 @@
+================================================================================
+TREINAMENTO COM NOMIC-EMBED-TEXT-V1.5
+Nomic AI | 137M params | Dim: 768 | Long Context 8192
+Início: 2025-10-13 23:12:24
+================================================================================
+
+✅ Dispositivo: cuda
+✅ GPU: NVIDIA GeForce RTX 3060
+✅ Memória GPU: 12.88 GB
+✅ Otimizações CUDA ativadas
+
+📥 Carregando Nomic: nomic-ai/nomic-embed-text-v1.5
+⚠️  Modelo 137M - long context BERT (8192 tokens!)
+
+✓ Modelo carregado!
+✓ Device: cuda:0
+✓ Dimensão: 768
+✓ Max seq length: 2048
+✓ Batch size: 64
+✓ Task type: search_document
+✓ Matryoshka: 768→512→256→128→64
+
+📊 VRAM alocada: 0.55 GB
+
+🧪 Teste de velocidade...
+   200 textos em 0.26s = 773.6 txt/s
+   ✅ Velocidade EXCELENTE!
+   Tempo estimado: ~0.3 minutos
+
+================================================================================
+PROCESSANDO DATASET: dataset_sem_stopwords_lemmatizado
+================================================================================
+
+Carregando ../../bases_preprocessados/dataset_sem_stopwords_lemmatizado.xlsx...
+Dataset carregado: 11902 linhas
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo - Campos: ['Titulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings Nomic (USANDO GPU!)...
+    Modelo: nomic-ai/nomic-embed-text-v1.5
+    Total de textos: 11902
+    Batch size: 64
+    Device: cuda
+    Task: search_document
+    ✓ Prefixo Nomic adicionado ('search_document:')
+    VRAM antes: 0.56 GB
+    VRAM depois: 0.56 GB
+    ✓ Embeddings gerados: (11902, 768)
+  Embeddings salvos em: embeddings_nomic\embeddings_dataset_sem_stopwords_lemmatizado_titulo.npy
+  ✓ Cache GPU limpo (usando 0.56 GB)
+  Dimensão dos embeddings: (11902, 768)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.8706
+      Precision: 0.8760
+      Recall: 0.8706
+      F1-Score: 0.8702
+    Treinando RandomForest...
+      Accuracy: 0.8337
+      Precision: 0.8359
+      Recall: 0.8337
+      F1-Score: 0.8334
+    Treinando LogisticRegression...
+      Accuracy: 0.8631
+      Precision: 0.8657
+      Recall: 0.8631
+      F1-Score: 0.8628
+  [CHECKPOINT] Progresso salvo para titulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: texto - Campos: ['Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings Nomic (USANDO GPU!)...
+    Modelo: nomic-ai/nomic-embed-text-v1.5
+    Total de textos: 11902
+    Batch size: 64
+    Device: cuda
+    Task: search_document
+    ✓ Prefixo Nomic adicionado ('search_document:')
+    VRAM antes: 0.56 GB
+    VRAM depois: 0.56 GB
+    ✓ Embeddings gerados: (11902, 768)
+  Embeddings salvos em: embeddings_nomic\embeddings_dataset_sem_stopwords_lemmatizado_texto.npy
+  ✓ Cache GPU limpo (usando 0.56 GB)
+  Dimensão dos embeddings: (11902, 768)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9026
+      Precision: 0.9033
+      Recall: 0.9026
+      F1-Score: 0.9025
+    Treinando RandomForest...
+      Accuracy: 0.8601
+      Precision: 0.8606
+      Recall: 0.8601
+      F1-Score: 0.8601
+    Treinando LogisticRegression...
+      Accuracy: 0.8887
+      Precision: 0.8891
+      Recall: 0.8887
+      F1-Score: 0.8887
+  [CHECKPOINT] Progresso salvo para texto
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: subtitulo - Campos: ['Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings Nomic (USANDO GPU!)...
+    Modelo: nomic-ai/nomic-embed-text-v1.5
+    Total de textos: 11902
+    Batch size: 64
+    Device: cuda
+    Task: search_document
+    ✓ Prefixo Nomic adicionado ('search_document:')
+    VRAM antes: 0.56 GB
+    VRAM depois: 0.56 GB
+    ✓ Embeddings gerados: (11902, 768)
+  Embeddings salvos em: embeddings_nomic\embeddings_dataset_sem_stopwords_lemmatizado_subtitulo.npy
+  ✓ Cache GPU limpo (usando 0.56 GB)
+  Dimensão dos embeddings: (11902, 768)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.8412
+      Precision: 0.8628
+      Recall: 0.8412
+      F1-Score: 0.8389
+    Treinando RandomForest...
+      Accuracy: 0.8144
+      Precision: 0.8203
+      Recall: 0.8144
+      F1-Score: 0.8135
+    Treinando LogisticRegression...
+      Accuracy: 0.8303
+      Precision: 0.8461
+      Recall: 0.8303
+      F1-Score: 0.8284
+  [CHECKPOINT] Progresso salvo para subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo_subtitulo - Campos: ['Titulo', 'Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings Nomic (USANDO GPU!)...
+    Modelo: nomic-ai/nomic-embed-text-v1.5
+    Total de textos: 11902
+    Batch size: 64
+    Device: cuda
+    Task: search_document
+    ✓ Prefixo Nomic adicionado ('search_document:')
+    VRAM antes: 0.56 GB
+    VRAM depois: 0.56 GB
+    ✓ Embeddings gerados: (11902, 768)
+  Embeddings salvos em: embeddings_nomic\embeddings_dataset_sem_stopwords_lemmatizado_titulo_subtitulo.npy
+  ✓ Cache GPU limpo (usando 0.56 GB)
+  Dimensão dos embeddings: (11902, 768)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9017
+      Precision: 0.9040
+      Recall: 0.9017
+      F1-Score: 0.9016
+    Treinando RandomForest...
+      Accuracy: 0.8774
+      Precision: 0.8821
+      Recall: 0.8774
+      F1-Score: 0.8770
+    Treinando LogisticRegression...
+      Accuracy: 0.8933
+      Precision: 0.8948
+      Recall: 0.8933
+      F1-Score: 0.8932
+  [CHECKPOINT] Progresso salvo para titulo_subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: completo - Campos: ['Titulo', 'Subtitulo', 'Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings Nomic (USANDO GPU!)...
+    Modelo: nomic-ai/nomic-embed-text-v1.5
+    Total de textos: 11902
+    Batch size: 64
+    Device: cuda
+    Task: search_document
+    ✓ Prefixo Nomic adicionado ('search_document:')
+    VRAM antes: 0.56 GB
+    VRAM depois: 0.56 GB
+    ✓ Embeddings gerados: (11902, 768)
+  Embeddings salvos em: embeddings_nomic\embeddings_dataset_sem_stopwords_lemmatizado_completo.npy
+  ✓ Cache GPU limpo (usando 0.56 GB)
+  Dimensão dos embeddings: (11902, 768)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9328
+      Precision: 0.9328
+      Recall: 0.9328
+      F1-Score: 0.9328
+    Treinando RandomForest...
+      Accuracy: 0.8841
+      Precision: 0.8843
+      Recall: 0.8841
+      F1-Score: 0.8841
+    Treinando LogisticRegression...
+      Accuracy: 0.9227
+      Precision: 0.9227
+      Recall: 0.9227
+      F1-Score: 0.9227
+  [CHECKPOINT] Progresso salvo para completo
+
+================================================================================
+PROCESSANDO DATASET: dataset_sem_caracteres_especiais_lemmatizado
+================================================================================
+
+Carregando ../../bases_preprocessados/dataset_sem_caracteres_especiais_lemmatizado.xlsx...
+Dataset carregado: 11902 linhas
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo - Campos: ['Titulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings Nomic (USANDO GPU!)...
+    Modelo: nomic-ai/nomic-embed-text-v1.5
+    Total de textos: 11902
+    Batch size: 64
+    Device: cuda
+    Task: search_document
+    ✓ Prefixo Nomic adicionado ('search_document:')
+    VRAM antes: 0.56 GB
+    VRAM depois: 0.56 GB
+    ✓ Embeddings gerados: (11902, 768)
+  Embeddings salvos em: embeddings_nomic\embeddings_dataset_sem_caracteres_especiais_lemmatizado_titulo.npy
+  ✓ Cache GPU limpo (usando 0.56 GB)
+  Dimensão dos embeddings: (11902, 768)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.8832
+      Precision: 0.8873
+      Recall: 0.8832
+      F1-Score: 0.8829
+    Treinando RandomForest...
+      Accuracy: 0.8480
+      Precision: 0.8517
+      Recall: 0.8480
+      F1-Score: 0.8476
+    Treinando LogisticRegression...
+      Accuracy: 0.8702
+      Precision: 0.8738
+      Recall: 0.8702
+      F1-Score: 0.8699
+  [CHECKPOINT] Progresso salvo para titulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: texto - Campos: ['Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings Nomic (USANDO GPU!)...
+    Modelo: nomic-ai/nomic-embed-text-v1.5
+    Total de textos: 11902
+    Batch size: 64
+    Device: cuda
+    Task: search_document
+    ✓ Prefixo Nomic adicionado ('search_document:')
+    VRAM antes: 0.56 GB
+    VRAM depois: 0.56 GB
+    ✓ Embeddings gerados: (11902, 768)
+  Embeddings salvos em: embeddings_nomic\embeddings_dataset_sem_caracteres_especiais_lemmatizado_texto.npy
+  ✓ Cache GPU limpo (usando 0.56 GB)
+  Dimensão dos embeddings: (11902, 768)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9089
+      Precision: 0.9099
+      Recall: 0.9089
+      F1-Score: 0.9088
+    Treinando RandomForest...
+      Accuracy: 0.8660
+      Precision: 0.8665
+      Recall: 0.8660
+      F1-Score: 0.8660
+    Treinando LogisticRegression...
+      Accuracy: 0.8933
+      Precision: 0.8938
+      Recall: 0.8933
+      F1-Score: 0.8933
+  [CHECKPOINT] Progresso salvo para texto
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: subtitulo - Campos: ['Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings Nomic (USANDO GPU!)...
+    Modelo: nomic-ai/nomic-embed-text-v1.5
+    Total de textos: 11902
+    Batch size: 64
+    Device: cuda
+    Task: search_document
+    ✓ Prefixo Nomic adicionado ('search_document:')
+    VRAM antes: 0.56 GB
+    VRAM depois: 0.56 GB
+    ✓ Embeddings gerados: (11902, 768)
+  Embeddings salvos em: embeddings_nomic\embeddings_dataset_sem_caracteres_especiais_lemmatizado_subtitulo.npy
+  ✓ Cache GPU limpo (usando 0.56 GB)
+  Dimensão dos embeddings: (11902, 768)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.8446
+      Precision: 0.8660
+      Recall: 0.8446
+      F1-Score: 0.8423
+    Treinando RandomForest...
+      Accuracy: 0.8144
+      Precision: 0.8200
+      Recall: 0.8144
+      F1-Score: 0.8135
+    Treinando LogisticRegression...
+      Accuracy: 0.8328
+      Precision: 0.8482
+      Recall: 0.8328
+      F1-Score: 0.8310
+  [CHECKPOINT] Progresso salvo para subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo_subtitulo - Campos: ['Titulo', 'Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings Nomic (USANDO GPU!)...
+    Modelo: nomic-ai/nomic-embed-text-v1.5
+    Total de textos: 11902
+    Batch size: 64
+    Device: cuda
+    Task: search_document
+    ✓ Prefixo Nomic adicionado ('search_document:')
+    VRAM antes: 0.56 GB
+    VRAM depois: 0.56 GB
+    ✓ Embeddings gerados: (11902, 768)
+  Embeddings salvos em: embeddings_nomic\embeddings_dataset_sem_caracteres_especiais_lemmatizado_titulo_subtitulo.npy
+  ✓ Cache GPU limpo (usando 0.56 GB)
+  Dimensão dos embeddings: (11902, 768)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9164
+      Precision: 0.9181
+      Recall: 0.9164
+      F1-Score: 0.9163
+    Treinando RandomForest...
+      Accuracy: 0.8908
+      Precision: 0.8957
+      Recall: 0.8908
+      F1-Score: 0.8905
+    Treinando LogisticRegression...
+      Accuracy: 0.9013
+      Precision: 0.9028
+      Recall: 0.9013
+      F1-Score: 0.9012
+  [CHECKPOINT] Progresso salvo para titulo_subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: completo - Campos: ['Titulo', 'Subtitulo', 'Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings Nomic (USANDO GPU!)...
+    Modelo: nomic-ai/nomic-embed-text-v1.5
+    Total de textos: 11902
+    Batch size: 64
+    Device: cuda
+    Task: search_document
+    ✓ Prefixo Nomic adicionado ('search_document:')
+    VRAM antes: 0.56 GB
+    VRAM depois: 0.56 GB
+    ✓ Embeddings gerados: (11902, 768)
+  Embeddings salvos em: embeddings_nomic\embeddings_dataset_sem_caracteres_especiais_lemmatizado_completo.npy
+  ✓ Cache GPU limpo (usando 0.56 GB)
+  Dimensão dos embeddings: (11902, 768)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9374
+      Precision: 0.9375
+      Recall: 0.9374
+      F1-Score: 0.9374
+    Treinando RandomForest...
+      Accuracy: 0.8870
+      Precision: 0.8871
+      Recall: 0.8870
+      F1-Score: 0.8870
+    Treinando LogisticRegression...
+      Accuracy: 0.9261
+      Precision: 0.9262
+      Recall: 0.9261
+      F1-Score: 0.9261
+  [CHECKPOINT] Progresso salvo para completo
+
+
+================================================================================
+RESUMO GERAL DOS RESULTADOS
+================================================================================
+
+Resultados salvos em: results_nomic\resultados_nomic.csv
+
+                                     Dataset      Combination         Classifier  Accuracy  Precision   Recall  F1-Score  Embedding_Dim
+           dataset_sem_stopwords_lemmatizado           titulo                SVM  0.870643   0.875998 0.870643  0.870184            768
+           dataset_sem_stopwords_lemmatizado           titulo       RandomForest  0.833683   0.835873 0.833683  0.833415            768
+           dataset_sem_stopwords_lemmatizado           titulo LogisticRegression  0.863083   0.865667 0.863083  0.862843            768
+           dataset_sem_stopwords_lemmatizado            texto                SVM  0.902562   0.903275 0.902562  0.902520            768
+           dataset_sem_stopwords_lemmatizado            texto       RandomForest  0.860143   0.860611 0.860143  0.860096            768
+           dataset_sem_stopwords_lemmatizado            texto LogisticRegression  0.888702   0.889121 0.888702  0.888673            768
+           dataset_sem_stopwords_lemmatizado        subtitulo                SVM  0.841243   0.862782 0.841243  0.838861            768
+           dataset_sem_stopwords_lemmatizado        subtitulo       RandomForest  0.814364   0.820305 0.814364  0.813506            768
+           dataset_sem_stopwords_lemmatizado        subtitulo LogisticRegression  0.830323   0.846090 0.830323  0.828378            768
+           dataset_sem_stopwords_lemmatizado titulo_subtitulo                SVM  0.901722   0.904034 0.901722  0.901583            768
+           dataset_sem_stopwords_lemmatizado titulo_subtitulo       RandomForest  0.877362   0.882065 0.877362  0.876987            768
+           dataset_sem_stopwords_lemmatizado titulo_subtitulo LogisticRegression  0.893322   0.894769 0.893322  0.893226            768
+           dataset_sem_stopwords_lemmatizado         completo                SVM  0.932801   0.932832 0.932801  0.932800            768
+           dataset_sem_stopwords_lemmatizado         completo       RandomForest  0.884082   0.884294 0.884082  0.884066            768
+           dataset_sem_stopwords_lemmatizado         completo LogisticRegression  0.922722   0.922732 0.922722  0.922721            768
+dataset_sem_caracteres_especiais_lemmatizado           titulo                SVM  0.883242   0.887314 0.883242  0.882938            768
+dataset_sem_caracteres_especiais_lemmatizado           titulo       RandomForest  0.847963   0.851662 0.847963  0.847566            768
+dataset_sem_caracteres_especiais_lemmatizado           titulo LogisticRegression  0.870223   0.873838 0.870223  0.869911            768
+dataset_sem_caracteres_especiais_lemmatizado            texto                SVM  0.908862   0.909870 0.908862  0.908807            768
+dataset_sem_caracteres_especiais_lemmatizado            texto       RandomForest  0.866023   0.866499 0.866023  0.865978            768
+dataset_sem_caracteres_especiais_lemmatizado            texto LogisticRegression  0.893322   0.893814 0.893322  0.893290            768
+dataset_sem_caracteres_especiais_lemmatizado        subtitulo                SVM  0.844603   0.866036 0.844603  0.842304            768
+dataset_sem_caracteres_especiais_lemmatizado        subtitulo       RandomForest  0.814364   0.820010 0.814364  0.813548            768
+dataset_sem_caracteres_especiais_lemmatizado        subtitulo LogisticRegression  0.832843   0.848211 0.832843  0.830988            768
+dataset_sem_caracteres_especiais_lemmatizado titulo_subtitulo                SVM  0.916422   0.918083 0.916422  0.916340            768
+dataset_sem_caracteres_especiais_lemmatizado titulo_subtitulo       RandomForest  0.890802   0.895671 0.890802  0.890468            768
+dataset_sem_caracteres_especiais_lemmatizado titulo_subtitulo LogisticRegression  0.901302   0.902819 0.901302  0.901210            768
+dataset_sem_caracteres_especiais_lemmatizado         completo                SVM  0.937421   0.937491 0.937421  0.937419            768
+dataset_sem_caracteres_especiais_lemmatizado         completo       RandomForest  0.887022   0.887068 0.887022  0.887019            768
+dataset_sem_caracteres_especiais_lemmatizado         completo LogisticRegression  0.926081   0.926159 0.926081  0.926078            768
+
+
+================================================================================
+MELHORES RESULTADOS POR COMBINAÇÃO
+================================================================================
+
+
+Dataset: dataset_sem_stopwords_lemmatizado
+--------------------------------------------------------------------------------
+  titulo               | Melhor: SVM                  | F1: 0.8702 | Acc: 0.8706
+  texto                | Melhor: SVM                  | F1: 0.9025 | Acc: 0.9026
+  subtitulo            | Melhor: SVM                  | F1: 0.8389 | Acc: 0.8412
+  titulo_subtitulo     | Melhor: SVM                  | F1: 0.9016 | Acc: 0.9017
+  completo             | Melhor: SVM                  | F1: 0.9328 | Acc: 0.9328
+
+Dataset: dataset_sem_caracteres_especiais_lemmatizado
+--------------------------------------------------------------------------------
+  titulo               | Melhor: SVM                  | F1: 0.8829 | Acc: 0.8832
+  texto                | Melhor: SVM                  | F1: 0.9088 | Acc: 0.9089
+  subtitulo            | Melhor: SVM                  | F1: 0.8423 | Acc: 0.8446
+  titulo_subtitulo     | Melhor: SVM                  | F1: 0.9163 | Acc: 0.9164
+  completo             | Melhor: SVM                  | F1: 0.9374 | Acc: 0.9374
+
+Resultados salvos em: results_nomic\resultados_completos_nomic.pkl
+
+================================================================================
+PROCESSAMENTO CONCLUÍDO!
+Fim: 2025-10-13 23:44:40
+================================================================================

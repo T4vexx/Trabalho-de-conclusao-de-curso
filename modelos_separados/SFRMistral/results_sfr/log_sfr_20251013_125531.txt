@@ -1,0 +1,15 @@
+================================================================================
+TREINAMENTO COM SFR-EMBEDDING-MISTRAL [CORRIGIDO - GPU]
+Otimizado para RTX 3060 16GB
+Início: 2025-10-13 12:55:31
+================================================================================
+
+✅ Dispositivo: cuda
+✅ GPU: NVIDIA GeForce RTX 3060
+✅ Memória GPU total: 12.88 GB
+✅ CUDA Version: 12.6
+✅ PyTorch Version: 2.8.0+cu126
+✅ Otimizações CUDA ativadas
+
+📥 Carregando modelo SFR-Mistral: Salesforce/SFR-Embedding-Mistral
+⚠️  Forçando uso de GPU...

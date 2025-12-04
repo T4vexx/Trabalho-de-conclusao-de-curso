@@ -1,0 +1,12 @@
+================================================================================
+SFR-MISTRAL: HYPERPARAMETER TUNING COM GPU
+================================================================================
+GPU Status:
+  • cuML (classificadores): ❌ CPU only
+  • PyTorch (embeddings): ✅ CUDA
+Início: 2025-10-21 10:20:10
+================================================================================
+
+✅ GPU PyTorch: NVIDIA GeForce RTX 3060
+
+Carregando SFR-Mistral...

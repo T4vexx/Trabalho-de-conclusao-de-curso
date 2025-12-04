@@ -1,0 +1,346 @@
+================================================================================
+TREINAMENTO COM WORD2VEC EMBEDDINGS
+Início: 2025-10-12 18:50:34
+================================================================================
+
+================================================================================
+PROCESSANDO DATASET: dataset_sem_stopwords_lemmatizado
+================================================================================
+
+Carregando ../../bases_preprocessados/dataset_sem_stopwords_lemmatizado.xlsx...
+Dataset carregado: 11902 linhas
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo - Campos: ['Titulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Treinando modelo Word2Vec...
+    Parâmetros: vector_size=300, window=5, epochs=10
+  Gerando embeddings dos documentos...
+  Dimensão dos embeddings: (11902, 300)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.4998
+      Precision: 0.2498
+      Recall: 0.4998
+      F1-Score: 0.3331
+    Treinando RandomForest...
+      Accuracy: 0.8249
+      Precision: 0.8287
+      Recall: 0.8249
+      F1-Score: 0.8244
+    Treinando LogisticRegression...
+      Accuracy: 0.8114
+      Precision: 0.8217
+      Recall: 0.8114
+      F1-Score: 0.8099
+  [CHECKPOINT] Progresso salvo para titulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: texto - Campos: ['Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Treinando modelo Word2Vec...
+    Parâmetros: vector_size=300, window=5, epochs=10
+  Gerando embeddings dos documentos...
+  Dimensão dos embeddings: (11902, 300)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.4998
+      Precision: 0.2498
+      Recall: 0.4998
+      F1-Score: 0.3331
+    Treinando RandomForest...
+      Accuracy: 0.8488
+      Precision: 0.8493
+      Recall: 0.8488
+      F1-Score: 0.8488
+    Treinando LogisticRegression...
+      Accuracy: 0.5002
+      Precision: 0.2502
+      Recall: 0.5002
+      F1-Score: 0.3336
+  [CHECKPOINT] Progresso salvo para texto
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: subtitulo - Campos: ['Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Treinando modelo Word2Vec...
+    Parâmetros: vector_size=300, window=5, epochs=10
+  Gerando embeddings dos documentos...
+  Dimensão dos embeddings: (11902, 300)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.4998
+      Precision: 0.2498
+      Recall: 0.4998
+      F1-Score: 0.3331
+    Treinando RandomForest...
+      Accuracy: 0.8018
+      Precision: 0.8046
+      Recall: 0.8018
+      F1-Score: 0.8013
+    Treinando LogisticRegression...
+      Accuracy: 0.5002
+      Precision: 0.2502
+      Recall: 0.5002
+      F1-Score: 0.3336
+  [CHECKPOINT] Progresso salvo para subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo_subtitulo - Campos: ['Titulo', 'Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Treinando modelo Word2Vec...
+    Parâmetros: vector_size=300, window=5, epochs=10
+  Gerando embeddings dos documentos...
+  Dimensão dos embeddings: (11902, 300)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.4998
+      Precision: 0.2498
+      Recall: 0.4998
+      F1-Score: 0.3331
+    Treinando RandomForest...
+      Accuracy: 0.8526
+      Precision: 0.8575
+      Recall: 0.8526
+      F1-Score: 0.8521
+    Treinando LogisticRegression...
+      Accuracy: 0.5002
+      Precision: 0.2502
+      Recall: 0.5002
+      F1-Score: 0.3336
+  [CHECKPOINT] Progresso salvo para titulo_subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: completo - Campos: ['Titulo', 'Subtitulo', 'Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Treinando modelo Word2Vec...
+    Parâmetros: vector_size=300, window=5, epochs=10
+  Gerando embeddings dos documentos...
+  Dimensão dos embeddings: (11902, 300)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.4998
+      Precision: 0.2498
+      Recall: 0.4998
+      F1-Score: 0.3331
+    Treinando RandomForest...
+      Accuracy: 0.8450
+      Precision: 0.8451
+      Recall: 0.8450
+      F1-Score: 0.8450
+    Treinando LogisticRegression...
+      Accuracy: 0.5002
+      Precision: 0.2502
+      Recall: 0.5002
+      F1-Score: 0.3336
+  [CHECKPOINT] Progresso salvo para completo
+
+================================================================================
+PROCESSANDO DATASET: dataset_sem_caracteres_especiais_lemmatizado
+================================================================================
+
+Carregando ../../bases_preprocessados/dataset_sem_caracteres_especiais_lemmatizado.xlsx...
+Dataset carregado: 11902 linhas
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo - Campos: ['Titulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Treinando modelo Word2Vec...
+    Parâmetros: vector_size=300, window=5, epochs=10
+  Gerando embeddings dos documentos...
+  Dimensão dos embeddings: (11902, 300)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.4998
+      Precision: 0.2498
+      Recall: 0.4998
+      F1-Score: 0.3331
+    Treinando RandomForest...
+      Accuracy: 0.8669
+      Precision: 0.8714
+      Recall: 0.8669
+      F1-Score: 0.8665
+    Treinando LogisticRegression...
+      Accuracy: 0.5002
+      Precision: 0.2502
+      Recall: 0.5002
+      F1-Score: 0.3336
+  [CHECKPOINT] Progresso salvo para titulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: texto - Campos: ['Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Treinando modelo Word2Vec...
+    Parâmetros: vector_size=300, window=5, epochs=10
+  Gerando embeddings dos documentos...
+  Dimensão dos embeddings: (11902, 300)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.4998
+      Precision: 0.2498
+      Recall: 0.4998
+      F1-Score: 0.3331
+    Treinando RandomForest...
+      Accuracy: 0.8387
+      Precision: 0.8390
+      Recall: 0.8387
+      F1-Score: 0.8387
+    Treinando LogisticRegression...
+      Accuracy: 0.5002
+      Precision: 0.2502
+      Recall: 0.5002
+      F1-Score: 0.3336
+  [CHECKPOINT] Progresso salvo para texto
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: subtitulo - Campos: ['Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Treinando modelo Word2Vec...
+    Parâmetros: vector_size=300, window=5, epochs=10
+  Gerando embeddings dos documentos...
+  Dimensão dos embeddings: (11902, 300)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.4998
+      Precision: 0.2498
+      Recall: 0.4998
+      F1-Score: 0.3331
+    Treinando RandomForest...
+      Accuracy: 0.8051
+      Precision: 0.8085
+      Recall: 0.8051
+      F1-Score: 0.8046
+    Treinando LogisticRegression...
+      Accuracy: 0.7887
+      Precision: 0.7916
+      Recall: 0.7887
+      F1-Score: 0.7882
+  [CHECKPOINT] Progresso salvo para subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo_subtitulo - Campos: ['Titulo', 'Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Treinando modelo Word2Vec...
+    Parâmetros: vector_size=300, window=5, epochs=10
+  Gerando embeddings dos documentos...
+  Dimensão dos embeddings: (11902, 300)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.4998
+      Precision: 0.2498
+      Recall: 0.4998
+      F1-Score: 0.3331
+    Treinando RandomForest...
+      Accuracy: 0.8601
+      Precision: 0.8642
+      Recall: 0.8601
+      F1-Score: 0.8598
+    Treinando LogisticRegression...
+      Accuracy: 0.5002
+      Precision: 0.2502
+      Recall: 0.5002
+      F1-Score: 0.3336
+  [CHECKPOINT] Progresso salvo para titulo_subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: completo - Campos: ['Titulo', 'Subtitulo', 'Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Treinando modelo Word2Vec...
+    Parâmetros: vector_size=300, window=5, epochs=10
+  Gerando embeddings dos documentos...
+  Dimensão dos embeddings: (11902, 300)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.4998
+      Precision: 0.2498
+      Recall: 0.4998
+      F1-Score: 0.3331
+    Treinando RandomForest...
+      Accuracy: 0.8564
+      Precision: 0.8565
+      Recall: 0.8564
+      F1-Score: 0.8563
+    Treinando LogisticRegression...
+      Accuracy: 0.5002
+      Precision: 0.2502
+      Recall: 0.5002
+      F1-Score: 0.3336
+  [CHECKPOINT] Progresso salvo para completo
+
+
+================================================================================
+RESUMO GERAL DOS RESULTADOS
+================================================================================
+
+Resultados salvos em: results_word2vec\resultados_word2vec.csv
+
+                                     Dataset      Combination         Classifier  Accuracy  Precision   Recall  F1-Score  Embedding_Dim
+           dataset_sem_stopwords_lemmatizado           titulo                SVM  0.499790   0.249790 0.499790  0.333100            300
+           dataset_sem_stopwords_lemmatizado           titulo       RandomForest  0.824864   0.828731 0.824864  0.824352            300
+           dataset_sem_stopwords_lemmatizado           titulo LogisticRegression  0.811424   0.821735 0.811424  0.809910            300
+           dataset_sem_stopwords_lemmatizado            texto                SVM  0.499790   0.249790 0.499790  0.333100            300
+           dataset_sem_stopwords_lemmatizado            texto       RandomForest  0.848803   0.849278 0.848803  0.848750            300
+           dataset_sem_stopwords_lemmatizado            texto LogisticRegression  0.500210   0.250210 0.500210  0.333567            300
+           dataset_sem_stopwords_lemmatizado        subtitulo                SVM  0.499790   0.249790 0.499790  0.333100            300
+           dataset_sem_stopwords_lemmatizado        subtitulo       RandomForest  0.801764   0.804564 0.801764  0.801312            300
+           dataset_sem_stopwords_lemmatizado        subtitulo LogisticRegression  0.500210   0.250210 0.500210  0.333567            300
+           dataset_sem_stopwords_lemmatizado titulo_subtitulo                SVM  0.499790   0.249790 0.499790  0.333100            300
+           dataset_sem_stopwords_lemmatizado titulo_subtitulo       RandomForest  0.852583   0.857463 0.852583  0.852082            300
+           dataset_sem_stopwords_lemmatizado titulo_subtitulo LogisticRegression  0.500210   0.250210 0.500210  0.333567            300
+           dataset_sem_stopwords_lemmatizado         completo                SVM  0.499790   0.249790 0.499790  0.333100            300
+           dataset_sem_stopwords_lemmatizado         completo       RandomForest  0.845023   0.845064 0.845023  0.845018            300
+           dataset_sem_stopwords_lemmatizado         completo LogisticRegression  0.500210   0.250210 0.500210  0.333567            300
+dataset_sem_caracteres_especiais_lemmatizado           titulo                SVM  0.499790   0.249790 0.499790  0.333100            300
+dataset_sem_caracteres_especiais_lemmatizado           titulo       RandomForest  0.866863   0.871365 0.866863  0.866462            300
+dataset_sem_caracteres_especiais_lemmatizado           titulo LogisticRegression  0.500210   0.250210 0.500210  0.333567            300
+dataset_sem_caracteres_especiais_lemmatizado            texto                SVM  0.499790   0.249790 0.499790  0.333100            300
+dataset_sem_caracteres_especiais_lemmatizado            texto       RandomForest  0.838723   0.838998 0.838723  0.838689            300
+dataset_sem_caracteres_especiais_lemmatizado            texto LogisticRegression  0.500210   0.250210 0.500210  0.333567            300
+dataset_sem_caracteres_especiais_lemmatizado        subtitulo                SVM  0.499790   0.249790 0.499790  0.333100            300
+dataset_sem_caracteres_especiais_lemmatizado        subtitulo       RandomForest  0.805124   0.808479 0.805124  0.804598            300
+dataset_sem_caracteres_especiais_lemmatizado        subtitulo LogisticRegression  0.788744   0.791569 0.788744  0.788237            300
+dataset_sem_caracteres_especiais_lemmatizado titulo_subtitulo                SVM  0.499790   0.249790 0.499790  0.333100            300
+dataset_sem_caracteres_especiais_lemmatizado titulo_subtitulo       RandomForest  0.860143   0.864163 0.860143  0.859759            300
+dataset_sem_caracteres_especiais_lemmatizado titulo_subtitulo LogisticRegression  0.500210   0.250210 0.500210  0.333567            300
+dataset_sem_caracteres_especiais_lemmatizado         completo                SVM  0.499790   0.249790 0.499790  0.333100            300
+dataset_sem_caracteres_especiais_lemmatizado         completo       RandomForest  0.856363   0.856509 0.856363  0.856349            300
+dataset_sem_caracteres_especiais_lemmatizado         completo LogisticRegression  0.500210   0.250210 0.500210  0.333567            300
+
+
+================================================================================
+MELHORES RESULTADOS POR COMBINAÇÃO
+================================================================================
+
+
+Dataset: dataset_sem_stopwords_lemmatizado
+--------------------------------------------------------------------------------
+  titulo               | Melhor: RandomForest         | F1: 0.8244 | Acc: 0.8249
+  texto                | Melhor: RandomForest         | F1: 0.8488 | Acc: 0.8488
+  subtitulo            | Melhor: RandomForest         | F1: 0.8013 | Acc: 0.8018
+  titulo_subtitulo     | Melhor: RandomForest         | F1: 0.8521 | Acc: 0.8526
+  completo             | Melhor: RandomForest         | F1: 0.8450 | Acc: 0.8450
+
+Dataset: dataset_sem_caracteres_especiais_lemmatizado
+--------------------------------------------------------------------------------
+  titulo               | Melhor: RandomForest         | F1: 0.8665 | Acc: 0.8669
+  texto                | Melhor: RandomForest         | F1: 0.8387 | Acc: 0.8387
+  subtitulo            | Melhor: RandomForest         | F1: 0.8046 | Acc: 0.8051
+  titulo_subtitulo     | Melhor: RandomForest         | F1: 0.8598 | Acc: 0.8601
+  completo             | Melhor: RandomForest         | F1: 0.8563 | Acc: 0.8564
+
+Resultados completos salvos em: results_word2vec\resultados_completos_word2vec.pkl
+
+================================================================================
+PROCESSAMENTO CONCLUÍDO!
+Fim: 2025-10-12 18:52:14
+================================================================================

@@ -1,0 +1,440 @@
+================================================================================
+TREINAMENTO COM GRANITE-EMBEDDING-278M-MULTILINGUAL
+IBM Research | 278M params | Dim: 768 | 12 línguas
+Início: 2025-10-13 23:45:21
+================================================================================
+
+✅ Dispositivo: cuda
+✅ GPU: NVIDIA GeForce RTX 3060
+✅ Memória GPU: 12.88 GB
+✅ Otimizações CUDA ativadas
+
+📥 Carregando Granite: ibm-granite/granite-embedding-278m-multilingual
+⚠️  Modelo 278M - XLM-RoBERTa-like (12 camadas)
+⚠️  Apache 2.0 license - Enterprise friendly!
+
+✓ Modelo carregado!
+✓ Device: cuda:0
+✓ Dimensão: 768
+✓ Max seq length: 512
+✓ Batch size: 64
+✓ Línguas: En, De, Es, Fr, Ja, Pt, Ar, Cs, It, Ko, Nl, Zh
+
+📊 VRAM alocada: 1.11 GB
+
+🧪 Teste de velocidade...
+   200 textos em 0.19s = 1054.7 txt/s
+   ✅ Velocidade EXCELENTE!
+   Tempo estimado: ~0.2 minutos
+
+================================================================================
+PROCESSANDO DATASET: dataset_sem_stopwords_lemmatizado
+================================================================================
+
+Carregando ../../bases_preprocessados/dataset_sem_stopwords_lemmatizado.xlsx...
+Dataset carregado: 11902 linhas
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo - Campos: ['Titulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings Granite (USANDO GPU!)...
+    Modelo: ibm-granite/granite-embedding-278m-multilingual
+    Total de textos: 11902
+    Batch size: 64
+    Device: cuda
+    VRAM antes: 1.12 GB
+    VRAM depois: 1.12 GB
+    ✓ Embeddings gerados: (11902, 768)
+  Embeddings salvos em: embeddings_granite\embeddings_dataset_sem_stopwords_lemmatizado_titulo.npy
+  ✓ Cache GPU limpo (usando 1.12 GB)
+  Dimensão dos embeddings: (11902, 768)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.8631
+      Precision: 0.8643
+      Recall: 0.8631
+      F1-Score: 0.8630
+    Treinando RandomForest...
+      Accuracy: 0.8316
+      Precision: 0.8318
+      Recall: 0.8316
+      F1-Score: 0.8316
+    Treinando LogisticRegression...
+      Accuracy: 0.8601
+      Precision: 0.8605
+      Recall: 0.8601
+      F1-Score: 0.8601
+  [CHECKPOINT] Progresso salvo para titulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: texto - Campos: ['Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings Granite (USANDO GPU!)...
+    Modelo: ibm-granite/granite-embedding-278m-multilingual
+    Total de textos: 11902
+    Batch size: 64
+    Device: cuda
+    VRAM antes: 1.12 GB
+    VRAM depois: 1.12 GB
+    ✓ Embeddings gerados: (11902, 768)
+  Embeddings salvos em: embeddings_granite\embeddings_dataset_sem_stopwords_lemmatizado_texto.npy
+  ✓ Cache GPU limpo (usando 1.12 GB)
+  Dimensão dos embeddings: (11902, 768)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9068
+      Precision: 0.9068
+      Recall: 0.9068
+      F1-Score: 0.9068
+    Treinando RandomForest...
+      Accuracy: 0.8799
+      Precision: 0.8805
+      Recall: 0.8799
+      F1-Score: 0.8798
+    Treinando LogisticRegression...
+      Accuracy: 0.9017
+      Precision: 0.9017
+      Recall: 0.9017
+      F1-Score: 0.9017
+  [CHECKPOINT] Progresso salvo para texto
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: subtitulo - Campos: ['Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings Granite (USANDO GPU!)...
+    Modelo: ibm-granite/granite-embedding-278m-multilingual
+    Total de textos: 11902
+    Batch size: 64
+    Device: cuda
+    VRAM antes: 1.12 GB
+    VRAM depois: 1.12 GB
+    ✓ Embeddings gerados: (11902, 768)
+  Embeddings salvos em: embeddings_granite\embeddings_dataset_sem_stopwords_lemmatizado_subtitulo.npy
+  ✓ Cache GPU limpo (usando 1.12 GB)
+  Dimensão dos embeddings: (11902, 768)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.8488
+      Precision: 0.8702
+      Recall: 0.8488
+      F1-Score: 0.8466
+    Treinando RandomForest...
+      Accuracy: 0.8358
+      Precision: 0.8476
+      Recall: 0.8358
+      F1-Score: 0.8344
+    Treinando LogisticRegression...
+      Accuracy: 0.8459
+      Precision: 0.8654
+      Recall: 0.8459
+      F1-Score: 0.8438
+  [CHECKPOINT] Progresso salvo para subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo_subtitulo - Campos: ['Titulo', 'Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings Granite (USANDO GPU!)...
+    Modelo: ibm-granite/granite-embedding-278m-multilingual
+    Total de textos: 11902
+    Batch size: 64
+    Device: cuda
+    VRAM antes: 1.12 GB
+    VRAM depois: 1.12 GB
+    ✓ Embeddings gerados: (11902, 768)
+  Embeddings salvos em: embeddings_granite\embeddings_dataset_sem_stopwords_lemmatizado_titulo_subtitulo.npy
+  ✓ Cache GPU limpo (usando 1.12 GB)
+  Dimensão dos embeddings: (11902, 768)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9055
+      Precision: 0.9066
+      Recall: 0.9055
+      F1-Score: 0.9054
+    Treinando RandomForest...
+      Accuracy: 0.8774
+      Precision: 0.8785
+      Recall: 0.8774
+      F1-Score: 0.8773
+    Treinando LogisticRegression...
+      Accuracy: 0.8958
+      Precision: 0.8965
+      Recall: 0.8958
+      F1-Score: 0.8958
+  [CHECKPOINT] Progresso salvo para titulo_subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: completo - Campos: ['Titulo', 'Subtitulo', 'Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings Granite (USANDO GPU!)...
+    Modelo: ibm-granite/granite-embedding-278m-multilingual
+    Total de textos: 11902
+    Batch size: 64
+    Device: cuda
+    VRAM antes: 1.12 GB
+    VRAM depois: 1.12 GB
+    ✓ Embeddings gerados: (11902, 768)
+  Embeddings salvos em: embeddings_granite\embeddings_dataset_sem_stopwords_lemmatizado_completo.npy
+  ✓ Cache GPU limpo (usando 1.12 GB)
+  Dimensão dos embeddings: (11902, 768)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9261
+      Precision: 0.9261
+      Recall: 0.9261
+      F1-Score: 0.9261
+    Treinando RandomForest...
+      Accuracy: 0.8795
+      Precision: 0.8803
+      Recall: 0.8795
+      F1-Score: 0.8794
+    Treinando LogisticRegression...
+      Accuracy: 0.9198
+      Precision: 0.9198
+      Recall: 0.9198
+      F1-Score: 0.9198
+  [CHECKPOINT] Progresso salvo para completo
+
+================================================================================
+PROCESSANDO DATASET: dataset_sem_caracteres_especiais_lemmatizado
+================================================================================
+
+Carregando ../../bases_preprocessados/dataset_sem_caracteres_especiais_lemmatizado.xlsx...
+Dataset carregado: 11902 linhas
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo - Campos: ['Titulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings Granite (USANDO GPU!)...
+    Modelo: ibm-granite/granite-embedding-278m-multilingual
+    Total de textos: 11902
+    Batch size: 64
+    Device: cuda
+    VRAM antes: 1.12 GB
+    VRAM depois: 1.12 GB
+    ✓ Embeddings gerados: (11902, 768)
+  Embeddings salvos em: embeddings_granite\embeddings_dataset_sem_caracteres_especiais_lemmatizado_titulo.npy
+  ✓ Cache GPU limpo (usando 1.12 GB)
+  Dimensão dos embeddings: (11902, 768)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9147
+      Precision: 0.9152
+      Recall: 0.9147
+      F1-Score: 0.9147
+    Treinando RandomForest...
+      Accuracy: 0.8790
+      Precision: 0.8799
+      Recall: 0.8790
+      F1-Score: 0.8790
+    Treinando LogisticRegression...
+      Accuracy: 0.9131
+      Precision: 0.9132
+      Recall: 0.9131
+      F1-Score: 0.9131
+  [CHECKPOINT] Progresso salvo para titulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: texto - Campos: ['Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings Granite (USANDO GPU!)...
+    Modelo: ibm-granite/granite-embedding-278m-multilingual
+    Total de textos: 11902
+    Batch size: 64
+    Device: cuda
+    VRAM antes: 1.12 GB
+    VRAM depois: 1.12 GB
+    ✓ Embeddings gerados: (11902, 768)
+  Embeddings salvos em: embeddings_granite\embeddings_dataset_sem_caracteres_especiais_lemmatizado_texto.npy
+  ✓ Cache GPU limpo (usando 1.12 GB)
+  Dimensão dos embeddings: (11902, 768)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9089
+      Precision: 0.9089
+      Recall: 0.9089
+      F1-Score: 0.9089
+    Treinando RandomForest...
+      Accuracy: 0.8761
+      Precision: 0.8766
+      Recall: 0.8761
+      F1-Score: 0.8761
+    Treinando LogisticRegression...
+      Accuracy: 0.8895
+      Precision: 0.8898
+      Recall: 0.8895
+      F1-Score: 0.8895
+  [CHECKPOINT] Progresso salvo para texto
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: subtitulo - Campos: ['Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings Granite (USANDO GPU!)...
+    Modelo: ibm-granite/granite-embedding-278m-multilingual
+    Total de textos: 11902
+    Batch size: 64
+    Device: cuda
+    VRAM antes: 1.12 GB
+    VRAM depois: 1.12 GB
+    ✓ Embeddings gerados: (11902, 768)
+  Embeddings salvos em: embeddings_granite\embeddings_dataset_sem_caracteres_especiais_lemmatizado_subtitulo.npy
+  ✓ Cache GPU limpo (usando 1.12 GB)
+  Dimensão dos embeddings: (11902, 768)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.8538
+      Precision: 0.8765
+      Recall: 0.8538
+      F1-Score: 0.8516
+    Treinando RandomForest...
+      Accuracy: 0.8383
+      Precision: 0.8499
+      Recall: 0.8383
+      F1-Score: 0.8370
+    Treinando LogisticRegression...
+      Accuracy: 0.8492
+      Precision: 0.8705
+      Recall: 0.8492
+      F1-Score: 0.8470
+  [CHECKPOINT] Progresso salvo para subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo_subtitulo - Campos: ['Titulo', 'Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings Granite (USANDO GPU!)...
+    Modelo: ibm-granite/granite-embedding-278m-multilingual
+    Total de textos: 11902
+    Batch size: 64
+    Device: cuda
+    VRAM antes: 1.12 GB
+    VRAM depois: 1.12 GB
+    ✓ Embeddings gerados: (11902, 768)
+  Embeddings salvos em: embeddings_granite\embeddings_dataset_sem_caracteres_especiais_lemmatizado_titulo_subtitulo.npy
+  ✓ Cache GPU limpo (usando 1.12 GB)
+  Dimensão dos embeddings: (11902, 768)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9336
+      Precision: 0.9340
+      Recall: 0.9336
+      F1-Score: 0.9336
+    Treinando RandomForest...
+      Accuracy: 0.8996
+      Precision: 0.9009
+      Recall: 0.8996
+      F1-Score: 0.8995
+    Treinando LogisticRegression...
+      Accuracy: 0.9244
+      Precision: 0.9247
+      Recall: 0.9244
+      F1-Score: 0.9244
+  [CHECKPOINT] Progresso salvo para titulo_subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: completo - Campos: ['Titulo', 'Subtitulo', 'Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings Granite (USANDO GPU!)...
+    Modelo: ibm-granite/granite-embedding-278m-multilingual
+    Total de textos: 11902
+    Batch size: 64
+    Device: cuda
+    VRAM antes: 1.12 GB
+    VRAM depois: 1.12 GB
+    ✓ Embeddings gerados: (11902, 768)
+  Embeddings salvos em: embeddings_granite\embeddings_dataset_sem_caracteres_especiais_lemmatizado_completo.npy
+  ✓ Cache GPU limpo (usando 1.12 GB)
+  Dimensão dos embeddings: (11902, 768)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9475
+      Precision: 0.9476
+      Recall: 0.9475
+      F1-Score: 0.9475
+    Treinando RandomForest...
+      Accuracy: 0.8979
+      Precision: 0.8984
+      Recall: 0.8979
+      F1-Score: 0.8979
+    Treinando LogisticRegression...
+      Accuracy: 0.9366
+      Precision: 0.9367
+      Recall: 0.9366
+      F1-Score: 0.9366
+  [CHECKPOINT] Progresso salvo para completo
+
+
+================================================================================
+RESUMO GERAL DOS RESULTADOS
+================================================================================
+
+Resultados salvos em: results_granite\resultados_granite.csv
+
+                                     Dataset      Combination         Classifier  Accuracy  Precision   Recall  F1-Score  Embedding_Dim
+           dataset_sem_stopwords_lemmatizado           titulo                SVM  0.863083   0.864274 0.863083  0.862973            768
+           dataset_sem_stopwords_lemmatizado           titulo       RandomForest  0.831583   0.831782 0.831583  0.831559            768
+           dataset_sem_stopwords_lemmatizado           titulo LogisticRegression  0.860143   0.860532 0.860143  0.860106            768
+           dataset_sem_stopwords_lemmatizado            texto                SVM  0.906762   0.906780 0.906762  0.906761            768
+           dataset_sem_stopwords_lemmatizado            texto       RandomForest  0.879882   0.880499 0.879882  0.879833            768
+           dataset_sem_stopwords_lemmatizado            texto LogisticRegression  0.901722   0.901727 0.901722  0.901722            768
+           dataset_sem_stopwords_lemmatizado        subtitulo                SVM  0.848803   0.870178 0.848803  0.846598            768
+           dataset_sem_stopwords_lemmatizado        subtitulo       RandomForest  0.835783   0.847555 0.835783  0.834389            768
+           dataset_sem_stopwords_lemmatizado        subtitulo LogisticRegression  0.845863   0.865370 0.845863  0.843787            768
+           dataset_sem_stopwords_lemmatizado titulo_subtitulo                SVM  0.905502   0.906643 0.905502  0.905437            768
+           dataset_sem_stopwords_lemmatizado titulo_subtitulo       RandomForest  0.877362   0.878529 0.877362  0.877270            768
+           dataset_sem_stopwords_lemmatizado titulo_subtitulo LogisticRegression  0.895842   0.896543 0.895842  0.895797            768
+           dataset_sem_stopwords_lemmatizado         completo                SVM  0.926081   0.926112 0.926081  0.926080            768
+           dataset_sem_stopwords_lemmatizado         completo       RandomForest  0.879462   0.880332 0.879462  0.879392            768
+           dataset_sem_stopwords_lemmatizado         completo LogisticRegression  0.919782   0.919832 0.919782  0.919779            768
+dataset_sem_caracteres_especiais_lemmatizado           titulo                SVM  0.914742   0.915188 0.914742  0.914719            768
+dataset_sem_caracteres_especiais_lemmatizado           titulo       RandomForest  0.879042   0.879947 0.879042  0.878972            768
+dataset_sem_caracteres_especiais_lemmatizado           titulo LogisticRegression  0.913062   0.913191 0.913062  0.913055            768
+dataset_sem_caracteres_especiais_lemmatizado            texto                SVM  0.908862   0.908897 0.908862  0.908860            768
+dataset_sem_caracteres_especiais_lemmatizado            texto       RandomForest  0.876102   0.876639 0.876102  0.876057            768
+dataset_sem_caracteres_especiais_lemmatizado            texto LogisticRegression  0.889542   0.889775 0.889542  0.889526            768
+dataset_sem_caracteres_especiais_lemmatizado        subtitulo                SVM  0.853843   0.876504 0.853843  0.851619            768
+dataset_sem_caracteres_especiais_lemmatizado        subtitulo       RandomForest  0.838303   0.849940 0.838303  0.836955            768
+dataset_sem_caracteres_especiais_lemmatizado        subtitulo LogisticRegression  0.849223   0.870465 0.849223  0.847039            768
+dataset_sem_caracteres_especiais_lemmatizado titulo_subtitulo                SVM  0.933641   0.933956 0.933641  0.933630            768
+dataset_sem_caracteres_especiais_lemmatizado titulo_subtitulo       RandomForest  0.899622   0.900894 0.899622  0.899544            768
+dataset_sem_caracteres_especiais_lemmatizado titulo_subtitulo LogisticRegression  0.924402   0.924749 0.924402  0.924387            768
+dataset_sem_caracteres_especiais_lemmatizado         completo                SVM  0.947501   0.947572 0.947501  0.947499            768
+dataset_sem_caracteres_especiais_lemmatizado         completo       RandomForest  0.897942   0.898368 0.897942  0.897914            768
+dataset_sem_caracteres_especiais_lemmatizado         completo LogisticRegression  0.936581   0.936693 0.936581  0.936577            768
+
+
+================================================================================
+MELHORES RESULTADOS POR COMBINAÇÃO
+================================================================================
+
+
+Dataset: dataset_sem_stopwords_lemmatizado
+--------------------------------------------------------------------------------
+  titulo               | Melhor: SVM                  | F1: 0.8630 | Acc: 0.8631
+  texto                | Melhor: SVM                  | F1: 0.9068 | Acc: 0.9068
+  subtitulo            | Melhor: SVM                  | F1: 0.8466 | Acc: 0.8488
+  titulo_subtitulo     | Melhor: SVM                  | F1: 0.9054 | Acc: 0.9055
+  completo             | Melhor: SVM                  | F1: 0.9261 | Acc: 0.9261
+
+Dataset: dataset_sem_caracteres_especiais_lemmatizado
+--------------------------------------------------------------------------------
+  titulo               | Melhor: SVM                  | F1: 0.9147 | Acc: 0.9147
+  texto                | Melhor: SVM                  | F1: 0.9089 | Acc: 0.9089
+  subtitulo            | Melhor: SVM                  | F1: 0.8516 | Acc: 0.8538
+  titulo_subtitulo     | Melhor: SVM                  | F1: 0.9336 | Acc: 0.9336
+  completo             | Melhor: SVM                  | F1: 0.9475 | Acc: 0.9475
+
+Resultados salvos em: results_granite\resultados_completos_granite.pkl
+
+================================================================================
+PROCESSAMENTO CONCLUÍDO!
+Fim: 2025-10-13 23:53:05
+================================================================================

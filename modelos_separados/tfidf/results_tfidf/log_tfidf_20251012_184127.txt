@@ -1,0 +1,326 @@
+================================================================================
+TREINAMENTO COM TF-IDF EMBEDDINGS
+Início: 2025-10-12 18:41:27
+================================================================================
+
+================================================================================
+PROCESSANDO DATASET: dataset_sem_stopwords_lemmatizado
+================================================================================
+
+Carregando ../../bases_preprocessados/dataset_sem_stopwords_lemmatizado.xlsx...
+Dataset carregado: 11902 linhas
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo - Campos: ['Titulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings TF-IDF...
+  Dimensão dos embeddings: (11902, 5000)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9181
+      Precision: 0.9201
+      Recall: 0.9181
+      F1-Score: 0.9180
+    Treinando RandomForest...
+      Accuracy: 0.9114
+      Precision: 0.9114
+      Recall: 0.9114
+      F1-Score: 0.9114
+    Treinando LogisticRegression...
+      Accuracy: 0.9139
+      Precision: 0.9171
+      Recall: 0.9139
+      F1-Score: 0.9137
+  [CHECKPOINT] Progresso salvo para titulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: texto - Campos: ['Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings TF-IDF...
+  Dimensão dos embeddings: (11902, 5000)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9509
+      Precision: 0.9509
+      Recall: 0.9509
+      F1-Score: 0.9509
+    Treinando RandomForest...
+      Accuracy: 0.9362
+      Precision: 0.9362
+      Recall: 0.9362
+      F1-Score: 0.9362
+    Treinando LogisticRegression...
+      Accuracy: 0.9479
+      Precision: 0.9480
+      Recall: 0.9479
+      F1-Score: 0.9479
+  [CHECKPOINT] Progresso salvo para texto
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: subtitulo - Campos: ['Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings TF-IDF...
+  Dimensão dos embeddings: (11902, 5000)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.8601
+      Precision: 0.8824
+      Recall: 0.8601
+      F1-Score: 0.8581
+    Treinando RandomForest...
+      Accuracy: 0.8396
+      Precision: 0.8511
+      Recall: 0.8396
+      F1-Score: 0.8382
+    Treinando LogisticRegression...
+      Accuracy: 0.8530
+      Precision: 0.8722
+      Recall: 0.8530
+      F1-Score: 0.8511
+  [CHECKPOINT] Progresso salvo para subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo_subtitulo - Campos: ['Titulo', 'Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings TF-IDF...
+  Dimensão dos embeddings: (11902, 5000)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9391
+      Precision: 0.9400
+      Recall: 0.9391
+      F1-Score: 0.9391
+    Treinando RandomForest...
+      Accuracy: 0.9391
+      Precision: 0.9394
+      Recall: 0.9391
+      F1-Score: 0.9391
+    Treinando LogisticRegression...
+      Accuracy: 0.9353
+      Precision: 0.9367
+      Recall: 0.9353
+      F1-Score: 0.9353
+  [CHECKPOINT] Progresso salvo para titulo_subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: completo - Campos: ['Titulo', 'Subtitulo', 'Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings TF-IDF...
+  Dimensão dos embeddings: (11902, 5000)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9756
+      Precision: 0.9756
+      Recall: 0.9756
+      F1-Score: 0.9756
+    Treinando RandomForest...
+      Accuracy: 0.9689
+      Precision: 0.9689
+      Recall: 0.9689
+      F1-Score: 0.9689
+    Treinando LogisticRegression...
+      Accuracy: 0.9706
+      Precision: 0.9706
+      Recall: 0.9706
+      F1-Score: 0.9706
+  [CHECKPOINT] Progresso salvo para completo
+
+================================================================================
+PROCESSANDO DATASET: dataset_sem_caracteres_especiais_lemmatizado
+================================================================================
+
+Carregando ../../bases_preprocessados/dataset_sem_caracteres_especiais_lemmatizado.xlsx...
+Dataset carregado: 11902 linhas
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo - Campos: ['Titulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings TF-IDF...
+  Dimensão dos embeddings: (11902, 5000)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9395
+      Precision: 0.9400
+      Recall: 0.9395
+      F1-Score: 0.9395
+    Treinando RandomForest...
+      Accuracy: 0.9437
+      Precision: 0.9441
+      Recall: 0.9437
+      F1-Score: 0.9437
+    Treinando LogisticRegression...
+      Accuracy: 0.9336
+      Precision: 0.9347
+      Recall: 0.9336
+      F1-Score: 0.9336
+  [CHECKPOINT] Progresso salvo para titulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: texto - Campos: ['Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings TF-IDF...
+  Dimensão dos embeddings: (11902, 5000)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9521
+      Precision: 0.9521
+      Recall: 0.9521
+      F1-Score: 0.9521
+    Treinando RandomForest...
+      Accuracy: 0.9320
+      Precision: 0.9320
+      Recall: 0.9320
+      F1-Score: 0.9320
+    Treinando LogisticRegression...
+      Accuracy: 0.9479
+      Precision: 0.9479
+      Recall: 0.9479
+      F1-Score: 0.9479
+  [CHECKPOINT] Progresso salvo para texto
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: subtitulo - Campos: ['Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings TF-IDF...
+  Dimensão dos embeddings: (11902, 5000)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.8618
+      Precision: 0.8832
+      Recall: 0.8618
+      F1-Score: 0.8599
+    Treinando RandomForest...
+      Accuracy: 0.8383
+      Precision: 0.8489
+      Recall: 0.8383
+      F1-Score: 0.8371
+    Treinando LogisticRegression...
+      Accuracy: 0.8438
+      Precision: 0.8588
+      Recall: 0.8438
+      F1-Score: 0.8421
+  [CHECKPOINT] Progresso salvo para subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo_subtitulo - Campos: ['Titulo', 'Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings TF-IDF...
+  Dimensão dos embeddings: (11902, 5000)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9504
+      Precision: 0.9511
+      Recall: 0.9504
+      F1-Score: 0.9504
+    Treinando RandomForest...
+      Accuracy: 0.9525
+      Precision: 0.9527
+      Recall: 0.9525
+      F1-Score: 0.9525
+    Treinando LogisticRegression...
+      Accuracy: 0.9416
+      Precision: 0.9429
+      Recall: 0.9416
+      F1-Score: 0.9416
+  [CHECKPOINT] Progresso salvo para titulo_subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: completo - Campos: ['Titulo', 'Subtitulo', 'Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings TF-IDF...
+  Dimensão dos embeddings: (11902, 5000)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9773
+      Precision: 0.9773
+      Recall: 0.9773
+      F1-Score: 0.9773
+    Treinando RandomForest...
+      Accuracy: 0.9702
+      Precision: 0.9702
+      Recall: 0.9702
+      F1-Score: 0.9702
+    Treinando LogisticRegression...
+      Accuracy: 0.9672
+      Precision: 0.9673
+      Recall: 0.9672
+      F1-Score: 0.9672
+  [CHECKPOINT] Progresso salvo para completo
+
+
+================================================================================
+RESUMO GERAL DOS RESULTADOS
+================================================================================
+
+Resultados salvos em: results_tfidf\resultados_tfidf.csv
+
+                                     Dataset      Combination         Classifier  Accuracy  Precision   Recall  F1-Score  Embedding_Dim
+           dataset_sem_stopwords_lemmatizado           titulo                SVM  0.918102   0.920146 0.918102  0.918003           5000
+           dataset_sem_stopwords_lemmatizado           titulo       RandomForest  0.911382   0.911417 0.911382  0.911380           5000
+           dataset_sem_stopwords_lemmatizado           titulo LogisticRegression  0.913902   0.917150 0.913902  0.913736           5000
+           dataset_sem_stopwords_lemmatizado            texto                SVM  0.950861   0.950861 0.950861  0.950861           5000
+           dataset_sem_stopwords_lemmatizado            texto       RandomForest  0.936161   0.936221 0.936161  0.936159           5000
+           dataset_sem_stopwords_lemmatizado            texto LogisticRegression  0.947921   0.947952 0.947921  0.947920           5000
+           dataset_sem_stopwords_lemmatizado        subtitulo                SVM  0.860143   0.882375 0.860143  0.858088           5000
+           dataset_sem_stopwords_lemmatizado        subtitulo       RandomForest  0.839563   0.851133 0.839563  0.838238           5000
+           dataset_sem_stopwords_lemmatizado        subtitulo LogisticRegression  0.853003   0.872156 0.853003  0.851095           5000
+           dataset_sem_stopwords_lemmatizado titulo_subtitulo                SVM  0.939101   0.940042 0.939101  0.939069           5000
+           dataset_sem_stopwords_lemmatizado titulo_subtitulo       RandomForest  0.939101   0.939438 0.939101  0.939089           5000
+           dataset_sem_stopwords_lemmatizado titulo_subtitulo LogisticRegression  0.935321   0.936748 0.935321  0.935269           5000
+           dataset_sem_stopwords_lemmatizado         completo                SVM  0.975640   0.975642 0.975640  0.975640           5000
+           dataset_sem_stopwords_lemmatizado         completo       RandomForest  0.968921   0.968942 0.968921  0.968920           5000
+           dataset_sem_stopwords_lemmatizado         completo LogisticRegression  0.970601   0.970634 0.970601  0.970600           5000
+dataset_sem_caracteres_especiais_lemmatizado           titulo                SVM  0.939521   0.940019 0.939521  0.939505           5000
+dataset_sem_caracteres_especiais_lemmatizado           titulo       RandomForest  0.943721   0.944084 0.943721  0.943710           5000
+dataset_sem_caracteres_especiais_lemmatizado           titulo LogisticRegression  0.933641   0.934674 0.933641  0.933603           5000
+dataset_sem_caracteres_especiais_lemmatizado            texto                SVM  0.952121   0.952142 0.952121  0.952120           5000
+dataset_sem_caracteres_especiais_lemmatizado            texto       RandomForest  0.931961   0.931966 0.931961  0.931961           5000
+dataset_sem_caracteres_especiais_lemmatizado            texto LogisticRegression  0.947921   0.947932 0.947921  0.947921           5000
+dataset_sem_caracteres_especiais_lemmatizado        subtitulo                SVM  0.861823   0.883180 0.861823  0.859878           5000
+dataset_sem_caracteres_especiais_lemmatizado        subtitulo       RandomForest  0.838303   0.848861 0.838303  0.837078           5000
+dataset_sem_caracteres_especiais_lemmatizado        subtitulo LogisticRegression  0.843763   0.858848 0.843763  0.842112           5000
+dataset_sem_caracteres_especiais_lemmatizado titulo_subtitulo                SVM  0.950441   0.951058 0.950441  0.950424           5000
+dataset_sem_caracteres_especiais_lemmatizado titulo_subtitulo       RandomForest  0.952541   0.952682 0.952541  0.952537           5000
+dataset_sem_caracteres_especiais_lemmatizado titulo_subtitulo LogisticRegression  0.941621   0.942943 0.941621  0.941578           5000
+dataset_sem_caracteres_especiais_lemmatizado         completo                SVM  0.977320   0.977342 0.977320  0.977320           5000
+dataset_sem_caracteres_especiais_lemmatizado         completo       RandomForest  0.970181   0.970184 0.970181  0.970181           5000
+dataset_sem_caracteres_especiais_lemmatizado         completo LogisticRegression  0.967241   0.967288 0.967241  0.967240           5000
+
+
+================================================================================
+MELHORES RESULTADOS POR COMBINAÇÃO
+================================================================================
+
+
+Dataset: dataset_sem_stopwords_lemmatizado
+--------------------------------------------------------------------------------
+  titulo               | Melhor: SVM                  | F1: 0.9180 | Acc: 0.9181
+  texto                | Melhor: SVM                  | F1: 0.9509 | Acc: 0.9509
+  subtitulo            | Melhor: SVM                  | F1: 0.8581 | Acc: 0.8601
+  titulo_subtitulo     | Melhor: RandomForest         | F1: 0.9391 | Acc: 0.9391
+  completo             | Melhor: SVM                  | F1: 0.9756 | Acc: 0.9756
+
+Dataset: dataset_sem_caracteres_especiais_lemmatizado
+--------------------------------------------------------------------------------
+  titulo               | Melhor: RandomForest         | F1: 0.9437 | Acc: 0.9437
+  texto                | Melhor: SVM                  | F1: 0.9521 | Acc: 0.9521
+  subtitulo            | Melhor: SVM                  | F1: 0.8599 | Acc: 0.8618
+  titulo_subtitulo     | Melhor: RandomForest         | F1: 0.9525 | Acc: 0.9525
+  completo             | Melhor: SVM                  | F1: 0.9773 | Acc: 0.9773
+
+Resultados completos salvos em: results_tfidf\resultados_completos_tfidf.pkl
+
+================================================================================
+PROCESSAMENTO CONCLUÍDO!
+Fim: 2025-10-12 18:42:52
+================================================================================

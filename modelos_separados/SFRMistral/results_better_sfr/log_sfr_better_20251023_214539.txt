@@ -1,0 +1,367 @@
+================================================================================
+SFR-MISTRAL: OTIMIZAÇÃO DE CLASSIFICADORES
+Embeddings: PRÉ-CARREGADOS de embeddings_sfr
+Resultados: results_better_sfr
+GPU: cuML ✅ ATIVO
+Início: 2025-10-23 21:45:39
+================================================================================
+
+
+################################################################################
+DATASET: dataset_sem_stopwords_lemmatizado
+################################################################################
+
+Combinação: completo
+  ✓ Carregando embeddings de: embeddings_sfr/embeddings_dataset_sem_stopwords_lemmatizado_completo.npy
+  ✓ Shape: (11902, 4096)
+  Treino: 9521 | Teste: 2381
+
+
+********************************************************************************
+CLASSIFICADOR: SVM (LINEAR)
+********************************************************************************
+
+================================================================================
+GRID SEARCH: SVM
+🚀 GPU (cuML)
+================================================================================
+    Transferindo dados para GPU...
+    ✓ Dados na GPU (VRAM: ~0.08 GB)
+Testando 8 combinações...
+  [1/8] ✓ Novo melhor! F1=0.9412 | {'C': 0.1, 'kernel': 'linear', 'class_weight': None}
+  [3/8] ✓ Novo melhor! F1=0.9672 | {'C': 1.0, 'kernel': 'linear', 'class_weight': None}
+  [5/8] ✓ Novo melhor! F1=0.9698 | {'C': 10.0, 'kernel': 'linear', 'class_weight': None}
+
+✅ Grid Search concluído!
+
+🏆 MELHORES HIPERPARÂMETROS:
+  • C: 10.0
+  • kernel: linear
+  • class_weight: None
+
+📈 TESTE:
+  • Accuracy:  0.9698
+  • Precision: 0.9698
+  • Recall:    0.9698
+  • F1-Score:  0.9698
+
+================================================================================
+RANDOM SEARCH: SVM
+🚀 GPU (cuML)
+================================================================================
+    Transferindo dados para GPU...
+    ✓ Dados na GPU (VRAM: ~0.08 GB)
+Testando 15 combinações aleatórias...
+  [1/15] ✓ Novo melhor! F1=0.9693
+  [2/15] ✓ Novo melhor! F1=0.9719
+  [5/15] F1=0.9706
+  [10/15] F1=0.9483
+  [15/15] F1=0.9689
+
+✅ Random Search concluído!
+
+🏆 MELHORES HIPERPARÂMETROS:
+  • C: 18.44347898661638
+  • kernel: linear
+  • class_weight: balanced
+
+📈 TESTE:
+  • Accuracy:  0.9719
+  • F1-Score:  0.9719
+
+
+********************************************************************************
+CLASSIFICADOR: RandomForest
+********************************************************************************
+
+================================================================================
+RANDOM SEARCH: RandomForest
+🚀 GPU (cuML)
+================================================================================
+    Transferindo dados para GPU...
+    ✓ Dados na GPU (VRAM: ~0.08 GB)
+Testando 20 combinações aleatórias...
+  [1/20] ✓ Novo melhor! F1=0.9239
+  [5/20] F1=0.9168
+  [10/20] F1=0.9214
+  [15/20] F1=0.9143
+  [20/20] F1=0.9185
+
+✅ Random Search concluído!
+
+🏆 MELHORES HIPERPARÂMETROS:
+  • n_estimators: 202
+  • max_depth: 20
+  • min_samples_split: 9
+  • max_features: sqrt
+
+📈 TESTE:
+  • Accuracy:  0.9240
+  • F1-Score:  0.9239
+
+
+********************************************************************************
+CLASSIFICADOR: LogisticRegression
+********************************************************************************
+
+================================================================================
+GRID SEARCH: LogisticRegression
+🚀 GPU (cuML)
+================================================================================
+    Transferindo dados para GPU...
+    ✓ Dados na GPU (VRAM: ~0.08 GB)
+Testando 4 combinações...
+  [1/4] ✓ Novo melhor! F1=0.9235 | {'C': 0.1, 'penalty': 'l2', 'max_iter': 2000}
+  [2/4] ✓ Novo melhor! F1=0.9500 | {'C': 1.0, 'penalty': 'l2', 'max_iter': 2000}
+  [3/4] ✓ Novo melhor! F1=0.9672 | {'C': 10.0, 'penalty': 'l2', 'max_iter': 2000}
+  [4/4] ✓ Novo melhor! F1=0.9710 | {'C': 100.0, 'penalty': 'l2', 'max_iter': 2000}
+
+✅ Grid Search concluído!
+
+🏆 MELHORES HIPERPARÂMETROS:
+  • C: 100.0
+  • penalty: l2
+  • max_iter: 2000
+
+📈 TESTE:
+  • Accuracy:  0.9710
+  • Precision: 0.9710
+  • Recall:    0.9710
+  • F1-Score:  0.9710
+
+================================================================================
+RANDOM SEARCH: LogisticRegression
+🚀 GPU (cuML)
+================================================================================
+    Transferindo dados para GPU...
+    ✓ Dados na GPU (VRAM: ~0.08 GB)
+Testando 15 combinações aleatórias...
+  [1/15] ✓ Novo melhor! F1=0.9698
+  [2/15] ✓ Novo melhor! F1=0.9719
+  [5/15] F1=0.9681
+  [10/15] F1=0.9714
+  [15/15] F1=0.9677
+
+✅ Random Search concluído!
+
+🏆 MELHORES HIPERPARÂMETROS:
+  • C: 95.17143064099162
+  • penalty: l2
+  • max_iter: 2000
+
+📈 TESTE:
+  • Accuracy:  0.9719
+  • F1-Score:  0.9719
+
+
+################################################################################
+DATASET: dataset_sem_caracteres_especiais_lemmatizado
+################################################################################
+
+Combinação: completo
+  ✓ Carregando embeddings de: embeddings_sfr/embeddings_dataset_sem_caracteres_especiais_lemmatizado_completo.npy
+  ✓ Shape: (11902, 4096)
+  Treino: 9521 | Teste: 2381
+
+
+********************************************************************************
+CLASSIFICADOR: SVM (LINEAR)
+********************************************************************************
+
+================================================================================
+GRID SEARCH: SVM
+🚀 GPU (cuML)
+================================================================================
+    Transferindo dados para GPU...
+    ✓ Dados na GPU (VRAM: ~0.08 GB)
+Testando 8 combinações...
+  [1/8] ✓ Novo melhor! F1=0.9542 | {'C': 0.1, 'kernel': 'linear', 'class_weight': None}
+  [3/8] ✓ Novo melhor! F1=0.9727 | {'C': 1.0, 'kernel': 'linear', 'class_weight': None}
+  [5/8] ✓ Novo melhor! F1=0.9740 | {'C': 10.0, 'kernel': 'linear', 'class_weight': None}
+
+✅ Grid Search concluído!
+
+🏆 MELHORES HIPERPARÂMETROS:
+  • C: 10.0
+  • kernel: linear
+  • class_weight: None
+
+📈 TESTE:
+  • Accuracy:  0.9740
+  • Precision: 0.9740
+  • Recall:    0.9740
+  • F1-Score:  0.9740
+
+================================================================================
+RANDOM SEARCH: SVM
+🚀 GPU (cuML)
+================================================================================
+    Transferindo dados para GPU...
+    ✓ Dados na GPU (VRAM: ~0.08 GB)
+Testando 15 combinações aleatórias...
+  [1/15] ✓ Novo melhor! F1=0.9727
+  [2/15] ✓ Novo melhor! F1=0.9761
+  [5/15] F1=0.9744
+  [10/15] F1=0.9605
+  [15/15] F1=0.9752
+
+✅ Random Search concluído!
+
+🏆 MELHORES HIPERPARÂMETROS:
+  • C: 18.44347898661638
+  • kernel: linear
+  • class_weight: balanced
+
+📈 TESTE:
+  • Accuracy:  0.9761
+  • F1-Score:  0.9761
+
+
+********************************************************************************
+CLASSIFICADOR: RandomForest
+********************************************************************************
+
+================================================================================
+RANDOM SEARCH: RandomForest
+🚀 GPU (cuML)
+================================================================================
+    Transferindo dados para GPU...
+    ✓ Dados na GPU (VRAM: ~0.08 GB)
+Testando 20 combinações aleatórias...
+  [1/20] ✓ Novo melhor! F1=0.9247
+  [4/20] ✓ Novo melhor! F1=0.9260
+  [5/20] F1=0.9218
+  [10/20] ✓ Novo melhor! F1=0.9264
+  [15/20] F1=0.9185
+  [20/20] ✓ Novo melhor! F1=0.9273
+
+✅ Random Search concluído!
+
+🏆 MELHORES HIPERPARÂMETROS:
+  • n_estimators: 289
+  • max_depth: 20
+  • min_samples_split: 3
+  • max_features: sqrt
+
+📈 TESTE:
+  • Accuracy:  0.9273
+  • F1-Score:  0.9273
+
+
+********************************************************************************
+CLASSIFICADOR: LogisticRegression
+********************************************************************************
+
+================================================================================
+GRID SEARCH: LogisticRegression
+🚀 GPU (cuML)
+================================================================================
+    Transferindo dados para GPU...
+    ✓ Dados na GPU (VRAM: ~0.08 GB)
+Testando 4 combinações...
+  [1/4] ✓ Novo melhor! F1=0.9256 | {'C': 0.1, 'penalty': 'l2', 'max_iter': 2000}
+  [2/4] ✓ Novo melhor! F1=0.9572 | {'C': 1.0, 'penalty': 'l2', 'max_iter': 2000}
+  [3/4] ✓ Novo melhor! F1=0.9740 | {'C': 10.0, 'penalty': 'l2', 'max_iter': 2000}
+
+✅ Grid Search concluído!
+
+🏆 MELHORES HIPERPARÂMETROS:
+  • C: 10.0
+  • penalty: l2
+  • max_iter: 2000
+
+📈 TESTE:
+  • Accuracy:  0.9740
+  • Precision: 0.9740
+  • Recall:    0.9740
+  • F1-Score:  0.9740
+
+================================================================================
+RANDOM SEARCH: LogisticRegression
+🚀 GPU (cuML)
+================================================================================
+    Transferindo dados para GPU...
+    ✓ Dados na GPU (VRAM: ~0.08 GB)
+Testando 15 combinações aleatórias...
+  [1/15] ✓ Novo melhor! F1=0.9740
+  [5/15] ✓ Novo melhor! F1=0.9748
+  [6/15] ✓ Novo melhor! F1=0.9752
+  [10/15] F1=0.9731
+  [15/15] F1=0.9744
+
+✅ Random Search concluído!
+
+🏆 MELHORES HIPERPARÂMETROS:
+  • C: 15.699452033620265
+  • penalty: l2
+  • max_iter: 2000
+
+📈 TESTE:
+  • Accuracy:  0.9752
+  • F1-Score:  0.9752
+
+
+================================================================================
+RESUMO FINAL
+================================================================================
+
+                                     Dataset       Method         Classifier  Test_F1  Test_Accuracy  Used_GPU
+dataset_sem_caracteres_especiais_lemmatizado RandomSearch                SVM 0.976060       0.976060      True
+dataset_sem_caracteres_especiais_lemmatizado RandomSearch LogisticRegression 0.975220       0.975220      True
+dataset_sem_caracteres_especiais_lemmatizado   GridSearch                SVM 0.973960       0.973961      True
+dataset_sem_caracteres_especiais_lemmatizado   GridSearch LogisticRegression 0.973960       0.973961      True
+           dataset_sem_stopwords_lemmatizado RandomSearch                SVM 0.971861       0.971861      True
+           dataset_sem_stopwords_lemmatizado RandomSearch LogisticRegression 0.971860       0.971861      True
+           dataset_sem_stopwords_lemmatizado   GridSearch LogisticRegression 0.971020       0.971021      True
+           dataset_sem_stopwords_lemmatizado   GridSearch                SVM 0.969761       0.969761      True
+dataset_sem_caracteres_especiais_lemmatizado RandomSearch       RandomForest 0.927283       0.927341      True
+           dataset_sem_stopwords_lemmatizado RandomSearch       RandomForest 0.923949       0.923982      True
+
+✅ Resultados salvos em: results_better_sfr/melhores_hiperparametros_sfr.csv
+
+
+================================================================================
+🏆 CAMPEÕES POR CLASSIFICADOR:
+================================================================================
+
+SVM:
+  Dataset: dataset_sem_caracteres_especiais_lemmatizado
+  Método: RandomSearch
+  F1-Score: 0.9761
+  Accuracy: 0.9761
+  GPU: True
+  Parâmetros: {'C': np.float64(18.44347898661638), 'kernel': np.str_('linear'), 'class_weight': 'balanced'}
+
+LogisticRegression:
+  Dataset: dataset_sem_caracteres_especiais_lemmatizado
+  Método: RandomSearch
+  F1-Score: 0.9752
+  Accuracy: 0.9752
+  GPU: True
+  Parâmetros: {'C': np.float64(15.699452033620265), 'penalty': np.str_('l2'), 'max_iter': np.int64(2000)}
+
+RandomForest:
+  Dataset: dataset_sem_caracteres_especiais_lemmatizado
+  Método: RandomSearch
+  F1-Score: 0.9273
+  Accuracy: 0.9273
+  GPU: True
+  Parâmetros: {'n_estimators': 289, 'max_depth': np.int64(20), 'min_samples_split': 3, 'max_features': np.str_('sqrt')}
+
+
+================================================================================
+🥇 MELHOR RESULTADO GERAL:
+================================================================================
+  Classificador: SVM
+  Dataset: dataset_sem_caracteres_especiais_lemmatizado
+  Método: RandomSearch
+  F1-Score: 0.9761
+  Accuracy: 0.9761
+  Parâmetros: {'C': np.float64(18.44347898661638), 'kernel': np.str_('linear'), 'class_weight': 'balanced'}
+
+✅ Modelos salvos em: results_better_sfr/best_models_sfr.pkl
+
+================================================================================
+✅ PROCESSAMENTO CONCLUÍDO!
+Fim: 2025-10-23 21:47:35
+================================================================================

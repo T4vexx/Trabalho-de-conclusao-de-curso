@@ -1,0 +1,13 @@
+================================================================================
+TREINAMENTO COM JINA-EMBEDDINGS-V3
+Modelo: 570M params | Dim: 1024 | Task-Specific LoRA
+Início: 2025-10-13 21:27:12
+================================================================================
+
+✅ Dispositivo: cuda
+✅ GPU: NVIDIA GeForce RTX 3060
+✅ Memória GPU: 12.88 GB
+✅ Otimizações CUDA ativadas
+
+📥 Carregando Jina-v3: jinaai/jina-embeddings-v3
+⚠️  Modelo 570M params com task-specific LoRA

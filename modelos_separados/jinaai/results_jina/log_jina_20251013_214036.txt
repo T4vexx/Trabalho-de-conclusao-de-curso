@@ -1,0 +1,251 @@
+================================================================================
+TREINAMENTO COM JINA-EMBEDDINGS-V3
+Modelo: 570M params | Dim: 1024 | Task-Specific LoRA
+Início: 2025-10-13 21:40:36
+================================================================================
+
+✅ Dispositivo: cuda
+✅ GPU: NVIDIA GeForce RTX 3060
+✅ Memória GPU: 12.88 GB
+✅ Otimizações CUDA ativadas
+
+📥 Carregando Jina-v3: jinaai/jina-embeddings-v3
+⚠️  Modelo 570M params com task-specific LoRA
+
+✓ Modelo carregado!
+✓ Device: cuda:0
+✓ Dimensão: 1024
+✓ Max seq length: 8192
+✓ Batch size: 48
+✓ Task: text-matching
+
+📊 VRAM alocada: 1.15 GB
+
+🧪 Teste de velocidade...
+   200 textos em 0.42s = 478.0 txt/s
+   ✅ Velocidade OK - usando GPU!
+   Tempo estimado: ~0.4 minutos
+
+================================================================================
+PROCESSANDO DATASET: dataset_sem_stopwords_lemmatizado
+================================================================================
+
+Carregando ../../bases_preprocessados/dataset_sem_stopwords_lemmatizado.xlsx...
+Dataset carregado: 11902 linhas
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo - Campos: ['Titulo']
+--------------------------------------------------------------------------------
+  [CHECKPOINT] Carregando embeddings salvos...
+  Dimensão dos embeddings: (11902, 1024)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.8841
+      Precision: 0.8844
+      Recall: 0.8841
+      F1-Score: 0.8841
+    Treinando RandomForest...
+      Accuracy: 0.8274
+      Precision: 0.8274
+      Recall: 0.8274
+      F1-Score: 0.8274
+    Treinando LogisticRegression...
+      Accuracy: 0.8757
+      Precision: 0.8757
+      Recall: 0.8757
+      F1-Score: 0.8757
+  [CHECKPOINT] Progresso salvo para titulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: texto - Campos: ['Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings Jina-v3 (USANDO GPU!)...
+    Modelo: jinaai/jina-embeddings-v3
+    Total de textos: 11902
+    Batch size: 48
+    Device: cuda
+    Task: text-matching
+    VRAM antes: 1.15 GB
+    ✓ Usando task-specific adapter: text-matching
+    VRAM depois: 1.16 GB
+    ✓ Embeddings gerados: (11902, 1024)
+  Embeddings salvos em: embeddings_jina\embeddings_dataset_sem_stopwords_lemmatizado_texto.npy
+  ✓ Cache GPU limpo (usando 1.16 GB)
+  Dimensão dos embeddings: (11902, 1024)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9194
+      Precision: 0.9194
+      Recall: 0.9194
+      F1-Score: 0.9194
+    Treinando RandomForest...
+      Accuracy: 0.8748
+      Precision: 0.8757
+      Recall: 0.8748
+      F1-Score: 0.8748
+    Treinando LogisticRegression...
+      Accuracy: 0.9080
+      Precision: 0.9081
+      Recall: 0.9080
+      F1-Score: 0.9080
+  [CHECKPOINT] Progresso salvo para texto
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: subtitulo - Campos: ['Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings Jina-v3 (USANDO GPU!)...
+    Modelo: jinaai/jina-embeddings-v3
+    Total de textos: 11902
+    Batch size: 48
+    Device: cuda
+    Task: text-matching
+    VRAM antes: 1.16 GB
+    ✓ Usando task-specific adapter: text-matching
+    VRAM depois: 1.16 GB
+    ✓ Embeddings gerados: (11902, 1024)
+  Embeddings salvos em: embeddings_jina\embeddings_dataset_sem_stopwords_lemmatizado_subtitulo.npy
+  ✓ Cache GPU limpo (usando 1.16 GB)
+  Dimensão dos embeddings: (11902, 1024)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.8475
+      Precision: 0.8674
+      Recall: 0.8475
+      F1-Score: 0.8455
+    Treinando RandomForest...
+      Accuracy: 0.8274
+      Precision: 0.8345
+      Recall: 0.8274
+      F1-Score: 0.8265
+    Treinando LogisticRegression...
+      Accuracy: 0.8425
+      Precision: 0.8607
+      Recall: 0.8425
+      F1-Score: 0.8405
+  [CHECKPOINT] Progresso salvo para subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo_subtitulo - Campos: ['Titulo', 'Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings Jina-v3 (USANDO GPU!)...
+    Modelo: jinaai/jina-embeddings-v3
+    Total de textos: 11902
+    Batch size: 48
+    Device: cuda
+    Task: text-matching
+    VRAM antes: 1.16 GB
+    ✓ Usando task-specific adapter: text-matching
+    VRAM depois: 1.16 GB
+    ✓ Embeddings gerados: (11902, 1024)
+  Embeddings salvos em: embeddings_jina\embeddings_dataset_sem_stopwords_lemmatizado_titulo_subtitulo.npy
+  ✓ Cache GPU limpo (usando 1.16 GB)
+  Dimensão dos embeddings: (11902, 1024)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9072
+      Precision: 0.9074
+      Recall: 0.9072
+      F1-Score: 0.9072
+    Treinando RandomForest...
+      Accuracy: 0.8568
+      Precision: 0.8574
+      Recall: 0.8568
+      F1-Score: 0.8567
+    Treinando LogisticRegression...
+      Accuracy: 0.8946
+      Precision: 0.8946
+      Recall: 0.8946
+      F1-Score: 0.8946
+  [CHECKPOINT] Progresso salvo para titulo_subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: completo - Campos: ['Titulo', 'Subtitulo', 'Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings Jina-v3 (USANDO GPU!)...
+    Modelo: jinaai/jina-embeddings-v3
+    Total de textos: 11902
+    Batch size: 48
+    Device: cuda
+    Task: text-matching
+    VRAM antes: 1.16 GB
+    ✓ Usando task-specific adapter: text-matching
+    VRAM depois: 1.16 GB
+    ✓ Embeddings gerados: (11902, 1024)
+  Embeddings salvos em: embeddings_jina\embeddings_dataset_sem_stopwords_lemmatizado_completo.npy
+  ✓ Cache GPU limpo (usando 1.16 GB)
+  Dimensão dos embeddings: (11902, 1024)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9471
+      Precision: 0.9471
+      Recall: 0.9471
+      F1-Score: 0.9471
+    Treinando RandomForest...
+      Accuracy: 0.8904
+      Precision: 0.8910
+      Recall: 0.8904
+      F1-Score: 0.8903
+    Treinando LogisticRegression...
+      Accuracy: 0.9303
+      Precision: 0.9303
+      Recall: 0.9303
+      F1-Score: 0.9303
+  [CHECKPOINT] Progresso salvo para completo
+
+================================================================================
+PROCESSANDO DATASET: dataset_sem_caracteres_especiais_lemmatizado
+================================================================================
+
+Carregando ../../bases_preprocessados/dataset_sem_caracteres_especiais_lemmatizado.xlsx...
+Dataset carregado: 11902 linhas
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo - Campos: ['Titulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings Jina-v3 (USANDO GPU!)...
+    Modelo: jinaai/jina-embeddings-v3
+    Total de textos: 11902
+    Batch size: 48
+    Device: cuda
+    Task: text-matching
+    VRAM antes: 1.16 GB
+    ✓ Usando task-specific adapter: text-matching
+    VRAM depois: 1.16 GB
+    ✓ Embeddings gerados: (11902, 1024)
+  Embeddings salvos em: embeddings_jina\embeddings_dataset_sem_caracteres_especiais_lemmatizado_titulo.npy
+  ✓ Cache GPU limpo (usando 1.16 GB)
+  Dimensão dos embeddings: (11902, 1024)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9135
+      Precision: 0.9135
+      Recall: 0.9135
+      F1-Score: 0.9135
+    Treinando RandomForest...
+      Accuracy: 0.8564
+      Precision: 0.8566
+      Recall: 0.8564
+      F1-Score: 0.8563
+    Treinando LogisticRegression...
+      Accuracy: 0.9021
+      Precision: 0.9022
+      Recall: 0.9021
+      F1-Score: 0.9021
+  [CHECKPOINT] Progresso salvo para titulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: texto - Campos: ['Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings Jina-v3 (USANDO GPU!)...
+    Modelo: jinaai/jina-embeddings-v3
+    Total de textos: 11902
+    Batch size: 48
+    Device: cuda
+    Task: text-matching
+    VRAM antes: 1.16 GB

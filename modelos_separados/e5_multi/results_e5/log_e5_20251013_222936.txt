@@ -1,0 +1,449 @@
+================================================================================
+TREINAMENTO COM MULTILINGUAL-E5-LARGE
+Microsoft | 560M params | Dim: 1024 | 100 línguas
+Início: 2025-10-13 22:29:36
+================================================================================
+
+✅ Dispositivo: cuda
+✅ GPU: NVIDIA GeForce RTX 3060
+✅ Memória GPU: 12.88 GB
+✅ Otimizações CUDA ativadas
+
+📥 Carregando E5-Large: intfloat/multilingual-e5-large
+⚠️  Modelo 560M params (XLM-RoBERTa-large base)
+
+✓ Modelo carregado!
+✓ Device: cuda:0
+✓ Dimensão: 1024
+✓ Max seq length: 512
+✓ Batch size: 32
+✓ Prefixo: 'query: ' (E5 requirement)
+
+📊 VRAM alocada: 2.24 GB
+
+🧪 Teste de velocidade...
+   200 textos em 0.35s = 566.7 txt/s
+   ✅ Velocidade OK - usando GPU!
+   Tempo estimado: ~0.4 minutos
+
+================================================================================
+PROCESSANDO DATASET: dataset_sem_stopwords_lemmatizado
+================================================================================
+
+Carregando ../../bases_preprocessados/dataset_sem_stopwords_lemmatizado.xlsx...
+Dataset carregado: 11902 linhas
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo - Campos: ['Titulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings E5-Large (USANDO GPU!)...
+    Modelo: intfloat/multilingual-e5-large
+    Total de textos: 11902
+    Batch size: 32
+    Device: cuda
+    ✓ Prefixo E5 adicionado ('query: ')
+    VRAM antes: 2.25 GB
+    VRAM depois: 2.25 GB
+    ✓ Embeddings gerados: (11902, 1024)
+  Embeddings salvos em: embeddings_e5\embeddings_dataset_sem_stopwords_lemmatizado_titulo.npy
+  ✓ Cache GPU limpo (usando 2.25 GB)
+  Dimensão dos embeddings: (11902, 1024)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9000
+      Precision: 0.9020
+      Recall: 0.9000
+      F1-Score: 0.8999
+    Treinando RandomForest...
+      Accuracy: 0.8849
+      Precision: 0.8858
+      Recall: 0.8849
+      F1-Score: 0.8849
+    Treinando LogisticRegression...
+      Accuracy: 0.8933
+      Precision: 0.8946
+      Recall: 0.8933
+      F1-Score: 0.8932
+  [CHECKPOINT] Progresso salvo para titulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: texto - Campos: ['Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings E5-Large (USANDO GPU!)...
+    Modelo: intfloat/multilingual-e5-large
+    Total de textos: 11902
+    Batch size: 32
+    Device: cuda
+    ✓ Prefixo E5 adicionado ('query: ')
+    VRAM antes: 2.25 GB
+    VRAM depois: 2.25 GB
+    ✓ Embeddings gerados: (11902, 1024)
+  Embeddings salvos em: embeddings_e5\embeddings_dataset_sem_stopwords_lemmatizado_texto.npy
+  ✓ Cache GPU limpo (usando 2.25 GB)
+  Dimensão dos embeddings: (11902, 1024)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9370
+      Precision: 0.9370
+      Recall: 0.9370
+      F1-Score: 0.9370
+    Treinando RandomForest...
+      Accuracy: 0.8925
+      Precision: 0.8931
+      Recall: 0.8925
+      F1-Score: 0.8924
+    Treinando LogisticRegression...
+      Accuracy: 0.9231
+      Precision: 0.9231
+      Recall: 0.9231
+      F1-Score: 0.9231
+  [CHECKPOINT] Progresso salvo para texto
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: subtitulo - Campos: ['Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings E5-Large (USANDO GPU!)...
+    Modelo: intfloat/multilingual-e5-large
+    Total de textos: 11902
+    Batch size: 32
+    Device: cuda
+    ✓ Prefixo E5 adicionado ('query: ')
+    VRAM antes: 2.25 GB
+    VRAM depois: 2.25 GB
+    ✓ Embeddings gerados: (11902, 1024)
+  Embeddings salvos em: embeddings_e5\embeddings_dataset_sem_stopwords_lemmatizado_subtitulo.npy
+  ✓ Cache GPU limpo (usando 2.25 GB)
+  Dimensão dos embeddings: (11902, 1024)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.8530
+      Precision: 0.8776
+      Recall: 0.8530
+      F1-Score: 0.8506
+    Treinando RandomForest...
+      Accuracy: 0.8383
+      Precision: 0.8497
+      Recall: 0.8383
+      F1-Score: 0.8370
+    Treinando LogisticRegression...
+      Accuracy: 0.8459
+      Precision: 0.8648
+      Recall: 0.8459
+      F1-Score: 0.8438
+  [CHECKPOINT] Progresso salvo para subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo_subtitulo - Campos: ['Titulo', 'Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings E5-Large (USANDO GPU!)...
+    Modelo: intfloat/multilingual-e5-large
+    Total de textos: 11902
+    Batch size: 32
+    Device: cuda
+    ✓ Prefixo E5 adicionado ('query: ')
+    VRAM antes: 2.25 GB
+    VRAM depois: 2.25 GB
+    ✓ Embeddings gerados: (11902, 1024)
+  Embeddings salvos em: embeddings_e5\embeddings_dataset_sem_stopwords_lemmatizado_titulo_subtitulo.npy
+  ✓ Cache GPU limpo (usando 2.25 GB)
+  Dimensão dos embeddings: (11902, 1024)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9353
+      Precision: 0.9372
+      Recall: 0.9353
+      F1-Score: 0.9353
+    Treinando RandomForest...
+      Accuracy: 0.9072
+      Precision: 0.9092
+      Recall: 0.9072
+      F1-Score: 0.9071
+    Treinando LogisticRegression...
+      Accuracy: 0.9278
+      Precision: 0.9293
+      Recall: 0.9278
+      F1-Score: 0.9277
+  [CHECKPOINT] Progresso salvo para titulo_subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: completo - Campos: ['Titulo', 'Subtitulo', 'Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings E5-Large (USANDO GPU!)...
+    Modelo: intfloat/multilingual-e5-large
+    Total de textos: 11902
+    Batch size: 32
+    Device: cuda
+    ✓ Prefixo E5 adicionado ('query: ')
+    VRAM antes: 2.25 GB
+    VRAM depois: 2.25 GB
+    ✓ Embeddings gerados: (11902, 1024)
+  Embeddings salvos em: embeddings_e5\embeddings_dataset_sem_stopwords_lemmatizado_completo.npy
+  ✓ Cache GPU limpo (usando 2.25 GB)
+  Dimensão dos embeddings: (11902, 1024)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9626
+      Precision: 0.9626
+      Recall: 0.9626
+      F1-Score: 0.9626
+    Treinando RandomForest...
+      Accuracy: 0.9362
+      Precision: 0.9363
+      Recall: 0.9362
+      F1-Score: 0.9362
+    Treinando LogisticRegression...
+      Accuracy: 0.9517
+      Precision: 0.9517
+      Recall: 0.9517
+      F1-Score: 0.9517
+  [CHECKPOINT] Progresso salvo para completo
+
+================================================================================
+PROCESSANDO DATASET: dataset_sem_caracteres_especiais_lemmatizado
+================================================================================
+
+Carregando ../../bases_preprocessados/dataset_sem_caracteres_especiais_lemmatizado.xlsx...
+Dataset carregado: 11902 linhas
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo - Campos: ['Titulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings E5-Large (USANDO GPU!)...
+    Modelo: intfloat/multilingual-e5-large
+    Total de textos: 11902
+    Batch size: 32
+    Device: cuda
+    ✓ Prefixo E5 adicionado ('query: ')
+    VRAM antes: 2.25 GB
+    VRAM depois: 2.25 GB
+    ✓ Embeddings gerados: (11902, 1024)
+  Embeddings salvos em: embeddings_e5\embeddings_dataset_sem_caracteres_especiais_lemmatizado_titulo.npy
+  ✓ Cache GPU limpo (usando 2.25 GB)
+  Dimensão dos embeddings: (11902, 1024)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9471
+      Precision: 0.9473
+      Recall: 0.9471
+      F1-Score: 0.9471
+    Treinando RandomForest...
+      Accuracy: 0.9118
+      Precision: 0.9142
+      Recall: 0.9118
+      F1-Score: 0.9117
+    Treinando LogisticRegression...
+      Accuracy: 0.9341
+      Precision: 0.9345
+      Recall: 0.9341
+      F1-Score: 0.9340
+  [CHECKPOINT] Progresso salvo para titulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: texto - Campos: ['Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings E5-Large (USANDO GPU!)...
+    Modelo: intfloat/multilingual-e5-large
+    Total de textos: 11902
+    Batch size: 32
+    Device: cuda
+    ✓ Prefixo E5 adicionado ('query: ')
+    VRAM antes: 2.25 GB
+    VRAM depois: 2.25 GB
+    ✓ Embeddings gerados: (11902, 1024)
+  Embeddings salvos em: embeddings_e5\embeddings_dataset_sem_caracteres_especiais_lemmatizado_texto.npy
+  ✓ Cache GPU limpo (usando 2.25 GB)
+  Dimensão dos embeddings: (11902, 1024)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9315
+      Precision: 0.9315
+      Recall: 0.9315
+      F1-Score: 0.9315
+    Treinando RandomForest...
+      Accuracy: 0.8795
+      Precision: 0.8803
+      Recall: 0.8795
+      F1-Score: 0.8794
+    Treinando LogisticRegression...
+      Accuracy: 0.9160
+      Precision: 0.9160
+      Recall: 0.9160
+      F1-Score: 0.9160
+  [CHECKPOINT] Progresso salvo para texto
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: subtitulo - Campos: ['Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings E5-Large (USANDO GPU!)...
+    Modelo: intfloat/multilingual-e5-large
+    Total de textos: 11902
+    Batch size: 32
+    Device: cuda
+    ✓ Prefixo E5 adicionado ('query: ')
+    VRAM antes: 2.25 GB
+    VRAM depois: 2.25 GB
+    ✓ Embeddings gerados: (11902, 1024)
+  Embeddings salvos em: embeddings_e5\embeddings_dataset_sem_caracteres_especiais_lemmatizado_subtitulo.npy
+  ✓ Cache GPU limpo (usando 2.25 GB)
+  Dimensão dos embeddings: (11902, 1024)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.8585
+      Precision: 0.8833
+      Recall: 0.8585
+      F1-Score: 0.8561
+    Treinando RandomForest...
+      Accuracy: 0.8446
+      Precision: 0.8580
+      Recall: 0.8446
+      F1-Score: 0.8431
+    Treinando LogisticRegression...
+      Accuracy: 0.8509
+      Precision: 0.8716
+      Recall: 0.8509
+      F1-Score: 0.8488
+  [CHECKPOINT] Progresso salvo para subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo_subtitulo - Campos: ['Titulo', 'Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings E5-Large (USANDO GPU!)...
+    Modelo: intfloat/multilingual-e5-large
+    Total de textos: 11902
+    Batch size: 32
+    Device: cuda
+    ✓ Prefixo E5 adicionado ('query: ')
+    VRAM antes: 2.25 GB
+    VRAM depois: 2.25 GB
+    ✓ Embeddings gerados: (11902, 1024)
+  Embeddings salvos em: embeddings_e5\embeddings_dataset_sem_caracteres_especiais_lemmatizado_titulo_subtitulo.npy
+  ✓ Cache GPU limpo (usando 2.25 GB)
+  Dimensão dos embeddings: (11902, 1024)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9576
+      Precision: 0.9580
+      Recall: 0.9576
+      F1-Score: 0.9576
+    Treinando RandomForest...
+      Accuracy: 0.9299
+      Precision: 0.9312
+      Recall: 0.9299
+      F1-Score: 0.9298
+    Treinando LogisticRegression...
+      Accuracy: 0.9446
+      Precision: 0.9452
+      Recall: 0.9446
+      F1-Score: 0.9445
+  [CHECKPOINT] Progresso salvo para titulo_subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: completo - Campos: ['Titulo', 'Subtitulo', 'Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings E5-Large (USANDO GPU!)...
+    Modelo: intfloat/multilingual-e5-large
+    Total de textos: 11902
+    Batch size: 32
+    Device: cuda
+    ✓ Prefixo E5 adicionado ('query: ')
+    VRAM antes: 2.25 GB
+    VRAM depois: 2.25 GB
+    ✓ Embeddings gerados: (11902, 1024)
+  Embeddings salvos em: embeddings_e5\embeddings_dataset_sem_caracteres_especiais_lemmatizado_completo.npy
+  ✓ Cache GPU limpo (usando 2.25 GB)
+  Dimensão dos embeddings: (11902, 1024)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9693
+      Precision: 0.9693
+      Recall: 0.9693
+      F1-Score: 0.9693
+    Treinando RandomForest...
+      Accuracy: 0.9433
+      Precision: 0.9433
+      Recall: 0.9433
+      F1-Score: 0.9433
+    Treinando LogisticRegression...
+      Accuracy: 0.9572
+      Precision: 0.9572
+      Recall: 0.9572
+      F1-Score: 0.9572
+  [CHECKPOINT] Progresso salvo para completo
+
+
+================================================================================
+RESUMO GERAL DOS RESULTADOS
+================================================================================
+
+Resultados salvos em: results_e5\resultados_e5.csv
+
+                                     Dataset      Combination         Classifier  Accuracy  Precision   Recall  F1-Score  Embedding_Dim
+           dataset_sem_stopwords_lemmatizado           titulo                SVM  0.900042   0.902046 0.900042  0.899919           1024
+           dataset_sem_stopwords_lemmatizado           titulo       RandomForest  0.884922   0.885840 0.884922  0.884855           1024
+           dataset_sem_stopwords_lemmatizado           titulo LogisticRegression  0.893322   0.894612 0.893322  0.893236           1024
+           dataset_sem_stopwords_lemmatizado            texto                SVM  0.937001   0.937001 0.937001  0.937001           1024
+           dataset_sem_stopwords_lemmatizado            texto       RandomForest  0.892482   0.893119 0.892482  0.892438           1024
+           dataset_sem_stopwords_lemmatizado            texto LogisticRegression  0.923142   0.923142 0.923142  0.923142           1024
+           dataset_sem_stopwords_lemmatizado        subtitulo                SVM  0.853003   0.877638 0.853003  0.850575           1024
+           dataset_sem_stopwords_lemmatizado        subtitulo       RandomForest  0.838303   0.849720 0.838303  0.836980           1024
+           dataset_sem_stopwords_lemmatizado        subtitulo LogisticRegression  0.845863   0.864776 0.845863  0.843848           1024
+           dataset_sem_stopwords_lemmatizado titulo_subtitulo                SVM  0.935321   0.937200 0.935321  0.935253           1024
+           dataset_sem_stopwords_lemmatizado titulo_subtitulo       RandomForest  0.907182   0.909173 0.907182  0.907070           1024
+           dataset_sem_stopwords_lemmatizado titulo_subtitulo LogisticRegression  0.927761   0.929334 0.927761  0.927696           1024
+           dataset_sem_stopwords_lemmatizado         completo                SVM  0.962621   0.962621 0.962621  0.962621           1024
+           dataset_sem_stopwords_lemmatizado         completo       RandomForest  0.936161   0.936284 0.936161  0.936157           1024
+           dataset_sem_stopwords_lemmatizado         completo LogisticRegression  0.951701   0.951727 0.951701  0.951700           1024
+dataset_sem_caracteres_especiais_lemmatizado           titulo                SVM  0.947081   0.947329 0.947081  0.947074           1024
+dataset_sem_caracteres_especiais_lemmatizado           titulo       RandomForest  0.911802   0.914171 0.911802  0.911677           1024
+dataset_sem_caracteres_especiais_lemmatizado           titulo LogisticRegression  0.934061   0.934529 0.934061  0.934044           1024
+dataset_sem_caracteres_especiais_lemmatizado            texto                SVM  0.931541   0.931549 0.931541  0.931541           1024
+dataset_sem_caracteres_especiais_lemmatizado            texto       RandomForest  0.879462   0.880332 0.879462  0.879392           1024
+dataset_sem_caracteres_especiais_lemmatizado            texto LogisticRegression  0.916002   0.916003 0.916002  0.916002           1024
+dataset_sem_caracteres_especiais_lemmatizado        subtitulo                SVM  0.858463   0.883302 0.858463  0.856141           1024
+dataset_sem_caracteres_especiais_lemmatizado        subtitulo       RandomForest  0.844603   0.857975 0.844603  0.843146           1024
+dataset_sem_caracteres_especiais_lemmatizado        subtitulo LogisticRegression  0.850903   0.871617 0.850903  0.848805           1024
+dataset_sem_caracteres_especiais_lemmatizado titulo_subtitulo                SVM  0.957581   0.958024 0.957581  0.957571           1024
+dataset_sem_caracteres_especiais_lemmatizado titulo_subtitulo       RandomForest  0.929861   0.931229 0.929861  0.929807           1024
+dataset_sem_caracteres_especiais_lemmatizado titulo_subtitulo LogisticRegression  0.944561   0.945227 0.944561  0.944541           1024
+dataset_sem_caracteres_especiais_lemmatizado         completo                SVM  0.969341   0.969344 0.969341  0.969341           1024
+dataset_sem_caracteres_especiais_lemmatizado         completo       RandomForest  0.943301   0.943301 0.943301  0.943301           1024
+dataset_sem_caracteres_especiais_lemmatizado         completo LogisticRegression  0.957161   0.957193 0.957161  0.957160           1024
+
+
+================================================================================
+MELHORES RESULTADOS POR COMBINAÇÃO
+================================================================================
+
+
+Dataset: dataset_sem_stopwords_lemmatizado
+--------------------------------------------------------------------------------
+  titulo               | Melhor: SVM                  | F1: 0.8999 | Acc: 0.9000
+  texto                | Melhor: SVM                  | F1: 0.9370 | Acc: 0.9370
+  subtitulo            | Melhor: SVM                  | F1: 0.8506 | Acc: 0.8530
+  titulo_subtitulo     | Melhor: SVM                  | F1: 0.9353 | Acc: 0.9353
+  completo             | Melhor: SVM                  | F1: 0.9626 | Acc: 0.9626
+
+Dataset: dataset_sem_caracteres_especiais_lemmatizado
+--------------------------------------------------------------------------------
+  titulo               | Melhor: SVM                  | F1: 0.9471 | Acc: 0.9471
+  texto                | Melhor: SVM                  | F1: 0.9315 | Acc: 0.9315
+  subtitulo            | Melhor: SVM                  | F1: 0.8561 | Acc: 0.8585
+  titulo_subtitulo     | Melhor: SVM                  | F1: 0.9576 | Acc: 0.9576
+  completo             | Melhor: SVM                  | F1: 0.9693 | Acc: 0.9693
+
+Resultados salvos em: results_e5\resultados_completos_e5.pkl
+
+================================================================================
+PROCESSAMENTO CONCLUÍDO!
+Fim: 2025-10-13 22:50:06
+================================================================================

@@ -1,0 +1,440 @@
+================================================================================
+TREINAMENTO COM PERSIAN-EMBEDDINGS
+HeydariAI | 560M params | Dim: 1024 | Persian + English
+Início: 2025-10-14 00:22:39
+================================================================================
+
+✅ Dispositivo: cuda
+✅ GPU: NVIDIA GeForce RTX 3060
+✅ Memória GPU: 12.88 GB
+✅ Otimizações CUDA ativadas
+
+📥 Carregando Persian-Embeddings: heydariAI/persian-embeddings
+⚠️  Fine-tuned XLM-RoBERTa para Persian/English
+
+✓ Modelo carregado!
+✓ Device: cuda:0
+✓ Dimensão: 1024
+✓ Max seq length: 512
+✓ Batch size: 32
+✓ Base: XLM-RoBERTa (FacebookAI)
+✓ Mean pooling com attention mask
+
+📊 VRAM alocada: 2.24 GB
+
+🧪 Teste de velocidade...
+   200 textos em 0.29s = 692.0 txt/s
+   ✅ Velocidade OK!
+   Tempo estimado: ~0.3 minutos
+
+================================================================================
+PROCESSANDO DATASET: dataset_sem_stopwords_lemmatizado
+================================================================================
+
+Carregando ../../bases_preprocessados/dataset_sem_stopwords_lemmatizado.xlsx...
+Dataset carregado: 11902 linhas
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo - Campos: ['Titulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings Persian (USANDO GPU!)...
+    Modelo: heydariAI/persian-embeddings
+    Total de textos: 11902
+    Batch size: 32
+    Device: cuda
+    VRAM antes: 2.25 GB
+    VRAM depois: 2.25 GB
+    ✓ Embeddings gerados: (11902, 1024)
+  Embeddings salvos em: embeddings_persian\embeddings_dataset_sem_stopwords_lemmatizado_titulo.npy
+  ✓ Cache GPU limpo (usando 2.25 GB)
+  Dimensão dos embeddings: (11902, 1024)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.8916
+      Precision: 0.8922
+      Recall: 0.8916
+      F1-Score: 0.8916
+    Treinando RandomForest...
+      Accuracy: 0.8488
+      Precision: 0.8488
+      Recall: 0.8488
+      F1-Score: 0.8488
+    Treinando LogisticRegression...
+      Accuracy: 0.8790
+      Precision: 0.8795
+      Recall: 0.8790
+      F1-Score: 0.8790
+  [CHECKPOINT] Progresso salvo para titulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: texto - Campos: ['Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings Persian (USANDO GPU!)...
+    Modelo: heydariAI/persian-embeddings
+    Total de textos: 11902
+    Batch size: 32
+    Device: cuda
+    VRAM antes: 2.25 GB
+    VRAM depois: 2.25 GB
+    ✓ Embeddings gerados: (11902, 1024)
+  Embeddings salvos em: embeddings_persian\embeddings_dataset_sem_stopwords_lemmatizado_texto.npy
+  ✓ Cache GPU limpo (usando 2.25 GB)
+  Dimensão dos embeddings: (11902, 1024)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9068
+      Precision: 0.9068
+      Recall: 0.9068
+      F1-Score: 0.9068
+    Treinando RandomForest...
+      Accuracy: 0.8404
+      Precision: 0.8408
+      Recall: 0.8404
+      F1-Score: 0.8404
+    Treinando LogisticRegression...
+      Accuracy: 0.8954
+      Precision: 0.8954
+      Recall: 0.8954
+      F1-Score: 0.8954
+  [CHECKPOINT] Progresso salvo para texto
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: subtitulo - Campos: ['Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings Persian (USANDO GPU!)...
+    Modelo: heydariAI/persian-embeddings
+    Total de textos: 11902
+    Batch size: 32
+    Device: cuda
+    VRAM antes: 2.25 GB
+    VRAM depois: 2.25 GB
+    ✓ Embeddings gerados: (11902, 1024)
+  Embeddings salvos em: embeddings_persian\embeddings_dataset_sem_stopwords_lemmatizado_subtitulo.npy
+  ✓ Cache GPU limpo (usando 2.25 GB)
+  Dimensão dos embeddings: (11902, 1024)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.8480
+      Precision: 0.8690
+      Recall: 0.8480
+      F1-Score: 0.8458
+    Treinando RandomForest...
+      Accuracy: 0.8177
+      Precision: 0.8237
+      Recall: 0.8177
+      F1-Score: 0.8169
+    Treinando LogisticRegression...
+      Accuracy: 0.8438
+      Precision: 0.8630
+      Recall: 0.8438
+      F1-Score: 0.8417
+  [CHECKPOINT] Progresso salvo para subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo_subtitulo - Campos: ['Titulo', 'Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings Persian (USANDO GPU!)...
+    Modelo: heydariAI/persian-embeddings
+    Total de textos: 11902
+    Batch size: 32
+    Device: cuda
+    VRAM antes: 2.25 GB
+    VRAM depois: 2.25 GB
+    ✓ Embeddings gerados: (11902, 1024)
+  Embeddings salvos em: embeddings_persian\embeddings_dataset_sem_stopwords_lemmatizado_titulo_subtitulo.npy
+  ✓ Cache GPU limpo (usando 2.25 GB)
+  Dimensão dos embeddings: (11902, 1024)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9143
+      Precision: 0.9155
+      Recall: 0.9143
+      F1-Score: 0.9143
+    Treinando RandomForest...
+      Accuracy: 0.8559
+      Precision: 0.8560
+      Recall: 0.8559
+      F1-Score: 0.8559
+    Treinando LogisticRegression...
+      Accuracy: 0.8992
+      Precision: 0.8997
+      Recall: 0.8992
+      F1-Score: 0.8992
+  [CHECKPOINT] Progresso salvo para titulo_subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: completo - Campos: ['Titulo', 'Subtitulo', 'Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings Persian (USANDO GPU!)...
+    Modelo: heydariAI/persian-embeddings
+    Total de textos: 11902
+    Batch size: 32
+    Device: cuda
+    VRAM antes: 2.25 GB
+    VRAM depois: 2.25 GB
+    ✓ Embeddings gerados: (11902, 1024)
+  Embeddings salvos em: embeddings_persian\embeddings_dataset_sem_stopwords_lemmatizado_completo.npy
+  ✓ Cache GPU limpo (usando 2.25 GB)
+  Dimensão dos embeddings: (11902, 1024)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9299
+      Precision: 0.9299
+      Recall: 0.9299
+      F1-Score: 0.9299
+    Treinando RandomForest...
+      Accuracy: 0.8631
+      Precision: 0.8638
+      Recall: 0.8631
+      F1-Score: 0.8630
+    Treinando LogisticRegression...
+      Accuracy: 0.9185
+      Precision: 0.9186
+      Recall: 0.9185
+      F1-Score: 0.9185
+  [CHECKPOINT] Progresso salvo para completo
+
+================================================================================
+PROCESSANDO DATASET: dataset_sem_caracteres_especiais_lemmatizado
+================================================================================
+
+Carregando ../../bases_preprocessados/dataset_sem_caracteres_especiais_lemmatizado.xlsx...
+Dataset carregado: 11902 linhas
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo - Campos: ['Titulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings Persian (USANDO GPU!)...
+    Modelo: heydariAI/persian-embeddings
+    Total de textos: 11902
+    Batch size: 32
+    Device: cuda
+    VRAM antes: 2.25 GB
+    VRAM depois: 2.25 GB
+    ✓ Embeddings gerados: (11902, 1024)
+  Embeddings salvos em: embeddings_persian\embeddings_dataset_sem_caracteres_especiais_lemmatizado_titulo.npy
+  ✓ Cache GPU limpo (usando 2.25 GB)
+  Dimensão dos embeddings: (11902, 1024)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9135
+      Precision: 0.9142
+      Recall: 0.9135
+      F1-Score: 0.9134
+    Treinando RandomForest...
+      Accuracy: 0.8513
+      Precision: 0.8515
+      Recall: 0.8513
+      F1-Score: 0.8513
+    Treinando LogisticRegression...
+      Accuracy: 0.9009
+      Precision: 0.9013
+      Recall: 0.9009
+      F1-Score: 0.9009
+  [CHECKPOINT] Progresso salvo para titulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: texto - Campos: ['Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings Persian (USANDO GPU!)...
+    Modelo: heydariAI/persian-embeddings
+    Total de textos: 11902
+    Batch size: 32
+    Device: cuda
+    VRAM antes: 2.25 GB
+    VRAM depois: 2.25 GB
+    ✓ Embeddings gerados: (11902, 1024)
+  Embeddings salvos em: embeddings_persian\embeddings_dataset_sem_caracteres_especiais_lemmatizado_texto.npy
+  ✓ Cache GPU limpo (usando 2.25 GB)
+  Dimensão dos embeddings: (11902, 1024)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9072
+      Precision: 0.9072
+      Recall: 0.9072
+      F1-Score: 0.9072
+    Treinando RandomForest...
+      Accuracy: 0.8396
+      Precision: 0.8401
+      Recall: 0.8396
+      F1-Score: 0.8395
+    Treinando LogisticRegression...
+      Accuracy: 0.8900
+      Precision: 0.8900
+      Recall: 0.8900
+      F1-Score: 0.8900
+  [CHECKPOINT] Progresso salvo para texto
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: subtitulo - Campos: ['Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings Persian (USANDO GPU!)...
+    Modelo: heydariAI/persian-embeddings
+    Total de textos: 11902
+    Batch size: 32
+    Device: cuda
+    VRAM antes: 2.25 GB
+    VRAM depois: 2.25 GB
+    ✓ Embeddings gerados: (11902, 1024)
+  Embeddings salvos em: embeddings_persian\embeddings_dataset_sem_caracteres_especiais_lemmatizado_subtitulo.npy
+  ✓ Cache GPU limpo (usando 2.25 GB)
+  Dimensão dos embeddings: (11902, 1024)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.8471
+      Precision: 0.8678
+      Recall: 0.8471
+      F1-Score: 0.8450
+    Treinando RandomForest...
+      Accuracy: 0.8186
+      Precision: 0.8244
+      Recall: 0.8186
+      F1-Score: 0.8177
+    Treinando LogisticRegression...
+      Accuracy: 0.8442
+      Precision: 0.8624
+      Recall: 0.8442
+      F1-Score: 0.8422
+  [CHECKPOINT] Progresso salvo para subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: titulo_subtitulo - Campos: ['Titulo', 'Subtitulo']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings Persian (USANDO GPU!)...
+    Modelo: heydariAI/persian-embeddings
+    Total de textos: 11902
+    Batch size: 32
+    Device: cuda
+    VRAM antes: 2.25 GB
+    VRAM depois: 2.25 GB
+    ✓ Embeddings gerados: (11902, 1024)
+  Embeddings salvos em: embeddings_persian\embeddings_dataset_sem_caracteres_especiais_lemmatizado_titulo_subtitulo.npy
+  ✓ Cache GPU limpo (usando 2.25 GB)
+  Dimensão dos embeddings: (11902, 1024)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9261
+      Precision: 0.9262
+      Recall: 0.9261
+      F1-Score: 0.9261
+    Treinando RandomForest...
+      Accuracy: 0.8610
+      Precision: 0.8610
+      Recall: 0.8610
+      F1-Score: 0.8610
+    Treinando LogisticRegression...
+      Accuracy: 0.9110
+      Precision: 0.9111
+      Recall: 0.9110
+      F1-Score: 0.9110
+  [CHECKPOINT] Progresso salvo para titulo_subtitulo
+
+--------------------------------------------------------------------------------
+COMBINAÇÃO: completo - Campos: ['Titulo', 'Subtitulo', 'Noticia']
+--------------------------------------------------------------------------------
+  Combinando campos...
+  Gerando embeddings Persian (USANDO GPU!)...
+    Modelo: heydariAI/persian-embeddings
+    Total de textos: 11902
+    Batch size: 32
+    Device: cuda
+    VRAM antes: 2.25 GB
+    VRAM depois: 2.25 GB
+    ✓ Embeddings gerados: (11902, 1024)
+  Embeddings salvos em: embeddings_persian\embeddings_dataset_sem_caracteres_especiais_lemmatizado_completo.npy
+  ✓ Cache GPU limpo (usando 2.25 GB)
+  Dimensão dos embeddings: (11902, 1024)
+  Treino: 9521 | Teste: 2381
+    Treinando SVM...
+      Accuracy: 0.9320
+      Precision: 0.9320
+      Recall: 0.9320
+      F1-Score: 0.9320
+    Treinando RandomForest...
+      Accuracy: 0.8627
+      Precision: 0.8629
+      Recall: 0.8627
+      F1-Score: 0.8626
+    Treinando LogisticRegression...
+      Accuracy: 0.9181
+      Precision: 0.9182
+      Recall: 0.9181
+      F1-Score: 0.9181
+  [CHECKPOINT] Progresso salvo para completo
+
+
+================================================================================
+RESUMO GERAL DOS RESULTADOS
+================================================================================
+
+Resultados salvos em: results_persian\resultados_persian.csv
+
+                                     Dataset      Combination         Classifier  Accuracy  Precision   Recall  F1-Score  Embedding_Dim
+           dataset_sem_stopwords_lemmatizado           titulo                SVM  0.891642   0.892230 0.891642  0.891603           1024
+           dataset_sem_stopwords_lemmatizado           titulo       RandomForest  0.848803   0.848838 0.848803  0.848799           1024
+           dataset_sem_stopwords_lemmatizado           titulo LogisticRegression  0.879042   0.879473 0.879042  0.879009           1024
+           dataset_sem_stopwords_lemmatizado            texto                SVM  0.906762   0.906763 0.906762  0.906762           1024
+           dataset_sem_stopwords_lemmatizado            texto       RandomForest  0.840403   0.840825 0.840403  0.840352           1024
+           dataset_sem_stopwords_lemmatizado            texto LogisticRegression  0.895422   0.895422 0.895422  0.895422           1024
+           dataset_sem_stopwords_lemmatizado        subtitulo                SVM  0.847963   0.868972 0.847963  0.845777           1024
+           dataset_sem_stopwords_lemmatizado        subtitulo       RandomForest  0.817724   0.823728 0.817724  0.816881           1024
+           dataset_sem_stopwords_lemmatizado        subtitulo LogisticRegression  0.843763   0.863003 0.843763  0.841674           1024
+           dataset_sem_stopwords_lemmatizado titulo_subtitulo                SVM  0.914322   0.915524 0.914322  0.914261           1024
+           dataset_sem_stopwords_lemmatizado titulo_subtitulo       RandomForest  0.855943   0.855985 0.855943  0.855938           1024
+           dataset_sem_stopwords_lemmatizado titulo_subtitulo LogisticRegression  0.899202   0.899655 0.899202  0.899174           1024
+           dataset_sem_stopwords_lemmatizado         completo                SVM  0.929861   0.929876 0.929861  0.929861           1024
+           dataset_sem_stopwords_lemmatizado         completo       RandomForest  0.863083   0.863774 0.863083  0.863016           1024
+           dataset_sem_stopwords_lemmatizado         completo LogisticRegression  0.918522   0.918579 0.918522  0.918519           1024
+dataset_sem_caracteres_especiais_lemmatizado           titulo                SVM  0.913482   0.914156 0.913482  0.913447           1024
+dataset_sem_caracteres_especiais_lemmatizado           titulo       RandomForest  0.851323   0.851516 0.851323  0.851302           1024
+dataset_sem_caracteres_especiais_lemmatizado           titulo LogisticRegression  0.900882   0.901250 0.900882  0.900860           1024
+dataset_sem_caracteres_especiais_lemmatizado            texto                SVM  0.907182   0.907182 0.907182  0.907182           1024
+dataset_sem_caracteres_especiais_lemmatizado            texto       RandomForest  0.839563   0.840113 0.839563  0.839497           1024
+dataset_sem_caracteres_especiais_lemmatizado            texto LogisticRegression  0.889962   0.889972 0.889962  0.889962           1024
+dataset_sem_caracteres_especiais_lemmatizado        subtitulo                SVM  0.847123   0.867770 0.847123  0.844956           1024
+dataset_sem_caracteres_especiais_lemmatizado        subtitulo       RandomForest  0.818564   0.824433 0.818564  0.817746           1024
+dataset_sem_caracteres_especiais_lemmatizado        subtitulo LogisticRegression  0.844183   0.862424 0.844183  0.842206           1024
+dataset_sem_caracteres_especiais_lemmatizado titulo_subtitulo                SVM  0.926081   0.926202 0.926081  0.926077           1024
+dataset_sem_caracteres_especiais_lemmatizado titulo_subtitulo       RandomForest  0.860983   0.861039 0.860983  0.860977           1024
+dataset_sem_caracteres_especiais_lemmatizado titulo_subtitulo LogisticRegression  0.910962   0.911130 0.910962  0.910953           1024
+dataset_sem_caracteres_especiais_lemmatizado         completo                SVM  0.931961   0.932039 0.931961  0.931958           1024
+dataset_sem_caracteres_especiais_lemmatizado         completo       RandomForest  0.862663   0.862877 0.862663  0.862642           1024
+dataset_sem_caracteres_especiais_lemmatizado         completo LogisticRegression  0.918102   0.918151 0.918102  0.918099           1024
+
+
+================================================================================
+MELHORES RESULTADOS POR COMBINAÇÃO
+================================================================================
+
+
+Dataset: dataset_sem_stopwords_lemmatizado
+--------------------------------------------------------------------------------
+  titulo               | Melhor: SVM                  | F1: 0.8916 | Acc: 0.8916
+  texto                | Melhor: SVM                  | F1: 0.9068 | Acc: 0.9068
+  subtitulo            | Melhor: SVM                  | F1: 0.8458 | Acc: 0.8480
+  titulo_subtitulo     | Melhor: SVM                  | F1: 0.9143 | Acc: 0.9143
+  completo             | Melhor: SVM                  | F1: 0.9299 | Acc: 0.9299
+
+Dataset: dataset_sem_caracteres_especiais_lemmatizado
+--------------------------------------------------------------------------------
+  titulo               | Melhor: SVM                  | F1: 0.9134 | Acc: 0.9135
+  texto                | Melhor: SVM                  | F1: 0.9072 | Acc: 0.9072
+  subtitulo            | Melhor: SVM                  | F1: 0.8450 | Acc: 0.8471
+  titulo_subtitulo     | Melhor: SVM                  | F1: 0.9261 | Acc: 0.9261
+  completo             | Melhor: SVM                  | F1: 0.9320 | Acc: 0.9320
+
+Resultados salvos em: results_persian\resultados_completos_persian.pkl
+
+================================================================================
+PROCESSAMENTO CONCLUÍDO!
+Fim: 2025-10-14 00:42:58
+================================================================================

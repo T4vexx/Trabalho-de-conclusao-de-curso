@@ -1,0 +1,15 @@
+================================================================================
+TF-IDF: HYPERPARAMETER TUNING (VERSÃO OTIMIZADA/RÁPIDA)
+Otimizações:
+  • 3-fold CV (ao invés de 5-fold)
+  • SVM: apenas kernel linear + grid reduzido para RBF
+  • RandomForest: Random Search ao invés de Grid
+  • LogisticRegression: apenas L2 com lbfgs
+  • Grids reduzidos (~200 testes totais)
+Início: 2025-10-21 08:29:29
+================================================================================
+
+
+################################################################################
+DATASET: dataset_sem_stopwords_lemmatizado
+################################################################################
