@@ -1,4 +1,4 @@
-# Estudo e Comparação de Modelos de Língua para Detecção de Fake News em Português 🕵️‍♂️📰
+# Estudo e Comparação de Modelos de Língua para Detecção de Fake News em Português 
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
 ![Status](https://img.shields.io/badge/Status-Concluído-success)
